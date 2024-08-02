@@ -1,0 +1,115 @@
+    /* 01.display */
+    
+    .top-right {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 1;
+    }
+    
+    .bottom-right {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1;
+    }
+    
+    .top-left {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    
+    .bottom-left {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: 1;
+    }
+    
+    .left-middle {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    
+    .right-middle {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    
+    .top-middle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .bottom-middle {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    /* 02.display effect */
+    /* hover-show */
+    
+    .top-middle.hover-show,
+    .bottom-middle.hover-show,
+    .right-middle.hover-show,
+    .left-middle.hover-show,
+    .middle.hover-show,
+    .top-right.hover-show,
+    .top-left.hover-show,
+    .bottom-right.hover-show,
+    .bottom-left.hover-show {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.7s;
+    }
+    
+    .box-ratio:hover .hover-show {
+        opacity: 1 !important;
+        visibility: visible !important;
+        /* transform: translateX(200px); */
+    }
+    /* hover-hidden */
+    /* mặc định items đã ở chế độ hiển thị */
+    
+    .box-ratio:hover .hover-hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.7s;
+    }
+    /* Display-animate */
+    
+    @keyframes fadeInRightMiddle {
+        0% {
+            opacity: 0;
+            transform: translate3d(100%, 0, 0) translateY(-50%)
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0) translateY(-50%)
+        }
+    }
+    
+    .fadeInRightMiddle {
+        animation-name: fadeInRightMiddle
+    }

@@ -1,0 +1,92 @@
+<div class="w3-responsive">
+    <table class="w3-table-all table-border" ng-init="getDataPagination(page_data)">
+
+        <tr class=" tr-top-table-color">
+            <th colspan="2">#</th>
+            <th class="th-left">Bài viết/sản phẩm</th>
+
+            <th>Nội dung (click 2 lần để ẩn hiện)</th>
+            <th class="th-left">Thời gian</th>
+            <th class="th-left">Tài khoản</th>
+
+            <th>Avatar user</th>
+
+
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+
+        </tr>
+
+
+        <tr class="text-center" dir-paginate="one_data in data_get |orderBy :optionsModelDisplay.hienthi| filter:tukhoa |itemsPerPage:optionsModelQuantity.PageSize" style=" font-size: 15px;">
+            <td>
+                <div class="form-check" style="padding-bottom: 25px;">
+                    <input class="form-check-input" name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_data)" type="checkbox" value="" id="">
+                </div>
+            </td>
+            <td>{{$index +1}}</td>
+            <td class="td-left" style="white-space: normal;">{{one_data.comment_location}}</td>
+            <td class="td-left" onclick="show_hidden_comment()">
+                <p style="white-space: normal; width: 186px;" class="show_hidden_comment hover-text-color-30 cursor comment-content"> {{one_data.comment_content}}</p>
+            </td>
+
+            <td class="td-left">
+                <span>{{one_data.comment_date}}</span>
+
+            </td>
+            <td class="td-left">
+                <span>{{one_data.comment_user}}</span>
+            </td>
+
+            <td class="">
+                <div style="width: 39px;height:39px;">
+                    <img class="img-object-fix circle" src="{{one_data.avatar_user}}" alt="">
+                </div>
+            </td>
+
+
+
+
+            <td>
+
+
+                <div>
+                    <!-- status admin -->
+                    <div class="margin-lr-5 ">
+                        <button ng-if="one_data.comment_status==1 ; " ng-click="ShowHiddenAct(one_data) " class="btn btn-info " style="width: 39px; margin: auto; ">
+                                <i class="fa-regular fa-unlock "></i>
+                            
+                            </button>
+                        <button ng-if="one_data.comment_status==0 ; " ng-click="ShowHiddenAct(one_data) " class="btn btn-warning " style="width: 39px; margin: auto; ">
+                                <i class="fa-sharp fa-solid fa-lock "></i>
+                            
+                            </button>
+
+                    </div>
+                    <!-- end status admin -->
+
+
+
+
+                </div>
+            </td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Thao tác
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Xét duyệt</a>
+                        <a class="dropdown-item" href="#">Ẩn</a>
+
+                    </div>
+                </div>
+            </td>
+
+
+            <!--  -->
+        </tr>
+
+
+    </table>
+</div>

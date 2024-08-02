@@ -1,0 +1,39 @@
+.circle {
+    border-radius: 50%;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.none {
+    display: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center !important;
+}

@@ -1,0 +1,55 @@
+/* -------------------------------------------------------------------------------------Global */
+
+@import url(Global-root-setting/global-root-setting.css);
+@import url(Global/setting-theme/box-setting.css);
+
+/* login-register */
+
+@import url(Global/login-register/login-register-final.css);
+
+/* sidebar */
+
+
+/* setting on view login */
+
+@import url(Global/sidebar/sidebar-on-view-login.css);
+
+/* layout basic */
+
+
+/* @import url(Global/sidebar/sidebar-basic-theme.css); */
+
+@import url(Global/sidebar/sidebar-right.css);
+@import url(Global/sidebar/sidebar-active.css);
+@import url(Global/sidebar/sidebar-elastic.css);
+
+/* layout horizontal */
+
+@import url(Global/sidebar/sidebar-horizontal-theme.css);
+
+/* color package */
+
+@import url(../css/color-package/color-package-no1.css);
+@import url(../css/color-package/color-package-no2.css);
+@import url(../css/color-package/color-package-no3.css);
+
+/* theme color */
+
+@import url(Theme-color/menu-sidebar-theme-dark.css);
+@import url(Theme-color/menu-sidebar-theme-light.css);
+
+/* footer */
+
+@import url(Global/footer/footer.css);
+
+/*------------------------------------------------------------------------------------- Content */
+
+
+/* content-global.css là mặc định có trong mỗi dự án */
+
+@import url(Content/content-global.css);
+
+/* thay đổi tên theo từng dự án */
+
+@import url(Content/home.css);
+@import url(Content/content-page.css);

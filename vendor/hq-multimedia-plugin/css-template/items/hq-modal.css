@@ -1,0 +1,247 @@
+/* code HQ Css */
+
+.btn-close.edit {
+    border: none !important;
+    background-color: transparent !important;
+    font-size: 25px !important;
+}
+
+
+/* 03.modal box */
+
+:root {
+    --widthModal: 579px;
+    --heightModal: 379px;
+    --modal-title: 50px;
+    --modal-content: 269px;
+    --modal-footer: 60px;
+}
+
+.backgroud_modal_box {
+    width: 100vmax;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #02020254;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal_box {
+    position: fixed !important;
+    width: var(--widthModal);
+    height: var(--heightModal);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 0.4s;
+    z-index: 9999;
+    border-radius: 5px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.modal_box .modal-box-title {
+    text-align: center;
+    height: var(--modal-title);
+    background-color: #ffc107;
+    line-height: 50px;
+    color: #dcdada;
+    font-weight: 300;
+}
+
+.modal_box .modal-box-content {
+    height: var(--modal-content)
+}
+
+.modal_box .modal-box-footer {
+    height: var(--modal-footer);
+}
+
+
+/* style */
+
+
+/* zoon in */
+
+.modal_box.zoom-in {
+    transform: translate(-50%, -50%);
+}
+
+
+/* from right */
+
+.modal_box.from-right {
+    animation: from-right 0.4s;
+}
+
+@keyframes from-right {
+    from {
+        right: -300px;
+        opacity: 0
+    }
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+.modal_box.select,
+.backgroud_modal_box.select {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block;
+}
+
+.modal_box.select {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* end code HQ Css */
+
+.pin {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid white;
+    color: #eeeeee;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    top: 50%;
+    left: 50%;
+}
+
+.pin:hover {
+    background-color: var(--highlight-color1);
+}
+
+
+/* animate-modal */
+
+
+/* Animate edit from animate.css */
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+.animated.infinite {
+    animation-iteration-count: infinite
+}
+
+.animated.delay-1s {
+    animation-delay: 1s
+}
+
+.animated.delay-2s {
+    animation-delay: 2s
+}
+
+.animated.delay-3s {
+    animation-delay: 3s
+}
+
+.animated.delay-4s {
+    animation-delay: 4s
+}
+
+.animated.delay-5s {
+    animation-delay: 5s
+}
+
+@keyframes modal-shake {
+    0%,
+    to {
+        transform: translateZ(0) translateX(-50%) translateY(-50%)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(-10px, 0, 0) translateX(-50%) translateY(-50%)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate3d(10px, 0, 0) translateX(-50%) translateY(-50%)
+    }
+}
+
+.modal-shake {
+    animation-name: modal-shake
+}
+
+@keyframes modal-bounce {
+    0%,
+    20%,
+    53%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transform: translateZ(0) translateX(-50%) translateY(-50%)
+    }
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -30px, 0) translateX(-50%) translateY(-50%)
+    }
+    70% {
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -15px, 0) translateX(-50%) translateY(-50%)
+    }
+    90% {
+        transform: translate3d(0, -4px, 0) translateX(-50%) translateY(-50%)
+    }
+}
+
+.modal-bounce {
+    animation-name: modal-bounce;
+    transform-origin: center bottom
+}
+
+@keyframes modal-bounceInDown {
+    0%,
+    60%,
+    75%,
+    90%,
+    to {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0) translateX(-50%) translateY(-50%)
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0) translateX(-50%) translateY(-50%)
+    }
+    75% {
+        transform: translate3d(0, -10px, 0) translateX(-50%) translateY(-50%)
+    }
+    90% {
+        transform: translate3d(0, 5px, 0) translateX(-50%) translateY(-50%)
+    }
+    to {
+        transform: translateZ(0) translateX(-50%) translateY(-50%)
+    }
+}
+
+.modal-bounceInDown {
+    animation-name: modal-bounceInDown
+}

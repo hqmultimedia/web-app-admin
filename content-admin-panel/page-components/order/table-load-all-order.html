@@ -1,0 +1,91 @@
+<div class="w3-responsive">
+    <table class="w3-table-all table-border" ng-init="getDataPagination(page_data)">
+
+        <tr class=" tr-top-table-color">
+            <th colspan="2">#</th>
+
+            <th>ID</th>
+            <th>Avatar</th>
+            <th class="th-left">Tài khoản</th>
+
+            <th class="th-left">Ngày tạo</th>
+            <th>Tổng tiền</th>
+            <!-- <th>Payment methods</th> -->
+
+
+            <th>Trạng thái</th>
+            <th>Xem đơn hàng</th>
+
+        </tr>
+
+
+        <tr dir-paginate="one_data in data_get |orderBy :optionsModelDisplay.hienthi| filter:tukhoa |itemsPerPage:optionsModelQuantity.PageSize" style=" font-size: 15px;">
+            <td>
+                <div class="form-check" style="padding-bottom: 25px;">
+                    <input class="form-check-input" name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_data)" type="checkbox" value="" id="">
+                </div>
+            </td>
+            <td class="td-stt">{{$index +1}}</td>
+            <td>{{one_data.id_order}}</td>
+            <td class="flex-align-middle">
+                <div style="width: 39px;height:39px;">
+                    <img class="img-object-fix circle" src="{{one_data.client_img}}" alt="">
+                </div>
+            </td>
+            <td class="td-left">
+                <span>{{one_data.client_user_name}}</span>
+            </td>
+
+            <td class="td-left">
+                <p class=""> {{one_data.order_date}}</p>
+            </td>
+
+            <td>
+                <span>{{one_data.order_total}} đ</span>
+            </td>
+            <!-- <td>
+                <span>{{one_data.payment_methods}}</span>
+            </td> -->
+
+
+
+
+            <td>
+
+
+
+
+                <div class="margin-lr-5">
+                    <button ng-if="one_data.order_status == 0;" class="btn card-inline-normal border-none " style="width: 128px; margin: auto;">
+                        <span>Chưa xử lý</span>
+                    </button>
+                    <button ng-if="one_data.order_status == 1;" class="btn card-status-normal " style="width: 128px;margin: auto;">
+                        <span>Đã xử lý</span>  
+                    </button>
+                    <button ng-if="one_data.order_status == 2;" class="btn card-status-warning " style="width: 128px;margin: auto;">
+                        <span>Đang giao hàng</span>  
+                    </button>
+                    <button ng-if="one_data.order_status == 3;" class="btn card-status-success " style="width: 128px;margin: auto;">
+                        <span>Hoàn thành</span>  
+                    </button>
+
+
+                </div>
+
+
+
+
+            </td>
+            <td>
+                <button class="btn card-inline-highlight-2 " style="margin: auto;">
+                <a href="chi-tiet-don-hang/{{one_data.id_order}}"><i class="fa-solid fa-eye"></i> Chi tiết</a>
+            
+            </button>
+            </td>
+
+
+        </tr>
+
+
+    </table>
+</div>

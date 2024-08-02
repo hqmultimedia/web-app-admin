@@ -1,0 +1,106 @@
+/* padding theo hướng */
+
+.reset-col {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.padding-l-5 {
+    padding-left: 5px;
+}
+
+.padding-r-5 {
+    padding-right: 5px;
+}
+
+.padding-t-5 {
+    padding-top: 5px;
+}
+
+.padding-b-5,
+.col-padding-b-5 {
+    padding-bottom: 5px;
+}
+
+.padding-l-15 {
+    padding-left: 15px;
+}
+
+.padding-r-15 {
+    padding-right: 15px;
+}
+
+.padding-t-15 {
+    padding-top: 15px;
+}
+
+.padding-b-15 {
+    padding-bottom: 15px;
+}
+
+.padding-t-30 {
+    padding-top: 30px;
+}
+
+.padding-r-30 {
+    padding-right: 30px;
+}
+
+.padding-b-30 {
+    padding-bottom: 30px;
+}
+
+.padding-l-30 {
+    padding-left: 30px;
+}
+
+
+/* padding tất cả */
+
+.padding-5 {
+    padding: 5px;
+}
+
+.padding-15 {
+    padding: 15px;
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+
+/* padding left right */
+
+.padding-lr-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.padding-lr-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.padding-lr-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* padding top bottom */
+
+.padding-tb-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.padding-tb-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.padding-tb-30 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

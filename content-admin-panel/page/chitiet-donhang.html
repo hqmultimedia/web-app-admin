@@ -1,0 +1,112 @@
+<div class="container-fluid" ng-model="page_data" ng-init="page_data='preview_order'">
+    <div class="row">
+        <div class="col-12">
+            <H6 class="margin-tb-15 text-normal">Chi tiết đơn hàng</H6>
+        </div>
+        <!-- left-top -->
+        <div class="col-12 col-md-7 col-lg-8">
+            <div class="card-basic flex padding-15 round-medium">
+                <div style="width: auto;">
+                    <div class="margin-b-5">
+                        <b>- Đơn hàng :</b> <b style="color:aqua;">222594848779</b>
+                    </div>
+                    <p>- Ngày tạo : 22/4/2024 - 11:11 AM </p>
+                    <p>- Ngày giao : 25/4/2024 - 3:39 PM </p>
+                </div>
+                <div class="right-end" style="flex : 1; align-items: center;">
+                    <b class="card-status-success padding-tb-5 padding-lr-15 round-medium">Đã giao hàng</b>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="flex margin-t-30">
+                <div class="client-info" style="width: 39%; display: flex;flex-direction: column;">
+                    <div class="card-basic padding-15" style="border-top-left-radius:5px ; border-top-right-radius:5px;">
+                        <H6>Khách hàng</H6>
+                    </div>
+                    <div class="card-inline-normal padding-15" style="border-bottom-left-radius:5px ; border-bottom-right-radius:5px;flex:1;">
+                        <b class="margin-b-5 block">Phan Kiều Chi</b>
+                        <p>0981199789</p>
+                    </div>
+                </div>
+                <div class="people-receiver margin-l-30" style="width: calc(61% - 30px);">
+                    <div class="card-basic padding-15" style="border-top-left-radius:5px ; border-top-right-radius:5px;">
+                        <H6>Người nhận</H6>
+                    </div>
+                    <div class="card-inline-normal padding-15" style="border-bottom-left-radius:5px ; border-bottom-right-radius:5px;">
+                        <b class="margin-b-5 block">Phan Kiều Chi</b>
+                        <p>0981199789</p>
+                        <p>Tầng 12 Toà nhà ABC-Quận Hải Nam-Cầu Giấy-Hà Nội</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 Table load -->
+            <div class="margin-t-30" ng-controller="checkBoxController" ng-if="data_get != '';" ng-include="'content-admin-panel/page-components/order/table-load-preview-order.html'" scope="" onload=""></div>
+            <!-- End table load -->
+        </div>
+        <!-- right-bottom -->
+        <div class="col-12 col-md-5 col-lg-4">
+            <div class="card-basic flex " style="border-top-left-radius: 5px;border-top-right-radius:5px;padding: 13px;">
+                <h6>Phương thức thanh toán</h6>
+            </div>
+            <div class="card-inline-normal padding-15 flex " style="border-bottom-left-radius: 5px;border-bottom-right-radius:5px;">
+                <p style="width:auto;" class="left-start">Master card :</p>
+                <p style="flex: 1;" class="right-end">Hoàn thành</p>
+            </div>
+
+
+            <div class="card-inline-normal margin-t-30 padding-15 round-medium">
+                <div class="flex margin-tb-5">
+                    <p style="width:auto;" class="left-start">Tạm tính :</p>
+                    <p style="flex: 1;" class="right-end"><b>630.500.000đ</b></p>
+                </div>
+                <div class="flex margin-tb-5">
+                    <p style="width: auto;" class="left-start">Voucher giảm giá :</p>
+                    <p style="flex: 1;" class="right-end">-3.500.000đ</p>
+                </div>
+                <div class="flex margin-tb-5">
+                    <p style="width: 50%;" class="left-start">Phí vận chuyển :</p>
+                    <p style="width: 50%;" class="right-end">2.190.000đ</p>
+                </div>
+                <div class="flex margin-tb-5">
+                    <p style="width: auto;" class="left-start">Thành tiền :</p>
+                    <p style="flex:1;" class="right-end">627.000.000đ</p>
+                </div>
+                <div class="flex margin-tb-5">
+                    <p style="width: auto;" class="left-start">Điểm tích luỹ :</p>
+                    <p style="flex:1;" class="right-end"><b style="color:rgb(184, 76, 76)">+6270 điểm</b></p>
+                </div>
+                <div class="flex margin-t-15" style="align-items:center;">
+                    <p style="width:auto" class="left-start">Tổng thanh toán :</p>
+                    <p style="flex:1;" class="right-end"><b style="font-size:21px;color:#3999af;">627.000.000đ</b></p>
+                </div>
+                <div class="flex margin-t-15" style="align-items:center;">
+                    <p style="width: auto;" class="left-start">Trạng thái :</p>
+                    <p style="flex:1;" class="right-end"><b class="card-status-success padding-5 round-medium">Đã thanh toán</b></p>
+                </div>
+                <div class="flex margin-t-15 text-center padding-t-15" style="border-top: 1px solid #dee2e655; flex-wrap: wrap;">
+                    <div class="button-note-order">
+                        <button class="btn card-status-normal " style="margin: auto;">
+                        <a href=""><i class="fa-solid fa-note-sticky"></i> Ghi chú</a>
+                        
+                    
+                    </button>
+                    </div>
+                    <div class="button-edit-order">
+                        <button class="btn card-status-warning disabled" style="margin: auto;">
+                        <a href=""><i class="fa-regular fa-pen-to-square"></i> Sửa đơn</a>
+                    
+                    </button>
+                    </div>
+                    <div class="button-cancel-order">
+                        <button class="btn card-status-error disabled" style="margin: auto;">
+                        <a href=""><i class="fa-solid fa-delete-left"></i> Huỷ đơn</a>
+                    
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

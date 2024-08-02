@@ -1,0 +1,26 @@
+.footer-right {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .footer-right,
+    .footer-left {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    .footer-right,
+    .footer-left {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+}

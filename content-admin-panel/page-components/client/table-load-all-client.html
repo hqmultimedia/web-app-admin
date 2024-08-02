@@ -1,0 +1,111 @@
+<div class="w3-responsive">
+    <table class="w3-table-all table-border" ng-init="getDataPagination(page_data)">
+
+        <tr class=" tr-top-table-color">
+            <th colspan="1">#</th>
+
+            <!-- <th>ID</th> -->
+            <th class="th-left">Khách hàng</th>
+
+            <th>Avatar</th>
+
+
+            <th class="th-left">Ngày tạo</th>
+            <th>Tổng mua hàng</th>
+            <th class="th-left">Hạn mức</th>
+            <th>Lịch sử đơn</th>
+
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+
+        </tr>
+
+
+        <tr dir-paginate="one_data in data_get |orderBy :optionsModelDisplay.hienthi| filter:tukhoa |itemsPerPage:optionsModelQuantity.PageSize" style=" font-size: 15px;">
+            <td>
+                <div class="form-check" style="padding-bottom: 25px;">
+                    <input class="form-check-input" name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_data)" type="checkbox" value="" id="">
+                </div>
+            </td>
+            <!-- <td class="td-stt">{{$index +1}}</td> -->
+            <!-- <td>{{one_data.id_order}}</td> -->
+            <td class="td-left">
+                <span>{{one_data.client_name}}</span>
+            </td>
+
+            <td class="flex-align-middle">
+                <div style="width: 39px;height:39px;">
+                    <img class="img-object-fix circle" src="{{one_data.client_img_thumb}}" alt="">
+                </div>
+            </td>
+
+
+            <td class="td-left">
+                <p class=""> {{one_data.client_date}}</p>
+            </td>
+
+            <td>
+                <span>{{one_data.client_purchase}}</span>
+            </td>
+            <!-- hạn mức -->
+
+            <td ng-if="one_data.client_level == 1">
+                <button class="btn card-inline-normal ng-binding" style=" margin: auto; min-width: 102px;">
+                    <span><i class="fa-sharp fa-regular fa-coin"></i> Bạc</span>
+                </button>
+            </td>
+            <td ng-if="one_data.client_level == 2">
+                <button class="btn card-inline-normal ng-binding" style=" margin: auto; min-width: 102px;">
+                    <span><i class="fa-regular fa-crown"></i> Vàng</span>
+                </button>
+            </td>
+            <td ng-if="one_data.client_level == 3">
+                <button class="btn card-inline-normal ng-binding" style=" margin: auto; min-width: 102px;">
+                    <span><i class="fa-solid fa-diamond"></i> Kim Cương</span>
+                </button>
+            </td>
+            <!-- end hạn mức -->
+
+            <td>
+                <button class="btn btn-info " style="margin: auto;">
+                    <span>Lịch sử đơn hàng</span>  
+                </button>
+            </td>
+
+
+
+
+
+            <td>
+
+
+
+
+                <div class="margin-lr-5">
+                    <button ng-if="one_data.client_status == 0;" class="btn card-inline-normal " style=" margin: auto;">
+                        <i class="fa-sharp fa-solid fa-lock"></i>
+                    </button>
+                    <button ng-if="one_data.client_status == 1;" class="btn btn-success " style="margin: auto;">
+                        <i class="fa-regular fa-unlock"></i> 
+                    </button>
+
+
+                </div>
+
+
+
+
+            </td>
+            <td>
+                <button class="btn btn-danger " style="margin: auto;">
+                    <a href=""><i class="fa-solid fa-trash"></i></a>
+                
+                </button>
+            </td>
+
+
+        </tr>
+
+
+    </table>
+</div>

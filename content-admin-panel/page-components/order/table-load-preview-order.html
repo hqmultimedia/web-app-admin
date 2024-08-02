@@ -1,0 +1,62 @@
+<div class="w3-responsive">
+    <table style="overflow:hidden ;" class="w3-table-all table-border round-medium" ng-init="getDataPagination(page_data)">
+
+        <tr class=" tr-top-table-color">
+            <th>#</th>
+
+            <th class="th-left">Tên sản phẩm</th>
+            <th>Ảnh sản phẩm</th>
+            <th>Phân loại</th>
+            <th>Số lượng</th>
+
+            <th class="th-left">Đơn giá</th>
+            <!-- <th>Tổng tiền</th> -->
+            <th>Thao tác</th>
+
+
+        </tr>
+
+
+        <tr dir-paginate="one_data in data_get |orderBy :optionsModelDisplay.hienthi| filter:tukhoa |itemsPerPage:optionsModelQuantity.PageSize" style=" font-size: 15px;">
+            <!-- <td>
+                <div class="form-check" style="padding-bottom: 25px;">
+                    <input class="form-check-input" name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_data)" type="checkbox" value="" id="">
+                </div>
+            </td> -->
+            <td class="td-stt">{{$index +1}}</td>
+            <td class="td-left">
+                <p style="white-space:normal;width: 186px;">{{one_data.product_name}}</p>
+            </td>
+            <td class="flex-align-middle">
+                <div style="width: 50px;height:50px;">
+                    <img class="img-object-fix round-medium" src="{{one_data.product_img}}" alt="">
+                </div>
+            </td>
+            <td>
+                <span>{{one_data.product_type}}</span>
+            </td>
+            <td>{{one_data.quantity}}</td>
+
+            <td class="td-left">
+                <span>{{one_data.price}} đ</span>
+            </td>
+
+
+
+
+            <!-- <td>
+                <span>{{one_data.total}} đ</span>
+            </td> -->
+            <td>
+                <button class="btn card-status-error " style="margin: auto;">
+                    <a href=""><i class="fa-solid fa-trash"></i></a>
+                
+                </button>
+            </td>
+
+
+        </tr>
+
+
+    </table>
+</div>

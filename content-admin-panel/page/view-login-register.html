@@ -1,0 +1,15 @@
+<div ng-controller="LoginRegisterController" class="theme-lr background-login-register container-fluid">
+
+    <div class="row father-box-login-register">
+        <div class=" left-content" ng-include="'content-admin-panel/page-components/login-resgiter/left-content.html'"></div>
+        <!-- 01.Login -->
+        <div class="box-login-register " ng-include="'content-admin-panel/page-components/login-resgiter/login.html'" ng-show="loginReg"></div>
+        <!-- 01.End Login -->
+
+        <!-- 02.Register -->
+        <div class="box-login-register " ng-include="'content-admin-panel/page-components/login-resgiter/register.html'" ng-show="!loginReg"></div>
+        <!-- 02.End Register -->
+    </div>
+
+
+</div>

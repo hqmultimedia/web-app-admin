@@ -1,0 +1,93 @@
+/* 
+ button basic
+ -color
+ -round
+ -border
+  
+*/
+
+button:focus {
+    outline: none !important;
+}
+
+.hq-btn {
+    position: relative;
+    /* border: none !important; */
+    font-weight: 400;
+    padding: 0 10px 0 10px;
+    font-size: 15px;
+    color: #212529;
+    text-align: center;
+    width: auto;
+    overflow: hidden;
+    min-height: 39px;
+    min-width: 102px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.hq-btn:hover {
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.hq-btn.btn-radius {
+    min-width: 102px !important;
+    border-radius: 40px;
+}
+
+.hq-btn.btn-circle {
+    min-width: 40px !important;
+    min-height: 40px !important;
+    border-radius: 50%;
+}
+
+.hq-btn.btn-flat {
+    min-width: 102px !important;
+    min-height: 39px !important;
+}
+
+
+/* items trong button */
+
+.hover-icon-hidden,
+.hover-icon-show,
+.hover-text-hidden,
+.hover-text-show {
+    width: inherit;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+/* vị trí ban đầu */
+
+.hover-icon-hidden,
+.hover-text-hidden {
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hover-icon-show,
+.hover-text-show {
+    transform: translateX(-50%) translateY(170%);
+}
+
+.button-on-menu,
+.button-on-menu-2,
+.button-on-menu-3,
+.button-on-menu-4 {
+    position: fixed;
+    right: 5px;
+    top: 16px;
+    z-index: 9998 !important;
+    padding: 0 10px;
+    border-radius: 4px;
+}

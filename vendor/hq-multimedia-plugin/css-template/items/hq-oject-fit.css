@@ -1,0 +1,21 @@
+@import url(ObjectFit-EffectCss/Box-style-1.css);
+@import url(ObjectFit-EffectCss/translateLeftRight.css);
+
+/* Oject fit */
+
+.box-object-img {
+    max-width: 86%;
+}
+
+.box-object-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+/*01.background object fit */
+
+
+/* 02.Animate object fit*/

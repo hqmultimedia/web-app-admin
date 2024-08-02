@@ -1,0 +1,110 @@
+/*01. ul-center  */
+
+@media (min-width:320px) and (max-width:543px) {
+    /* ẩn 2 icon đầu tiên */
+    .boxMenu-CenterSystem .item-5 .element-1,
+    .boxMenu-CenterSystem .item-5 .element-2 {
+        display: none;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1199px) {}
+
+@media (max-width:1025px) {
+     :root {
+        /* chieu cao ,line-height menu cap 1 ul-center,ul-primary  */
+        --menuHeight: 55px;
+        --liHeight: 55px;
+        /* chieu cao ,line-height menu cap 1 ul-center,ul-primary */
+        --menu-c2-Height: 35px;
+        --li-c2-Height: 35px;
+        /* chieu dai li menu cap 1 ul-center,ul-primary*/
+        --width-li-c1: 100px;
+        /* chieu dai li menu cap 2 ul-center,ul-primary */
+        --width-li-c2: 200px;
+    }
+    .boxMenu-CenterSystem .item-5 .element-3 .top-right,
+    .boxMenu-CenterSystem .item-5 .element-4 .top-right {
+        width: 18px !important;
+        height: 18px !important;
+        font-size: 11px !important;
+        top: 6px !important;
+        left: 8px;
+    }
+}
+
+@media (min-width:1026px) {
+     :root {
+        /* chieu cao ,line-height menu cap 1 ul-center,ul-primary  */
+        --menuHeight: 68px;
+        --liHeight: 68px;
+        /* chieu cao ,line-height menu cap 1 ul-center,ul-primary */
+        --menu-c2-Height: 35px;
+        --li-c2-Height: 35px;
+        /* chieu dai li menu cap 1 ul-center,ul-primary*/
+        --width-li-c1: 100px;
+        /* chieu dai li menu cap 2 ul-center,ul-primary */
+        --width-li-c2: 200px;
+    }
+}
+
+
+/* style 1 ul-center */
+
+.boxMenu-CenterSystem {
+    position: relative;
+    z-index: 1 !important;
+}
+
+.box-left-menu-center,
+.box-center-menu-center,
+.box-right-menu-center {
+    line-height: var(--menuHeight);
+}
+
+.boxMenu-CenterSystem .item-5 .element-3 .top-right,
+.boxMenu-CenterSystem .item-5 .element-4 .top-right {
+    width: 20px;
+    height: 20px;
+    font-size: 11px !important;
+    top: 10px;
+    left: 7px;
+}
+
+.ul-center {
+    list-style: none !important;
+    position: relative;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+    width: 100% !important;
+}
+
+.ul-center>a,
+.ul-center>li {
+    width: var(--width-li-c1);
+    text-align: center;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.dropdown-menu-center {
+    position: absolute;
+    visibility: hidden;
+    display: inline;
+    overflow: auto;
+    width: 92vmax;
+    z-index: -1 !important;
+}
+
+.dropdown-menu-center ul>a>li {
+    font-size: 14px;
+    height: var(--menu-c2-Height) !important;
+    line-height: var(--li-c2-Height) !important;
+    border-bottom: 1px solid #ccc;
+}

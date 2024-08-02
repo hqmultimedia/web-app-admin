@@ -1,0 +1,136 @@
+/* Copy bên file menu medium */
+
+:root {
+    --height-link: 39px;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .modal-content {
+        width: 86% !important;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    .modal-content {
+        width: 68% !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .modal-content {
+        width: 50% !important;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {}
+
+@media (max-width:1025px) {
+    .big-title,
+    .small-title,
+    .link a {
+        height: 50px !important;
+        line-height: 50px !important;
+    }
+}
+
+.modal {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.modal-content {
+    margin: auto;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    height: auto;
+    width: 300px;
+    overflow: auto;
+    margin: 0px;
+    border-radius: 0px !important;
+}
+
+.big-title::after,
+.big-title::before,
+.small-title::after,
+.small-title::before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background-color: var(--color-60);
+    transition: 0.3s;
+}
+
+.big-title::before,
+.small-title::before {
+    transform: rotate(90deg);
+}
+
+.button-close-menu {
+    height: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 100;
+    color: #ffffff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: var(--height-link) !important;
+    width: var(--height-link) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.big-title {
+    position: relative;
+    cursor: pointer;
+    /* padding: 10px; */
+    display: block;
+    padding-left: 10px;
+    height: var(--height-link) !important;
+    line-height: var(--height-link) !important;
+}
+
+.small-title {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding-left: 20px;
+    height: var(--height-link) !important;
+    line-height: var(--height-link) !important;
+}
+
+span.big-title.icon-down::before,
+span.big-title.icon-down::after,
+span.small-title.icon-down::after,
+span.small-title.icon-down::before {
+    transform: rotate(180deg);
+}
+
+.title-menu {
+    text-align: center;
+    font-weight: 500px;
+    font-size: 16px;
+    line-height: var(--height-link) !important;
+}
+
+.link a {
+    padding-left: 40px;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    height: var(--height-link) !important;
+    line-height: var(--height-link) !important;
+}

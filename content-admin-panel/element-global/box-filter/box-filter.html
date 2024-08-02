@@ -1,0 +1,133 @@
+<div class="row">
+    <div class="col-12 card-basic w3-animate-top">
+        <!-- box add -->
+        <div class="box-action">
+
+
+            <!-- TRANG ORDER -->
+            <form ng-if="page_data == 'order';" novalidate>
+                <div class="flex flex-wrap">
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="all" checked>
+                        <label>Hiển thị toàn bộ</label>
+
+                    </div>
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="no_processed">
+                        <label>Đơn hàng chưa xử lý</label>
+
+                    </div>
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="processed">
+                        <label>Đơn hàng đã xử lý</label>
+
+                    </div>
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="transport">
+                        <label>Đơn hàng đang giao</label>
+
+                    </div>
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="complete">
+                        <label>Đơn hàng đã hoàn thành</label>
+
+                    </div>
+                </div>
+
+
+
+                <!-- Phần button -->
+                <div class="box-button margin-t-15">
+                    <button type="button" ng-click="getDataPagination(page_data,page_function,value_option)" class="btn btn-primary card-inline-highlight-1  text-color-support-1"><i class="fa-light fa-arrows-rotate"></i> Cập nhật</button>
+                    <button onclick="document.getElementById('filter-order').style.display='none'" type="button" class="btn btn-primary card-inline-normal text-color-support-1"><i class="fa-regular fa-xmark"></i> Close</button>
+
+
+                </div>
+                <!-- End button -->
+
+
+
+
+            </form>
+            <!-- END TRANG ORDER -->
+            <!-- TRANG COMMENT -->
+            <form ng-if="page_data == 'comment';" novalidate>
+                <div class="flex flex-wrap">
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="all" checked>
+                        <label>Hiển thị toàn bộ</label>
+
+                    </div>
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="no_processed">
+                        <label>Bình luận được hiển thị</label>
+
+                    </div>
+
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="transport">
+                        <label>Bình luận ẩn</label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Phần button -->
+                <div class="box-button margin-t-15">
+                    <button type="button" ng-click="getDataPagination(page_data,page_function,value_option)" class="btn btn-primary card-inline-highlight-1  text-color-support-1"><i class="fa-light fa-arrows-rotate"></i> Cập nhật</button>
+                    <button onclick="document.getElementById('filter-order').style.display='none'" type="button" class="btn btn-primary card-inline-normal text-color-support-1"><i class="fa-regular fa-xmark"></i> Close</button>
+
+
+                </div>
+                <!-- End button -->
+
+
+
+
+            </form>
+            <!-- END TRANG TRANG COMMENT -->
+            <!-- TRANG COMMENT -->
+            <form ng-if="page_data == 'assess';" novalidate>
+                <div class="flex flex-wrap">
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="all" checked>
+                        <label>Hiển thị toàn bộ</label>
+
+                    </div>
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="no_processed">
+                        <label>Đánh giá được hiển thị</label>
+
+                    </div>
+
+                    <div class="margin-r-15" style="min-width: 199px;">
+                        <input class="w3-radio" type="radio" ng-model="value_option" value="transport">
+                        <label>Đánh giá chưa duyệt</label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Phần button -->
+                <div class="box-button margin-t-15">
+                    <button type="button" ng-click="getDataPagination(page_data,page_function,value_option)" class="btn btn-primary card-inline-highlight-1  text-color-support-1"><i class="fa-light fa-arrows-rotate"></i> Cập nhật</button>
+                    <button onclick="document.getElementById('filter-order').style.display='none'" type="button" class="btn btn-primary card-inline-normal text-color-support-1"><i class="fa-regular fa-xmark"></i> Close</button>
+
+
+                </div>
+                <!-- End button -->
+
+
+
+
+            </form>
+            <!-- END TRANG TRANG COMMENT -->
+        </div>
+        <!-- end view add menu -->
+        <!-- end box add -->
+    </div>
+</div>

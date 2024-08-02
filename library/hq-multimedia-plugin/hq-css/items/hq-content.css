@@ -1,0 +1,126 @@
+        @media (min-width:320px) and (max-width:543px) {
+            .icon-text {
+                text-align: center;
+            }
+            .icon-text .icon {
+                margin-bottom: 15px;
+            }
+            .baner-1-left {
+                border-bottom: 2px solid #ccc;
+                padding-top: 15px;
+            }
+        }
+        
+        @media (min-width:544px) and (max-width:767px) {
+            .baner-1-left {
+                border-bottom: 5px solid #ccc;
+                padding-top: 15px;
+                width: 100% !important;
+            }
+            .icon-text {
+                text-align: center;
+            }
+            .icon-text .icon {
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (min-width:768px) and (max-width:991px) {
+            .icon-text {
+                display: flex;
+            }
+            .icon-text .icon {
+                display: flex;
+                align-items: center;
+                padding-right: 15px;
+                padding-bottom: 8px;
+            }
+            .baner-1-left {
+                border-bottom: 2px solid #ccc;
+                padding-top: 15px;
+            }
+        }
+        
+        @media (min-width:992px) and (max-width:1360px) {
+            .icon-text {
+                display: flex;
+            }
+            .icon-text .icon {
+                display: flex;
+                align-items: center;
+                padding-right: 15px;
+                padding-bottom: 8px;
+            }
+        }
+        
+        @media (min-width:1361px) and (max-width:1500px) {}
+        
+        @media (min-width:1501px) and (max-width:1920px) {}
+        /* /* setting sự xuất hiện của menu */
+        
+        @media (max-width:1025px) {}
+        
+        @media (min-width:1026px) {}
+        /* Highlight */
+        
+        .highlight-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 50%;
+            font-weight: 500;
+        }
+        
+        .highlight-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 65px;
+            height: 35px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .highlight-vertical {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 35px;
+            height: 65px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .highlight-circle.sale,
+        .highlight-horizontal.sale,
+        .highlight-vertical.sale {
+            background-color: brown !important;
+            color: white !important;
+        }
+        
+        .highlight-circle.gift,
+        .highlight-vertical.gift,
+        .highlight-horizontal.gift {
+            background-color: #FF91AF !important;
+            color: white !important;
+        }
+        
+        .text-vertical {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+        }
+        
+        .text-limit {
+            width: 386px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }

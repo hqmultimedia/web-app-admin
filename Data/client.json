@@ -1,0 +1,121 @@
+[{
+        "client_id": "01",
+        "client_name": "Quỳnh Diệp",
+        "client_level": "2",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/01.jpg",
+        "client_date": "August 15, 2019",
+        "client_purchase": "15.579.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Nhật Hạ",
+        "client_level": "2",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/02.jpg",
+        "client_date": "August 05, 2018",
+        "client_purchase": "18.689.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Tuệ Lâm",
+        "client_level": "2",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/03.jpg",
+        "client_date": "August 20, 2019",
+        "client_purchase": "14.179.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Nhã Đoan",
+        "client_level": "2",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/04.jpg",
+        "client_date": "August 10, 2020",
+        "client_purchase": "17.579.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Giáng My",
+        "client_level": "2",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/05.jpg",
+        "client_date": "August 25, 2021",
+        "client_purchase": "19.789.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Khả Hân",
+        "client_level": "1",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/06.jpg",
+        "client_date": "August 25, 2018",
+        "client_purchase": "14.019.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Thiện Mỹ",
+        "client_level": "3",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/07.jpg",
+        "client_date": "August 01, 2017",
+        "client_purchase": "25.779.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Thu Nguyệt",
+        "client_level": "1",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/08.jpg",
+        "client_date": "August 26, 2019",
+        "client_purchase": "8.579.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Tường Khuê",
+        "client_level": "2",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/09.jpg",
+        "client_date": "August 15, 2016",
+        "client_purchase": "18.658.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    },
+    {
+        "client_id": "01",
+        "client_name": "Cẩm Tú",
+        "client_level": "3",
+        "client_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/10.jpg",
+        "client_date": "August 10, 2019",
+        "client_purchase": "25.379.000",
+        "client_status": "1",
+        "client_email": "thunguyet@gmail.com"
+
+
+    }
+]

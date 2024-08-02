@@ -1,0 +1,58 @@
+[{
+        "assess_location": "Mẹo phối quần ống rộng nữ thanh lịch và hiện đại",
+        "assess_content": "5",
+        "assess_date": "August 25, 2024",
+        "assess_user": "Quỳnh Diệp",
+
+        "avatar_user": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/01.jpg",
+        "assess_status": "0"
+
+
+    },
+    {
+        "assess_location": "Áo phông AP017",
+        "assess_content": "5",
+        "assess_date": "August 25, 2024",
+        "assess_user": "Nhã Đoan",
+
+        "avatar_user": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/02.jpg",
+        "assess_status": "0"
+
+
+    },
+    {
+        "assess_location": "Top đầm hoa cực xinh cho chị em tự tin dạo phố",
+        "assess_content": "5",
+        "assess_date": "August 25, 2024",
+        "assess_user": "Tuệ Lâm",
+
+        "avatar_user": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/03.jpg",
+        "assess_status": "1"
+
+
+    },
+    {
+        "assess_location": "Những mẫu đầm maxi nàng nhất định phải có trong hè này",
+        "assess_content": "5",
+        "assess_date": "August 29, 2024",
+        "assess_user": "Thu Nguyệt",
+
+        "avatar_user": "https://hqmultimedia.github.io/project-admin-panel/SourceData/client/04.jpg",
+        "assess_status": "1"
+
+
+    },
+    {
+        "assess_location": "Áo sơ mi nữ và biến hoá đa dạng phong cách",
+        "assess_content": "5",
+        "assess_date": "August 24, 2024",
+        "assess_user": "Nhật Hạ",
+
+        "avatar_user": "http://localhost/FashionTemplateAdmin/SourceData/client/05.jpg",
+        "assess_status": "0"
+
+
+    }
+
+
+]

@@ -1,0 +1,230 @@
+/* phần nền  */
+
+.theme-03.background-login-register {
+    display: flex !important;
+    justify-content: left !important;
+    align-items: center !important;
+    background-position: 0px -92px;
+    height: 100vh;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.theme-03.background-login-register::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #cdcdcd;
+    position: absolute;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+
+/*  */
+
+.theme-03 .father-box-login-register {
+    width: 79%;
+    height: 500px;
+    margin: auto;
+}
+
+
+/* phần box chứa login */
+
+
+/* setting độ rộng  */
+
+.theme-03 .box-login-register {
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+
+/* phần nền của box chứa */
+
+.theme-03 .box-login-register::before {
+    content: '';
+    width: 100% !important;
+    height: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    /* box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25); */
+    opacity: 1;
+    z-index: 0;
+    /* border-radius: 15px; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* phần text-left */
+
+.theme-03 .element-left {
+    z-index: 99 !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.theme-03 .element-left img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+}
+
+.theme-03 .element-left .box-text {
+    position: absolute;
+    bottom: 31px;
+    left: 30px;
+    width: 286px;
+}
+
+.theme-03 .element-left .box-text h3 {
+    color: white;
+}
+
+.theme-03 .element-left .box-text p {
+    color: #e9e9e9;
+    font-weight: 500;
+}
+
+.theme-03 .element-left .box-icon {
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 75%;
+    background-color: #2e2d2b;
+    line-height: 50px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+.theme-03 .element-left .box-icon>a>i {
+    padding: 0 5px;
+    font-size: 19px;
+}
+
+
+/* phần image của box chứa */
+
+.theme-03 .img-box-login-register {
+    /* border-top-left-radius: 15px; */
+    /* border-top-right-radius: 15px; */
+    /* height bằng 0 là ko xuất hiện image */
+    height: 268px;
+}
+
+
+/* phần title */
+
+.theme-03 .login-register-title {
+    margin: 15px 0 19px 0;
+    text-transform: uppercase;
+    /* text-align: center; */
+    color: #0C2E33;
+}
+
+
+/* phần text input */
+
+
+/* phần icon */
+
+.theme-03 .icon-invalid,
+.theme-03 .icon-valid {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 50px;
+    background-color: #040404;
+    color: brown;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.theme-03 .icon-valid {
+    color: #5f5fd9;
+}
+
+.theme-03 .notification-invalid {
+    position: absolute;
+    bottom: -25px;
+    color: white !important;
+}
+
+
+/* phần button */
+
+.theme-03 .btn-login,
+.theme-03 .btn-register {
+    font-size: 13px !important;
+    background: #0e8559 !important;
+    /* background: linear-gradient(42deg, rgba(34, 193, 195, 1) 0%, rgba(20, 97, 98, 1) 100%) !important; */
+    border-radius: 5px;
+    border-color: #0e8559;
+    color: white;
+    transition: 0.4s;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.theme-03 .btn-login:hover {
+    background-color: #1e9469 !important;
+    color: white;
+}
+
+.theme-03 .btn-register {
+    background-color: #5f5fd9 !important;
+    border-color: #5f5fd9;
+}
+
+.theme-03 .btn-register:hover {
+    background-color: #7171dd !important;
+    border-color: #7171dd;
+    color: white;
+}
+
+.theme-03 input:focus {
+    box-shadow: 0 0 0 0 transparent !important;
+    border-bottom: 1px solid gray !important;
+    background-color: transparent !important;
+    /* border-color: transparent !important; */
+    font-size: 14px !important;
+}
+
+.theme-03 input {
+    padding: 0 !important;
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid gray !important;
+}
+
+
+/* @media (min-width:320px) and (max-width:543px) {}
+
+@media (min-width:544px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1360px) {}
+
+@media (min-width:1361px) and (max-width:1500px) {
+    
+}
+
+ @media (min-width:1501px) and (max-width:1920px) {} */

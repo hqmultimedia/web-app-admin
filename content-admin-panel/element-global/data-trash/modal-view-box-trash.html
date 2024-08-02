@@ -1,0 +1,264 @@
+<style>
+    div#id02:before {
+        content: '';
+        position: fixed;
+        background-color: var(--color--main--hsl--3);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+<!-- <div onclick="document.getElementById('id02').style.display='block'" class=" color-basic-light-yellow margin-r-5 cursor text-center padding-tb-5 round-medium margin-t-5 border-none" style="width:139px;"><i class="fa-regular fa-user-plus"></i> Add new Posts</div> -->
+<!-- content modal -->
+
+<div id="id02" style="z-index: 9999;" class="w3-modal edit-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+
+        <div class="w3-container margin-b-30 ">
+            <h5 class="margin-t-15">Table Posts on trash</h5>
+            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button edit-button card-basic w3-display-topright edit-top-right"><i class="fa-thin fa-xmark" style="font-size: 17px;"></i></span>
+            <p class="margin-b-15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem saepe a excepturi assumenda, nihil obcaecati doloremque odio nulla aperiam quaerat maiores recusandae voluptate eligendi soluta, perspiciatis quisquam expedita doloribus vero!</p>
+
+            <!-- Khối xử lý dữ liệu-->
+            <div class="margin-tb-15" ng-controller="checkBoxController">
+                <form novalidate name="form_option" class="flex align-items-center">
+                    <div class="form-check margin-r-15">
+                        <input class="form-check-input" type="checkbox" value="" ng-model="selectAllItemModel_2" ng-click="checkAllItems_2()" name="check_all" id="id_check_all_2">
+                        <label class="form-check-label" for="flexCheckDefault">
+                              Chọn tất cả <span>({{itemSelectedModel_2.length}} item)</span>
+                        </label>
+
+                    </div>
+                    <div class="form-check margin-r-15" style="padding-left: 0;">
+
+                        <label class="form-check-label" for="flexCheckDefault">
+                              Items selected <span>({{itemSelectedModel_2.length}} item)</span>
+                            </label>
+
+                    </div>
+
+
+                    <select ng-model="optionCheckBox" name="option_act" class="text-left margin-r-15 form-select form-control form-sm" style="width: auto; font-size: 14px;" required>
+                            <option value="" disabled selected>-- Hành động --</option>
+        
+                            <option value="delete">Xoá vĩnh viễn</option>
+                            <option value="hidden">Phục hồi dữ liệu</option>
+                            
+                            
+                        </select>
+
+                    <button style="width: auto;font-size: 14px;" ng-disabled="form_option.$invalid" ng-model="option_function" ng-click="option_act_2(optionCheckBox,page_data)" class="btn btn-primary btn-sm"><span>Thực hiện</span></button>
+
+                </form>
+            </div>
+            <!-- End khối xử lý dữ liệu -->
+
+            <!-- Thông báo ko có dữ liệu -->
+            <div ng-if="data_get_box_trash == '';" ng-include="'content-admin-panel/element-global/view-notification/notification_nodata.html'" scope="" onload=""></div>
+            <!-- End thông báo ko có dữ liệu -->
+            <!-- Khối hiển thị dữ liệu data đã xoá TRANG POSTS -->
+            <div ng-if="page_data == 'posts';" class="table-responsive margin-b-30">
+                <table class="w3-table-all table-border" ng-if="data_get_box_trash != '';" ng-controller="checkBoxController">
+                    <tr class="text-center tr-top-table-color">
+                        <th class="text-center " colspan="2">#</th>
+                        <th>ID</th>
+                        <th class="th-left">Bài viết</th>
+                        <th class="th-left">Ngày xoá</th>
+                        <th>Tài khoản xoá</th>
+
+                    </tr>
+                    <tr class="text-center" ng-repeat="one_data in data_get_box_trash " style=" font-size: 15px;height: 45px;line-height: 45px;">
+
+
+                        <td>
+                            <div class="form-check ">
+                                <input style="margin-top: -6px !important;" class="form-check-input" name="items_name_2[]" ng-model="itemSelectedModel_2" ng-click="toggleSelectionItem_2(one_data)" type="checkbox" value="" id="" value="{{one_data.data_id}}">
+                            </div>
+                        </td>
+                        <td class="">{{$index +1}}</td>
+                        <td>{{one_data.data_id}}</td>
+                        <!-- name -->
+                        <td class=" td-left" ng-init="one_data.hienra=true" ng-show="one_data.hienra">
+                            <a class="hover-text-color-30" href="preview_posts/{{one_data.data_id}}"> <span>{{one_data.data_name}}</span></a>
+
+                        </td>
+                        <!-- end name -->
+
+                        <td class="td-left">
+                            {{one_data.data_date}}
+                        </td>
+                        <td>
+                            {{one_data.user}}
+                        </td>
+
+
+
+
+                        <!--  -->
+                    </tr>
+                </table>
+            </div>
+            <!-- End khối hiển thị dữ liệu data đã xoá TRANG POSTS -->
+            <!-- Khối hiển thị dữ liệu data đã xoá TRANG PRODUCT -->
+            <div ng-if="page_data == 'product';" class="table-responsive margin-b-30">
+                <table class="w3-table-all table-border" ng-if="data_get_box_trash != '';" ng-controller="checkBoxController">
+                    <tr class="tr-top-table-color">
+                        <th class="text-center" colspan="2">#</th>
+                        <th class="th-left">ID</th>
+                        <th class="th-left">Product name</th>
+                        <th>Product img</th>
+                        <th class="th-left">Date delete</th>
+                        <th class="th-left">User Delete</th>
+
+                    </tr>
+                    <tr ng-repeat="one_data in data_get_box_trash " style=" font-size: 15px;height: 45px;line-height: 45px;">
+
+
+                        <td>
+                            <div class="form-check ">
+                                <input style="margin-top: -6px !important;" class="form-check-input" name="items_name_2[]" ng-model="itemSelectedModel_2" ng-click="toggleSelectionItem_2(one_data)" type="checkbox" value="" id="" value="{{one_data.data_id}}">
+                            </div>
+                        </td>
+                        <td class="">{{$index +1}}</td>
+                        <td><span>{{one_data.product_id}}</span></td>
+                        <td class="td-left">
+                            <span>{{one_data.product_name}}</span>
+
+                        </td>
+
+                        <td>
+                            <div style="width: 55px;height:55px;">
+                                <img class="img-object-fix round-medium" src="{{one_data.product_img_thumb}}" alt="">
+                            </div>
+
+                        </td>
+
+                        <td class="td-left">
+                            <span>{{one_data.product_date_delete}}</span>
+                        </td>
+
+                        <td class="td-left">{{one_data.product_user_delete}}</td>
+
+
+                        <!--  -->
+                    </tr>
+                </table>
+            </div>
+            <!-- End khối hiển thị dữ liệu data đã xoá TRANG PRODUCT -->
+
+            <!-- Khối hiển thị dữ liệu data đã xoá TRANG BANER -->
+            <div ng-if="page_data == 'baner';" class="table-responsive margin-b-30">
+                <table class="w3-table-all table-border" ng-if="data_get_box_trash != '';" ng-controller="checkBoxController">
+
+                    <tr class=" tr-top-table-color">
+                        <th colspan="1">#</th>
+
+                        <!-- <th>ID</th> -->
+                        <th>Baner</th>
+
+                        <th class="th-left">Vị trí</th>
+                        <th class="th-left">Ngày xoá</th>
+                        <th class="th-left">Người xoá</th>
+
+
+                    </tr>
+
+                    <tr ng-repeat="one_data in data_get_box_trash " style=" font-size: 15px;height: 45px;line-height: 45px;">
+
+
+                        <td>
+                            <div class="form-check ">
+                                <input style="margin-top: -6px !important;" class="form-check-input" name="items_name_2[]" ng-model="itemSelectedModel_2" ng-click="toggleSelectionItem_2(one_data)" type="checkbox" value="" id="" value="{{one_data.data_id}}">
+                            </div>
+                        </td>
+                        <!-- <td>
+                <div class="form-check" style="padding-bottom: 25px;">
+                    <input class="form-check-input" name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_data)" type="checkbox" value="" id="">
+                </div>
+            </td> -->
+                        <td class="flex-align-middle">
+                            <div style="width: 91px;height:119px;">
+                                <img class="img-object-fix round-medium" src="{{one_data.baner_img}}" alt="">
+                            </div>
+                        </td>
+
+
+
+
+                        </td>
+
+                        <td class="td-left">
+                            <div style="white-space: normal; width: 139px;">
+                                <p>-Trang chủ</p>
+                                <p>-Trang bài viết </p>
+                            </div>
+
+                        </td>
+
+
+                        <td class="td-left">
+                            <span>{{one_data.date_delete}}</span>
+                        </td>
+
+                        <td class="td-left">{{one_data.user_delete}}</td>
+
+
+                        <!--  -->
+                    </tr>
+                </table>
+            </div>
+            <!-- End khối hiển thị dữ liệu data đã xoá TRANG BANER -->
+            <!-- Khối hiển thị dữ liệu data đã xoá TRANG category -->
+            <div ng-if="page_data == 'category';" class="table-responsive margin-b-30">
+                <table class="w3-table-all table-border" ng-if="data_get_box_trash != '';" ng-controller="checkBoxController">
+                    <tr class="tr-top-table-color">
+                        <th class="text-center" colspan="2">#</th>
+                        <th class="th-left">ID</th>
+                        <th class="th-left"> Danh mục</th>
+                        <th>Ảnh</th>
+                        <th class="th-left">Ngày xoá</th>
+                        <th class="th-left">Tài khoản xoá</th>
+
+                    </tr>
+                    <tr ng-repeat="one_data in data_get_box_trash " style=" font-size: 15px;height: 45px;line-height: 45px;">
+
+
+                        <td>
+                            <div class="form-check ">
+                                <input style="margin-top: -6px !important;" class="form-check-input" name="items_name_2[]" ng-model="itemSelectedModel_2" ng-click="toggleSelectionItem_2(one_data)" type="checkbox" value="" id="" value="{{one_data.data_id}}">
+                            </div>
+                        </td>
+                        <td class="">{{$index +1}}</td>
+                        <td><span>{{one_data.category_id}}</span></td>
+                        <td class="td-left">
+                            <span>{{one_data.category_name}}</span>
+
+                        </td>
+
+                        <td>
+                            <div style="width: 55px;height:55px;">
+                                <img class="img-object-fix round-medium" src="{{one_data.category_img_thumb}}" alt="">
+                            </div>
+
+                        </td>
+
+                        <td class="td-left">
+                            <span>{{one_data.category_date_delete}}</span>
+                        </td>
+
+                        <td class="td-left">{{one_data.category_user_delete}}</td>
+
+
+                        <!--  -->
+                    </tr>
+                </table>
+            </div>
+            <!-- End khối hiển thị dữ liệu data đã xoá TRANG category -->
+
+        </div>
+
+
+
+    </div>
+</div>

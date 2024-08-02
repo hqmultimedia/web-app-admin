@@ -1,0 +1,534 @@
+/* ------------------------------------------------------------------------------I/ layout horizontal*/
+
+
+/* menu */
+
+
+/* màu nền menu */
+
+.horizontal-theme.theme-light .box-menu {
+    background-color: var(--color--highlight) !important;
+    border-color: var(--color--main--hsl--2);
+}
+
+
+/* màu nền input search */
+
+.horizontal-theme.theme-light .box-menu .box-search-menu-bar .form-control.form-search {
+    background-color: var(--color--second--hsl--3);
+}
+
+
+/* màu chữ planceholder input search */
+
+.horizontal-theme.theme-light .box-menu .box-search-menu-bar .form-control.form-search::-webkit-input-placeholder {
+    color: var(--color--main);
+}
+
+
+/* màu chữ title menu,icon menu ,chữ input search màu button search */
+
+.horizontal-theme.theme-light .box-menu .box-title-page,
+.horizontal-theme.theme-light .box-menu .box-control .box-icon-menu .icon-menu,
+.horizontal-theme.theme-light .box-search-menu-bar input,
+.horizontal-theme.theme-light .box-search-menu-bar .btn-search {
+    color: var( --color--highlight--hsl);
+}
+
+
+/* màu chữ user */
+
+.horizontal-theme.theme-light .box-menu .box-icon-menu .icon-menu .name-user {
+    color: var(--color--support--2--hsl);
+    font-weight: 600;
+    background-color: var(--color--support--2);
+}
+
+
+/* màu nền avatar */
+
+.horizontal-theme.theme-light .icon-menu .avatar::before {
+    content: '';
+    background-color: var(--color--support--1) !important;
+}
+
+.horizontal-theme.theme-light .icon-menu .notification-bell {
+    background-color: var(--color--support--3);
+}
+
+
+/* sidebar */
+
+
+/* màu nền sidebar*/
+
+.horizontal-theme.theme-light .box-sidebar {
+    background-color: var(--color--second) !important;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+}
+
+
+/* setting box-dropdown */
+
+.horizontal-theme.theme-light .scroll_content {
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    border-radius: 0 0 0.25rem 0.25rem !important;
+    overflow: hidden;
+    background-color: var(--color--second--hsl);
+    color: var(--color--second);
+}
+
+
+/* màu nền sidebar cấp 1 */
+
+.horizontal-theme.theme-light .scroll_title {
+    /* background-color: transparent; */
+    background-color: var(--color--second);
+    color: var( --color--second--hsl);
+    /* hsl(190deg 84% 17% / 80%) */
+    font-weight: 600;
+}
+
+
+/* màu chữ sidebar cấp 1 */
+
+
+/* notification sidebar */
+
+.horizontal-theme.theme-light .sidebar-link .notification {
+    color: var(--color--main);
+    background-color: var(--color--second--hsl);
+}
+
+.horizontal-theme.theme-light .scroll_title a i {
+    /* color: var(--color--support--1); */
+    color: var(--color--second--hsl--4);
+}
+
+
+/* màu nền sidebar cấp khi selected */
+
+.horizontal-theme.theme-light .scroll_title.selected {
+    background-color: transparent !important;
+}
+
+
+/* màu nền và chữ sidbar cấp 1 khi selected */
+
+.horizontal-theme.theme-light .hoverColor>a {
+    color: #818986;
+    background-color: transparent;
+}
+
+
+/* icon dropdown sidebar */
+
+.horizontal-theme.theme-light .box-sidebar .sidebar-link .icon-dropdown {
+    color: var( --color--highlight--hsl);
+}
+
+
+/* màu nền sidebar cấp 2 */
+
+.horizontal-theme.theme-light li.sidebar-link .scroll_content .link-scroll {
+    /* background-color: var(--color--second);
+    color: var(--color--second--hsl); */
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+.horizontal-theme.theme-light li.sidebar-link .scroll_content.drop-center .link-scroll {
+    background-color: transparent;
+    /* color: var(--color--second); */
+    border-top: none;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+
+/* màu nền hover sidebar cấp 2 */
+
+.horizontal-theme.theme-light li.sidebar-link .scroll_content .link-scroll:hover {
+    background-color: var(--color--second);
+    color: var(--color--second--hsl);
+}
+
+.horizontal-theme.theme-light li.sidebar-link .scroll_content.drop-center .link-scroll:hover {
+    background-color: transparent;
+    color: var(--color--second);
+    transform: translateY(-5px);
+}
+
+
+/* box-information */
+
+.horizontal-theme.theme-light .box-menu .box-control .box-information {
+    /* background-color: var(--color--highlight) !important; */
+    background: linear-gradient(159deg, var(--color--main) 0%, var(--color--highlight) 100%);
+    box-shadow: -1px 0px 9px 0px var(--color--highlight);
+    /* box-shadow: -3px 2px 9px 0px #0000006e; */
+}
+
+.horizontal-theme.theme-light .box-menu .box-control .box-information .logout {
+    background-color: var(--color--highlight--hsl--2);
+}
+
+.horizontal-theme.theme-light .box-menu .box-control .box-information .logout:hover {
+    background-color: var(--color--highlight--hsl--3);
+}
+
+
+/* content view */
+
+
+/* màu nền box view*/
+
+.horizontal-theme.theme-light .box-content-footer .view-include {
+    background-color: var(--color--main) !important;
+}
+
+
+/* footer  */
+
+
+/* màu nền footer */
+
+.horizontal-theme.theme-light .box-content-footer .sidebar-footer-setting {
+    background-color: var(--color--second) !important;
+    color: var(--color--second--hsl--2);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+    font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------------------------I/Layout basic active */
+
+
+/* menu */
+
+
+/* màu nền menu */
+
+.basic-theme.theme-light .box-menu {
+    background-color: var(--color--second--3) !important;
+    border-color: var(--color--main--hsl--2);
+}
+
+
+/* box-search */
+
+
+/* màu nền box search */
+
+.basic-theme.theme-light .box-menu .box-search-menu-bar .form-control.form-search {
+    /* background-color: var(--color--second); */
+    background-color: var(--color--second--hsl--3);
+    color: var(--color--second--2);
+}
+
+
+/* màu chữ title menu,icon menu ,chữ input search màu button search */
+
+.basic-theme.theme-light .box-menu .box-search-menu-bar .btn-search i,
+.basic-theme.theme-light .box-menu .box-title-page,
+.basic-theme.theme-light .box-icon-menu .icon-menu {
+    color: var(--color--second--hsl--5);
+    font-weight: 500;
+}
+
+
+/* màu nền avatar */
+
+.basic-theme.theme-light .icon-menu .avatar::before {
+    content: '';
+    background-color: var(--color--support--1) !important;
+}
+
+
+/* màu chữ user */
+
+
+/* .horizontal-theme.theme-light .box-menu .box-icon-menu .icon-menu .name-user  */
+
+.basic-theme.theme-light .box-menu .box-icon-menu .icon-menu .name-user {
+    color: var(--color--support--2--hsl);
+    font-weight: 600;
+    background-color: var(--color--support--2);
+}
+
+.basic-theme.theme-light .icon-menu .notification-bell {
+    background-color: var(--color--support--3);
+}
+
+
+/* box-information */
+
+.basic-theme.theme-light .box-menu .box-control .box-information {
+    background-color: var(--color--second--2) !important;
+    /* box-shadow: -3px 2px 9px 0px #0000006e; */
+}
+
+.basic-theme.theme-light .box-menu .box-control .box-information .logout {
+    background-color: var(--color--second--2--hsl--5);
+    color: var(--color--second--2--hsl--2);
+}
+
+.basic-theme.theme-light .box-menu .box-control .box-information .logout:hover {
+    background-color: var(--color--second--2--hsl--3);
+}
+
+
+/* sidebar */
+
+
+/* màu nền sidebar*/
+
+.basic-theme.theme-light .box-sidebar {
+    background-color: var(--color--second--2) !important;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+}
+
+.basic-theme.theme-light .box-sidebar.elastic ul:last-child li.sidebar-link .box_scroll::after {
+    content: '';
+    background-color: var(--color--second--2);
+}
+
+
+/* setting box-dropdown */
+
+
+/* 
+.basic-theme.theme-light .scroll_content {
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+} */
+
+
+/* màu chữ,nền sidebar cấp 1 */
+
+.basic-theme .theme-light .box-sidebar.elastic .title-link {
+    color: var(--color--second);
+}
+
+.basic-theme.theme-light .scroll_title {
+    background-color: var(--color--second--2);
+    color: var( --color--second--2--hsl--2);
+    font-weight: 500;
+}
+
+
+/* notification sidebar */
+
+.basic-theme.theme-light .sidebar-link .notification {
+    color: var(--color--second--2--hsl--2);
+    background-color: var(--color--support--1);
+    background-color: var(--color--support--3);
+}
+
+
+/* màu nền sidebar cấp khi selected */
+
+.basic-theme.theme-light .scroll_title.selected {
+    /* background-color: transparent; */
+    background-color: var(--color--second--2--hsl) !important;
+}
+
+
+/* màu nền và chữ sidbar cấp 1 khi selected */
+
+.basic-theme.theme-light .hoverColor>a {
+    background-color: transparent;
+}
+
+
+/* icon dropdown sidebar */
+
+.basic-theme.theme-light .box-sidebar .sidebar-link .icon-dropdown {
+    color: var( --color--highlight--hsl--2);
+}
+
+
+/* màu nền sidebar cấp 2 : layout basic */
+
+.basic-theme.theme-light li.sidebar-link .scroll_content .link-scroll {
+    /* background-color: var(--color--second--2--hsl) !important; */
+    color: var(--color--second--2--hsl--2) !important;
+    font-weight: 500;
+    transition: 0.4s;
+    border-color: var(--color--second--2--hsl);
+}
+
+.basic-theme.theme-light li.sidebar-link .scroll_content .link-scroll:nth-child(1) {
+    border-top: none !important;
+}
+
+
+/* màu nền hover sidebar cấp 2 : layout basic*/
+
+.basic-theme.theme-light li.sidebar-link .scroll_content .link-scroll:hover {
+    background-color: var(--color--second--2--hsl--3) !important;
+}
+
+
+/* màu chữ title danh mục sidebar cấp 1 */
+
+.basic-theme.theme-light .box-sidebar .sidebar-category-title {
+    color: var(--color--support--2--hsl--2);
+}
+
+
+/* setting srcollbar */
+
+
+/* màu thanh cuộn bên góc phải */
+
+.basic-theme.theme-light .box-sidebar::-webkit-scrollbar-corner {
+    background-color: var(--color--second--2) !important;
+    height: 0 !important;
+}
+
+
+/* content view */
+
+.basic-theme.theme-light .box-content-footer .view-include {
+    background-color: var(--color--main) !important;
+}
+
+
+/* footer  */
+
+.basic-theme.theme-light .box-content-footer .sidebar-footer-setting {
+    background-color: var(--color--second--3) !important;
+    color: var(--color--second--hsl--5);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+    font-weight: 500;
+}
+
+
+/* -----------------------------------------------------------------------------------------layout basic elastic */
+
+.theme-light .elastic.box-content-footer {
+    background-color: var(--color--second--2);
+}
+
+
+/* màu nền sidebar cấp 1 khi selected */
+
+.elastic.theme-light .scroll_title.selected {
+    background-color: var(--color--second--2) !important;
+}
+
+
+/* màu nền sidebar cấp 2 : layout elastic */
+
+.basic-theme.theme-light .elastic li.sidebar-link .scroll_content .link-scroll {
+    background-color: var(--color--second) !important;
+    color: var(--color--second--2) !important;
+}
+
+
+/* màu nền hover sidebar cấp 2 : layout basic*/
+
+.basic-theme.theme-light li.sidebar-link .scroll_content .link-scroll:hover {
+    background-color: var(--color--second--2--hsl--2) !important;
+    color: var(--color--second--2--hsl--1) !important;
+}
+
+
+/*---------------------------------------------------------------------II.Content (view-include)*/
+
+
+/* A. element cụ thể */
+
+.color_package_no3.theme-light .box-content-footer .view-include tspan {
+    fill: #3a4c58;
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include option {
+    background-color: var(--color--main);
+    color: var(--color--main--hsl--4);
+    padding: 5px 0 5px 0 !important;
+    display: block;
+    height: 39px;
+}
+
+
+/*1. card color*/
+
+.color_package_no3.theme-light .box-content-footer .view-include .card-highlight {
+    background-color: var(--color--main--hsl--2);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+    color: var(--color--main--hsl--4);
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include .card-inline {
+    background-color: var(--color--main--hsl--3) !important;
+    color: var(--color--main--hsl--2) !important;
+}
+
+
+/* table */
+
+.color_package_no3.theme-light .box-content-footer .view-include .tr-top-table-color {
+    /* background-color: var(--color--main--hsl--3) !important; */
+    /* color: var(--color--support--1); */
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include tr {
+    /* background-color: var(--color--main--hsl--2) !important;
+    color: var(--color--main--hsl--4); */
+}
+
+
+/* 2. text color */
+
+.color_package_no3.theme-light .box-content-footer .view-include .text-highlight {
+    color: var(--color--main--hsl--4);
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include .text-normal {
+    color: var(--color--main--hsl--4);
+}
+
+
+/* 3. background color basic*/
+
+.color_package_no3.theme-light .box-content-footer .view-include .color-highlight {}
+
+.color_package_no3.theme-light .box-content-footer .view-include .color-normal {}
+
+
+/* text-color-support */
+
+.color_package_no3.theme-light .box-content-footer .view-include .text-color-support-1 {
+    color: var(--color--support--1);
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include .text-color-support-2 {
+    color: var(--color--support--2);
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include .text-color-support-3 {
+    color: var(--color--support--3);
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include .text-color-support-4 {
+    color: var(--color--support--4);
+}
+
+
+/* background color support */
+
+.color_package_no3.theme-light .box-content-footer .view-include .color-support-1 {
+    background-color: var(--color--support--1);
+    color: var(--color--support--1--hsl);
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include .color-support-1-opacity {
+    background-color: #38c787e3;
+    color: rgb(255 236 236);
+}
+
+.color_package_no3.theme-light .box-content-footer .view-include .color-support-2 {
+    background-color: var(--color--support--2);
+    color: var(--color--support--2--hsl);
+}

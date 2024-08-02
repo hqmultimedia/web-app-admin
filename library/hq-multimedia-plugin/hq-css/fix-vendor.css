@@ -1,0 +1,44 @@
+/* -----------------------------------------------------------------------------Ckeditor */
+
+
+/* posts */
+
+.box-description {
+    width: 100%;
+    margin: auto !important;
+}
+
+.box-description>p>img {
+    width: 100% !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+.box-description .text-description {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 0 0 0 black !important;
+}
+
+p>img,
+p>a>img {
+    width: 100% !important;
+    border-radius: 9px;
+}
+
+
+/* note */
+
+.box-note {
+    margin: 0 0 1rem;
+    background-color: #e7e7e9 !important;
+    padding: 9px !important;
+    border-radius: 5px !important;
+    border-left: 6px solid gray;
+}
+
+
+/* -----------------------------------------------------------------------------End Ckeditor */

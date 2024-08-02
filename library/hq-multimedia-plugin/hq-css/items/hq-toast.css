@@ -1,0 +1,307 @@
+/* 1.box chứa : #toast*/
+
+
+/* 2.one items : .toast */
+
+
+/* 3. items in one item :*/
+
+
+/* 3-a .toast__icon */
+
+
+/* 3-b .toast__body */
+
+
+/* 3-b .toast__close */
+
+
+/* 4.type */
+
+
+/* 5.animate */
+
+#toast {
+    position: fixed;
+    bottom: -10px;
+    right: 15px;
+    z-index: 99999 !important;
+    /* đảo vị trí xuất hiện */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+}
+
+.toast {
+    position: relative;
+    display: flex;
+    min-width: 400px;
+    max-width: 450px !important;
+    align-items: center;
+    border-radius: 2px !important;
+    border-left: 4px solid !important;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 8%) !important;
+    font-size: 1rem !important;
+    line-height: 1.5;
+    border-radius: .25rem !important;
+    transition: .4s !important;
+    margin-bottom: 24px !important;
+    min-height: 39px;
+    max-height: 68px;
+    /* 1s là thời gian diễn ra */
+    /* 2.5s là thời gian bắt đầu diễn ra */
+    /* animation: InLeft ease .4s, FadeOut linear 1s 2.5s forwards !important; */
+    /* animation: InLeft ease .4s forwards; */
+}
+
+
+/* animate hiển thị  */
+
+
+/* InLeft */
+
+@keyframes InLeft {
+    from {
+        transform: translateX(calc(100% + 32px));
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes OutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(calc(100% + 32px));
+        opacity: 0;
+    }
+}
+
+
+/* InBottom */
+
+@keyframes InBottom {
+    from {
+        transform: translateY(calc(100% + 32px));
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes OutBottom {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(calc(100% + 22px));
+        opacity: 0;
+    }
+}
+
+
+/* InBasic */
+
+@keyframes InBasicFade {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes OutBasicFade {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+
+/* class biến mất */
+
+.Toast--Animate--In--Left {
+    animation: InLeft ease .4s forwards !important;
+}
+
+.Toast--Animate--Out--Left {
+    animation: OutLeft ease .4s forwards !important;
+}
+
+
+/* class biến mất */
+
+.Toast--Animate--In--Bottom {
+    animation: InBottom ease .4s forwards !important;
+}
+
+.Toast--Animate--Out--Bottom {
+    animation: OutBottom ease .4s forwards !important;
+}
+
+
+/* class biến mất */
+
+.Toast--Animate--In--BasicFade {
+    animation: InBasicFade linear .5s forwards !important;
+}
+
+.Toast--Animate--Out--BasicFade {
+    animation: OutBasicFade linear .5s forwards !important;
+}
+
+
+/* 
+.toast+.toast {
+    margin-top: 24px !important;
+} */
+
+.toast__icon {
+    font-size: 24px;
+    /* top-bottom-left-right */
+    margin: 0 10px;
+}
+
+
+/* .toast__body {} */
+
+.toast__title {
+    font-size: 16px;
+    color: #fff;
+}
+
+.toast__text {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.toast__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    color: #ffffffad;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+
+/* 02.style toast */
+
+
+/* ------------------------------------a.success */
+
+.toast.toast--background--success {
+    background-color: #198754 !important;
+}
+
+.toast--text--success .toast__body .toast__text {
+    color: #d9d3d3 !important;
+}
+
+.toast--success {
+    border-color: #5fba79 !important;
+}
+
+.toast--success .toast__icon {
+    color: #fff !important;
+}
+
+
+/* ------------------------------------b.error */
+
+.toast.toast--background--error {
+    background-color: #dc3545 !important;
+}
+
+.toast--text--error .toast__body .toast__text {
+    color: #d9d3d3 !important;
+}
+
+.toast--error {
+    /* border-color: #dc3545 !important; */
+    border-color: #000 !important;
+}
+
+.toast--error .toast__icon {
+    color: #efefef !important;
+}
+
+
+/* ------------------------------------c.warning */
+
+.toast.toast--background--warning {
+    background-color: #ffc107 !important;
+}
+
+.toast--text--warning .toast__body .toast__text {
+    color: #585858 !important;
+}
+
+.toast--warning {
+    border-color: #060606 !important;
+}
+
+.toast--warning .toast__icon {
+    color: #ffffff !important;
+}
+
+
+/*------------------------------------ d.info */
+
+.toast.toast--background--info {
+    background-color: #acd9d9 !important;
+}
+
+.toast--text--info .toast__body .toast__text {
+    color: #3c3c39fa !important;
+}
+
+.toast--text--info .toast__body .toast__title {
+    color: #3c3c39fa !important;
+}
+
+.toast--info {
+    border-color: #3c3c39fa !important;
+}
+
+.toast--info .toast__icon {
+    color: #3c3c39fa !important;
+}
+
+
+/* responsive */
+
+@media (min-width:320px) and (max-width:543px) {
+    #toast {
+        bottom: -22px;
+        right: 0;
+        width: 100%;
+    }
+    .toast {
+        min-width: 100%;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    #toast {
+        position: fixed;
+        bottom: -15px;
+        right: 10px;
+    }
+}

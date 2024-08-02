@@ -1,0 +1,131 @@
+<div class="box-menu">
+    <!-- box-title -->
+    <div class="box-logo">
+        <a ng-href="home">
+            <!-- <img src="../../../../../HQ-Tempalte-2026/SourceData/logo/stylon-logo-new-2.png" alt=""> -->
+            <img src="SourceData/logo/logo-light.png" alt="">
+        </a>
+    </div>
+    <div class="button-change-sidebar button-change-sidebar-elastic" style="display:none ;">
+        <i class="fa-sharp fa-thin fa-bars-staggered"></i>
+    </div>
+
+
+    <div class="box-title-page">
+        <a ng-model="page_title" ng-href="home">
+            <h5>{{page_title}}</h5>
+        </a>
+    </div>
+
+    <!-- box-control -->
+    <div class="box-control">
+        <!-- box-search -->
+        <div class="show-box-search relative ">
+            <i class="fa-sharp fa-light fa-magnifying-glass icon-show-box-search"></i>
+
+            <div class="box-search-menu-bar">
+                <form class="relative" action="">
+
+                    <input type="text" class="form-control form-search  " placeholder="Search...">
+
+
+
+                    <button type="submit" class="btn btn-search"><i class="fa-sharp fa-light fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- box-icon -->
+        <div class="box-icon-menu">
+
+            <div class="icon-menu show_setting">
+                <i class="fa-regular fa-gear"></i>
+                <div class="box-notification"></div>
+
+            </div>
+            <div class="icon-menu">
+                <i class="fa-light fa-bell"></i>
+                <span class="notification-bell">9</span>
+            </div>
+            <div id="box_information" class="icon-menu ">
+                <div class="avatar img-background">
+                    <div class="img-user img-background" style="background-image: url(SourceData/client/03.jpg);">
+
+                    </div>
+
+
+
+                </div>
+                <!-- admin -->
+                <span class="name-user">Admin <i class="fa-solid fa-caret-down"></i></span>
+                <!-- ctv -->
+                <span ng-if="info[0].level == 2;" class="name-user">CTV <i class="fa-solid fa-caret-down"></i></span>
+                <!-- kiểm duyệt -->
+                <span ng-if="info[0].level == 3;" class="name-user">Censor <i class="fa-solid fa-caret-down"></i></span>
+                <!-- <span class="name-user">Collaborators <i class="fa-solid fa-caret-down"></i></span> -->
+                <!-- <span class="name-user">Censor <i class="fa-solid fa-caret-down"></i></span> -->
+                <!-- box information -->
+                <div class="box-information">
+                    <div class="box-img-information">
+                        <div class="img-user-information img-background" style="background-image: url(SourceData/client/03.jpg);">
+                        </div>
+                    </div>
+                    <div class="information-name">
+                        <span>Xin chào :</span>
+                        <b>Admin
+                        </b>
+                    </div>
+                    <!-- link chọn nhanh -->
+                    <ul class="quick-link-control">
+                        <li>
+                            <a ng-href="#"><i class="fa-regular fa-user"></i>Profile</a>
+                        </li>
+                        <li>
+
+                            <a ng-href=""><i class="fa-light fa-house"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a ng-href=""><i class="fa-regular fa-gear"></i>Setting</a>
+
+                        </li>
+                    </ul>
+                    <div class="logout">
+                        <i class="fa-thin fa-right-from-bracket"></i>
+                        <span class="padding-l-5">Logout</span>
+                    </div>
+                </div>
+
+                <!-- avatar khi dùng dùng thẻ img -->
+                <!-- <div class="icon-menu">
+                <div class="avatar-user">
+                    <img src="https://themesdesign.in/tocly/layouts/assets/images/users/avatar-2.jpg" alt="">
+                </div>
+            </div> -->
+
+            </div>
+            <!-- <div class="icon-menu" ng-model="theme_color" ng-init="theme_color='theme-light'" ng-click="select_color_theme(theme_color)">
+                <i class="fa-solid fa-sun-cloud"></i>
+            </div>
+            <div class="icon-menu" ng-model="theme_color" ng-init="theme_color='theme-dark'" ng-click="select_color_theme(theme_color)">
+                <i class="fa-solid fa-moon-cloud"></i>
+            </div> -->
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <script>
+        Show_off_menu_setting();
+        show_basic_sidebar();
+        show_form_search();
+        show_box_information();
+
+        // responsive
+        show_sidebar_horizontal_responsive();
+    </script>

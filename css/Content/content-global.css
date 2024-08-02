@@ -1,0 +1,339 @@
+.view-include select {
+    font-size: 15px;
+}
+
+.view-include select option {
+    padding-right: 10px !important;
+}
+
+.view-include .btn {
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+
+/* MODAL BOX DÙNG CHO FORM ADD VÀ BOX TRASH */
+
+.w3-modal {
+    padding-top: 50px !important;
+}
+
+.modal-action {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+}
+
+.modal-action::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.box-action {
+    padding: 68px;
+    position: relative;
+}
+
+.button-close-box-action {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    /* background-color: #c79368; */
+    background-color: var(--card--inline--highlight--1);
+    color: var(--text--card--inline--highlight--1);
+    width: 39px;
+    height: 39px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 9999;
+}
+
+.button-close-box-action:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    .box-action {
+        padding: 15px;
+    }
+    .button-close-box-action {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+
+/*END MODAL BOX DÙNG CHO FORM ADD VÀ BOX TRASH */
+
+
+/* Css phần box add */
+
+.form-add {
+    position: relative;
+    padding: 15px;
+    border-radius: 8px;
+    padding-bottom: 35px;
+}
+
+.box-input-form-add {
+    display: flex;
+}
+
+.block-add-left {
+    padding-right: 20px;
+}
+
+.block-add-right {
+    transform: translateY(-16px);
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    .box-input-form-add {
+        flex-wrap: wrap;
+    }
+    .block-add-left {
+        padding-right: 0;
+        width: 100%;
+    }
+}
+
+
+/* End css phần box add */
+
+
+/* css dành cho phần setting source*/
+
+.block-checkbox {
+    display: flex;
+    justify-content: left;
+    padding: 0px 0 15px 0px !important;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.block-setting-source {
+    display: flex;
+    justify-content: right;
+    padding: 0px 0px 15px 0px !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.block-setting-source>div {
+    width: auto;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* TABLE */
+
+
+/* all table */
+
+.w3-table-all.table-border {
+    border: none !important;
+}
+
+
+/* table tile */
+
+.w3-table-all.table-border tr:first-child {
+    border: none !important;
+}
+
+.w3-table-all.table-border tr:first-child th {
+    padding: 15px 10px !important;
+}
+
+
+/* dòng thứ 2 trong table */
+
+.w3-table-all.table-border tr:nth-child(2) {
+    border-top: none !important;
+}
+
+
+/* dòng cuối cùng trong table */
+
+.w3-table-all.table-border tr:last-child {
+    border-bottom: none !important;
+}
+
+
+/* tất cả các dòng trong table */
+
+.w3-table-all.table-border tr {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.w3-table td,
+.w3-table th,
+.w3-table-all td,
+.w3-table-all th {
+    vertical-align: middle !important;
+    white-space: nowrap;
+    padding: 12px 10px !important;
+    text-align: center !important;
+    font-size: 15px;
+}
+
+
+/* th riêng */
+
+td.td-left,
+th.th-left {
+    text-align: left !important;
+}
+
+@media (min-width:320px) and (max-width:991px) {
+    /* table */
+    .w3-table td,
+    .w3-table th,
+    .w3-table-all td,
+    .w3-table-all th {
+        padding: 10px 20px !important;
+    }
+    /* end table */
+    .block-setting-source {
+        justify-content: left;
+        margin-top: 15px;
+    }
+    .check-box-all {
+        flex-wrap: wrap;
+    }
+    .check-box-all .form-check {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .block-setting-source>.father-box-input-setting {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 15px;
+        padding-right: 15px;
+    }
+    .father-box-input-setting div {
+        width: 100%;
+    }
+    .father-box-input-setting div label {
+        margin-top: 10px;
+        text-align: left !important;
+    }
+    .father-box-input-setting div input,
+    .father-box-input-setting div select {
+        width: 100% !important;
+    }
+    .check-box-all select,
+    .check-box-all button {
+        width: 100% !important;
+    }
+}
+
+
+/* css dành cho thanh quick search */
+
+.button-trash {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 39px !important;
+}
+
+.search-box>input {
+    border: none;
+    width: 333px;
+    padding-left: 10px;
+    height: 100%;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.button-add,
+.button-filter {
+    font-size: 14px;
+    padding-left: 15px;
+    cursor: pointer;
+    position: absolute;
+    background-color: cadetblue;
+    color: aliceblue;
+    padding-right: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.button-filter.edit-radius {
+    border-radius: 5px;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    .button-trash {
+        margin-bottom: 15px;
+    }
+    .search-box>input {
+        width: 100%;
+        /* margin-top: 20px; */
+    }
+    .button-trash {
+        justify-content: flex-end;
+    }
+    .button-add {
+        /* margin-top: 20px; */
+        right: 15px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+
+/* table */
+
+
+/* 
+.table td {
+    vertical-align: center;
+    border-top: 1px solid #dee2e68d;
+    border-bottom: 1px solid #dee2e68d;
+}
+
+.table th {
+    border-top: none !important;
+    border-bottom: 1px solid #dee2e68d !important;
+}
+
+.table {
+    margin-bottom: 0 !important;
+} */
+
+
+/* 
+.table tr:last-child td {
+    border-bottom: none !important;
+} */

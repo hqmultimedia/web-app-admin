@@ -1,0 +1,196 @@
+/* The side navigation menu */
+
+.SideActive.translateX {
+    transform: translateX(-250px);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 55px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    /* text-align: center; */
+}
+
+
+/* The sidenav */
+
+.sidenav.SideActive {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 9998;
+    overflow: scroll;
+    padding-bottom: 50px !important;
+    top: 0;
+    left: 0;
+    /* right: 0; */
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+/* Page content */
+
+.main {
+    margin-left: 200px;
+    /* Same as the width of the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 5px 5px 5px 25px !important;
+    /* padding-left: 15px !important; */
+    margin-top: 0 !important;
+    text-decoration: none;
+    font-size: 17px !important;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    /* background-color: #f1f1f1; */
+}
+
+.sidenav a.closebtn {
+    margin-left: 25px !important;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav a.active {
+    color: #d9c5c5;
+    background-color: #888888;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px !important;
+    width: 30px;
+    height: 30px;
+    line-height: 30px !important;
+    padding-left: 9px !important;
+    /* margin-left: 50px; */
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+.main-sidebar {
+    padding: 0 65px 0 65px !important;
+    transition: 0.7s !important;
+}
+
+.main-sidebar-2 {
+    padding: 0 !important;
+    transition: 0.7s !important;
+}
+
+.main-sidebar.set-main {
+    padding-left: calc(265px + 30px) !important;
+    padding-right: 45px !important;
+    /* -15px */
+    transition: 0.7s !important;
+}
+
+.main-sidebar-2.set-main-2 {
+    padding-left: 255px !important;
+    transition: 0.7s !important;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .main-sidebar {
+        padding: 0 50px 0 50px !important;
+        transition: 0.7s !important;
+    }
+    .main-sidebar.set-main {
+        padding-left: calc(50px) !important;
+        padding-right: 50px !important;
+        /* -15px */
+        transition: 0.7s !important;
+    }
+    /* phần footer */
+    .main-sidebar-2 {
+        padding: 0 !important;
+        transition: 0.7s !important;
+    }
+    .main-sidebar-2.set-main-2 {
+        padding-left: 0px !important;
+        transition: 0.7s !important;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    .main-sidebar {
+        padding: 0 50px 0 50px !important;
+        transition: 0.7s !important;
+    }
+    .main-sidebar.set-main {
+        padding-left: calc(50px) !important;
+        padding-right: 50px !important;
+        /* -15px */
+        transition: 0.7s !important;
+    }
+    /* phần footer */
+    .main-sidebar-2 {
+        padding: 0 !important;
+        transition: 0.7s !important;
+    }
+    .main-sidebar-2.set-main-2 {
+        padding-left: 0px !important;
+        transition: 0.7s !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .main-sidebar {
+        padding: 0 50px 0 50px !important;
+        transition: 0.7s !important;
+    }
+    .main-sidebar.set-main {
+        padding-left: calc(265px + 30px) !important;
+        padding-right: 45px !important;
+        /* -15px */
+        transition: 0.7s !important;
+    }
+}
+
+@media (min-width:992px) and (max-width:1360px) {}
+
+@media (min-width:1361px) and (max-width:1500px) {}
+
+@media (min-width:1501px) and (max-width:1920px) {}

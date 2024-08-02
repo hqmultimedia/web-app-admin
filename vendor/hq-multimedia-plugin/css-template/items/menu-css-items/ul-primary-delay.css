@@ -1,0 +1,89 @@
+/* 04. ul-primary-delay  */
+
+@media (min-width:320px) and (max-width:543px) {}
+
+@media (min-width:544px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1199px) {}
+
+@media (max-width:1025px) {}
+
+@media (min-width:1026px) {}
+
+
+/* style 3 menu-delay */
+
+.menu {
+    height: 55px;
+    line-height: 55px;
+    /* background-color: #91c5c95c; */
+    background-color: transparent;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
+.menu li {
+    background: -moz-linear-gradient(#292929, #252525);
+    background: -ms-linear-gradient(#292929, #252525);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #252525));
+    background: -webkit-linear-gradient(#292929, #252525);
+    background: -o-linear-gradient(#292929, #252525);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525')";
+    background: linear-gradient(#292929, #252525);
+    min-width: 160px;
+}
+
+.menu>li {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+.menu>li:first-child {
+    border-radius: 5px 0 0;
+}
+
+.menu a {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    color: #808080;
+    padding-left: 5px;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.submenu {
+    left: 0;
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+
+.submenu li>a {
+    padding-left: 5px;
+}
+
+.submenu li {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}

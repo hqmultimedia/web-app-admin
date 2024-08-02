@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="col-12 w3-animate-top">
+        <!-- box add -->
+        <div class="box-action page-add-baner">
+
+            <form novalidate name="form_add" class="form-add card-basic">
+                <div class="box-input-form-add">
+                    <!-- button close -->
+                    <div class="button-close-box-action" onclick="document.getElementById('baner-add').style.display='none'">
+                        <i class="fa-thin fa-xmark" style="font-size: 17px;"></i>
+                    </div>
+                    <!-- End button close -->
+                    <div style="width: 100%;">
+                        <!-- 01. label Name -->
+                        <div class="form-group">
+                            <label class="text-highlight-2 weight-500" for="exampleInputEmail1">Link baner name</label>
+                            <div class="relative">
+                                <input type="text" ng-model="baner.name" class="form-control" placeholder="Enter link baner" name="input_baner" required>
+
+                                <!-- validation -->
+                                <!-- Không hợp lệ- Invalid -->
+                                <div class="margin-t-5">
+                                    <small class=" valid-icon" ng-show="form_add.input_baner.$invalid"><i class="fas fa-times-circle padding-r-5"></i></small>
+
+                                    <small class="" ng-show="form_add.input_baner.$error.required">Vui lòng nhập dữ liệu !</small>
+                                </div>
+
+                                <!-- Hợp lệ - Valid-->
+                                <small class="form-text text-color-basic-cyan valid-icon" ng-show="form_add.input_baner  .$valid"><i class="fas fa-check-circle"></i></small>
+
+                                <!-- end validation -->
+                            </div>
+
+                        </div>
+                        <!-- 01. End label Name -->
+                        <!--02. Label tags-->
+                        <div class="mb-3 mt-3">
+                            <label class="form-label text-highlight-2 weight-500">baner tags :</label> <br>
+
+
+                            <input type="text" ng-model="baner.tags" data-role="tagsinput" class="form-control" placeholder="Enter tags" name="data_tags" required>
+                            <!-- validation -->
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+
+                            <!-- end validation -->
+
+                        </div>
+                        <!-- 02. End label tags -->
+
+                        <div class="form-group" ng-controller="checkBoxBanner">
+                            <div class="checkbox-title flex">
+                                <div style="width: 50%;"><label for="exampleInputEmail1">Vị trí banner</label></div>
+                                <div class="right-end" style="width: 50%;">
+
+                                    <label class="margin-r-5">Chọn tất cả</label>
+                                    <input value="" ng-model="selectAllItemModel" ng-click="checkAllItems()" name="check_all" id="id_check_all" class="w3-check" style="top:0px; width: 12px;" type="checkbox">
+                                </div>
+
+                            </div>
+
+
+                            <div class="checkbox-banner">
+
+                                <p ng-repeat="one_location in location">
+                                    <input name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_location)" type="checkbox" class="w3-check">
+                                    <label>{{one_location.name}}</label>
+                                </p>
+
+
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- 05. Label image -->
+                        <div class="">
+                            <label class="text-highlight-2 weight-500">Hình ảnh:</label>
+                            <!-- <input type='file' name='source_file' ng-file="uploadfiles"> -->
+                            <div>
+                                <input style="height: 42px;" class="form-control" type="file" name='source_file' ng-file="uploadfiles" accept="image/*" onchange="loadFile(event)">
+                            </div>
+                            <div class="flex">
+
+                                <div class="margin-t-30 " style="width: 100%; display: flex; justify-content: center; align-items: center;">
+
+                                    <img class="w3-card-2 round-medium" width="239px" id="output" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--  05. End label image -->
+                    </div>
+
+                </div>
+                <!-- Phần button -->
+                <div class="box-button-form-add-baner">
+                    <button type="button" ng-disabled="form_add.$invalid" ng-model="page_function" ng-init="page_function='baner_add'" ng-click="upload(one_data,page_data,page_function)" class="btn btn-primary card-inline-highlight-1 text-highlight-2 weight-500"><i class="fas fa-plus-circle"></i> Add</button>
+
+                    <button type="reset" id="button_reset_img" ng-click="button_reset_img()" class="btn card-inline-normal "><i class="fas fa-backspace text-highlight-2 weight-500"></i> Reset</button>
+
+                    <button onclick="document.getElementById('baner-add').style.display='none'" type="button" class="btn btn-primary card-inline-normal text-color-support-1"><i class="fa-sharp fa-light fa-power-off"></i> Close</button>
+                </div>
+                <!-- End button -->
+
+
+
+
+            </form>
+        </div>
+        <!-- end view add menu -->
+        <!-- end box add -->
+    </div>
+</div>

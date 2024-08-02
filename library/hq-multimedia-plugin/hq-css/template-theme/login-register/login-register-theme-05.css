@@ -1,0 +1,271 @@
+/* -----------------------------------------------------------------------------phần nền  */
+
+.theme-05 {
+    background-image: url(../../../../../../TemplateAngularJS/SourceData/login-register/anh-gai-xinh-chau-au-moi-son-do.jpg);
+}
+
+.theme-05.background-login-register {
+    height: 100vh;
+    /* background-size: cover; */
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    position: relative;
+    /* display: flex !important;
+    justify-content: left !important;
+    align-items: center !important; */
+}
+
+.theme-05.background-login-register::before {
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #cdcdcd;
+    position: absolute;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+
+/* -------------------------------------------------------- PHẦN CHỨA LEFT VÀ RIGHT CONTENT */
+
+.theme-05 .father-box-login-register {
+    width: 339px;
+    height: 100vh;
+    margin: auto;
+}
+
+
+/* -----------------------------------------------------------------------------LEFT content */
+
+.theme-05 .left-content {
+    z-index: 99 !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    position: relative;
+    display: none;
+}
+
+
+/* --------------------------------------------------------------------RIGHT content box-login-register */
+
+.theme-05 .box-login-register {
+    width: 100% !important;
+    position: relative;
+    z-index: 9999;
+    margin: auto;
+}
+
+
+/* phần nền của box chứa */
+
+.theme-05 .box-login-register::before {
+    content: '';
+    width: 100% !important;
+    height: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    opacity: 1;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+
+/* phần box chứa các input form */
+
+.theme-05 .box-form-login-register {
+    padding: 0 30px;
+}
+
+
+/* phần image của box chứa */
+
+.theme-05 .img-box-login-register {
+    /* display: none; */
+    /* height bằng 0 là ko xuất hiện image */
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+/* phần title */
+
+.theme-05 .login-register-title {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    /* text-align: center; */
+    color: #0C2E33;
+}
+
+
+/* phần text input */
+
+.theme-05 .icon-user,
+.theme-05 .icon-password {
+    color: white;
+    font-size: 22px;
+    padding-right: 5px;
+}
+
+
+/* phần icon */
+
+.theme-05 .icon-invalid,
+.theme-05 .icon-valid {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 50px;
+    background-color: #444440;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.theme-05 .icon-valid {
+    color: #06a370;
+    background-color: #d8ebdf;
+}
+
+.theme-05 .notification-invalid {
+    position: absolute;
+    bottom: -25px;
+    color: white !important;
+}
+
+
+/* phần button */
+
+.theme-05 .btn-login,
+.theme-05 .btn-register {
+    font-size: 13px !important;
+    background: #ffa900 !important;
+    /* background: linear-gradient(42deg, rgba(34, 193, 195, 1) 0%, rgba(20, 97, 98, 1) 100%) !important; */
+    border-radius: 4px;
+    border-color: #ffa900;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    transition: 0.4s;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.theme-05 .btn-login:hover {
+    background-color: #f8b93a!important;
+    color: rgb(255, 255, 255);
+}
+
+.theme-05 .btn-register {
+    background-color: #5f5fd9 !important;
+    border-color: #5f5fd9;
+}
+
+.theme-05 .btn-register:hover {
+    background-color: #7171dd !important;
+    border-color: #7171dd;
+    color: white;
+}
+
+.theme-05 input:focus {
+    box-shadow: 0 0 0 0 transparent !important;
+    /* border-bottom: 1px solid gray !important; */
+    /* background-color: transparent !important; */
+    /* border-color: transparent !important; */
+    font-size: 14px !important;
+}
+
+.theme-05 input {
+    /* padding: 0 !important; */
+    /* background-color: transparent !important; */
+    border: none;
+    /* border-bottom: 1px solid gray !important; */
+}
+
+.theme-05 .text-change-display-login,
+.theme-05 .text-change-display-register {
+    color: #8dbcf5;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.theme-05 .text-change-display-login {
+    color: #ffa700;
+}
+
+
+/* responsive thay thế cho col bootstrap theo thứ tự sm-md-lg-xl */
+
+
+/* col-sm */
+
+@media (min-width:576px) {}
+
+
+/* col-md */
+
+@media (min-width:768px) {}
+
+
+/* col-lg */
+
+@media (min-width:992px) {}
+
+
+/* col-xl */
+
+@media (min-width:1200px) {}
+
+
+/* responsive setting hiển thị */
+
+@media (min-width:544px) and (max-width:767px) {
+    /* -----------------------------------------------------------------------------phần nền  */
+    .theme-05.background-login-register {
+        /* display: block !important;
+        height: auto; */
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    /* -------------------------------------------------------- PHẦN CHỨA LEFT VÀ RIGHT CONTENT */
+    .theme-05 .father-box-login-register {
+        width: 339px;
+        height: auto;
+    }
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    /* -----------------------------------------------------------------------------phần nền  */
+    .theme-05.background-login-register {
+        /* display: block !important;
+        height: auto; */
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    /* -------------------------------------------------------- PHẦN CHỨA LEFT VÀ RIGHT CONTENT */
+    .theme-05 .father-box-login-register {
+        width: 315px;
+        height: auto;
+    }
+    /* --------------------------------------------------------------------RIGHT content box-login-register */
+    /* phần box chứa các input form */
+    .theme-05 .box-form-login-register {
+        padding: 15px !important;
+    }
+}
+
+@media (min-width:1361px) and (max-width:1920px) {
+    /* .theme-05 .father-box-login-register {
+        width: 79%;
+        height: 668px;
+        margin: auto;
+    } */
+}

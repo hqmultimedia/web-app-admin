@@ -1,0 +1,172 @@
+/* -----------------------------------------A. Dành cho code thuần Codeigniter */
+
+
+/* 01.alert */
+
+.box-alert {
+    position: fixed !important;
+    min-width: 368px !important;
+    z-index:9999;
+}
+
+.alert-message {
+    width: 100%;
+    background-color: #c99383;
+    color: #000;
+    min-height: 39px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0px 25px 0px 10px;
+    margin-bottom: 15px;
+}
+
+
+/* 02.display-alert */
+
+.box-alert.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.box-alert.top-right {
+    right: 17px; 
+    top:-56px; 
+    transition-duration: 0.5s;
+}
+
+.box-alert.bottom-right {
+ right: 17px; 
+ bottom:-56px; 
+ transition-duration: 0.5s;
+}
+
+.box-alert.bottom-left {
+    left: 17px; 
+    bottom:-56px; 
+    transition-duration: 0.5s;
+}
+
+.box-alert.middle {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+
+/* 03.animate-alert */
+
+.animate-alert-to-top {
+    position: relative;
+    animation: animateAlertToTop 0.7s
+}
+
+@keyframes animateAlertToTop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 10px;
+        opacity: 1
+    }
+}
+
+.animate-alert-to-bottom {
+    position: relative;
+    animation: animateAlertToBottom 0.7s
+    /* animation: animatebottomMessage 1.2s ease-in-out */
+}
+
+@keyframes animateAlertToBottom {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 10px;
+        opacity: 1
+    }
+}
+
+.animate-alert-middle {
+    position: relative;
+    animation: animateAlertMiddle 0.7s
+}
+
+@keyframes animateAlertMiddle {
+    from {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) scale(1.1);
+        opacity: 1
+    }
+    to {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) scale(1);
+        opacity: 1
+    }
+}
+
+
+/* 04.animate-close-alert */
+
+.hidden-alert {
+    opacity: 0;
+    visibility: hidden;
+    transition: 3.9s !important;
+}
+
+.hidden-alert.hidden-basic {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: 1.5s !important;
+}
+
+.hidden-alert.hidden-to-the-left {
+    transform: translateX(-3000px) !important;
+}
+
+.hidden-alert.hidden-to-the-right {
+    transform: translateX(3000px) !important;
+}
+
+.hidden-alert.hidden-to-the-bottom {
+    transform: translateY(3000px) !important;
+}
+
+.hidden-alert.hidden-to-the-top {
+    transform: translateY(-3000px) !important;
+}
+
+.hidden-alert.hidden-zoom-in {
+    transition: 0.4s !important;
+    opacity: 0 !important;
+    transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
+}
+
+
+/*  */
+
+.hidden-alert-translateX {
+    transform: translateX(-900px);
+    transition: 0.7s;
+}
+
+.show-alert {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: 1s !important;
+}
+
+
+/* --------------------------------------------------------Dành cho code AngularJS */
+
+
+/* 22-12-2023 */
+
+.angular-animate-alert-bottom {
+    transform: translateY(-59px);
+    transition-duration: 0.5s;
+}

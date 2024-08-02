@@ -1,0 +1,96 @@
+ /* poster-preview:.mejs__poster */
+ /* button-play-pause :.mejs__overlay*/
+ /* playlist-active:.mejs__playlist-layer  */
+ /* playlist-hidden : .mejs__playlist-hidden*/
+ /* TRẠNG THÁI BÌNH THƯỜNG */
+ /* video-height,width: .mejs__container */
+ /* TRẠNG THÁI FULL MÀN HÌNH */
+ /* video-height,width : #player1_html5 */
+ /* mejs__playlist-selector-label :title */
+ /* .mejs__playlist-item-description :mô tả video */
+ /*  .mejs__playlist-item-thumbnail : ảnh thumb playlist */
+ 
+ :root {
+     /* phần width-height video */
+     --video_width: 100%;
+     --video_height: 468px;
+     /* phần list khi ở trang thái chưa click */
+     /* playlist-hidden */
+     --width_playlist_active: 39%;
+     /* playlist-active */
+     --playlist_hidden: -40%;
+ }
+ 
+ @media (min-width:320px) and (max-width:543px) {
+      :root {
+         /* phần width-height video */
+         --video_width: 320px;
+         --video_height: 468px;
+         /* phần list khi ở trang thái chưa click */
+         /* playlist-hidden */
+         --width_playlist_active: 95%;
+         /* playlist-active */
+         --playlist_hidden: -100%;
+     }
+ }
+ 
+ @media (min-width:544px) and (max-width:767px) {
+      :root {
+         /* phần width-height video */
+         --video_width: 544px;
+         --video_height: 468px;
+         /* phần list khi ở trang thái chưa click */
+         /* playlist-hidden */
+         --width_playlist_active: 57%;
+         /* playlist-active */
+         --playlist_hidden: -57%;
+     }
+ }
+ 
+ .mejs__playlist-layer {
+     width: var(--width_playlist_active) !important;
+ }
+ 
+ .mejs__playlist-hidden {
+     right: var(--playlist_hidden);
+ }
+ 
+ .mejs__container {
+     width: var(--video_width) !important;
+     height: var(--video_height) !important;
+ }
+ 
+ #player1_html5,
+ .mejs__overlay,
+ .mejs__poster {
+     width: 100% !important;
+     height: 100% !important;
+ }
+ 
+ .media-wrapper {
+     display: flex !important;
+     justify-content: center !important;
+     align-items: center !important;
+     /* padding: 39px 2px 39px 2px; */
+     font-family: 'Courier New', Courier, monospace !important;
+     /* background-color: black !important; */
+ }
+ 
+ .mejs__playlist-selector-label {
+     font-family: 'Quicksand';
+     /* width: 299px !important; */
+     overflow: hidden;
+ }
+ 
+ .mejs__playlist-item-description {
+     font-family: 'Quicksand';
+     color: #a9a9a9;
+ }
+ 
+ .mejs__playlist-item-thumbnail {
+     vertical-align: middle !important;
+ }
+ 
+ .mejs__playlist-item-thumbnail>img {
+     border-radius: 3px;
+ }

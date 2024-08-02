@@ -1,0 +1,30 @@
+/* setting layout */
+
+
+/* 
+.sidebar-layout.layout-right {
+    flex-direction: row-reverse;
+    z-index: 1;
+    position: relative;
+} */
+
+
+/* .sidebar-layout.layout-right .box-content-footer.active {
+    padding-right: calc( var(--width--sidebar)) !important;
+    padding-left: 0 !important;
+} */
+
+
+/* setting menu */
+
+
+/* .active.layout-right.sidebar-menu-setting {
+    padding-right: calc( var(--width--sidebar)) !important;
+    padding-left: 0 !important;
+} */
+
+
+/* .elastic.layout-right.sidebar-menu-setting {
+    padding-right: calc( var(--width--sidebar--elastic)) !important;
+    padding-left: 0 !important;
+} */

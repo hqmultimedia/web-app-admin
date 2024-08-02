@@ -1,0 +1,30 @@
+<!-- 02. Khối dữ liệu  -->
+<div class="container-fluid" ng-model="page_data" ng-init="page_data='client'">
+    <div class="row">
+        <div class="col-12">
+            <div class=" card-basic margin-t-30 padding-30 round-medium">
+
+                <!-- 02.1 Khối setting -->
+                <div ng-include="'content-admin-panel/element-global/setting-source/setting-source.html'" scope="" onload=""></div>
+                <!-- 02.1 End khối setting -->
+
+                <!-- 02.2 Khối hiển thị khi có dữ liệu -->
+
+                <div ng-controller="checkBoxController" ng-if="data_get != '';" ng-include="'content-admin-panel/page-components/client/table-load-all-client.html'" scope="" onload=""></div>
+                <!-- 02.2 End khối hiển thị dữ liệu -->
+
+                <!-- 02.3 Khối thông báo khi không có dữ liệu -->
+                <div ng-if="data_get == '';" ng-include="'content-admin-panel/element-global/view-notification/notification_nodata.html'" scope="" onload=""></div>
+                <!-- 02.3 End khối thông báo khi không có dữ liệu -->
+
+                <!-- 02.4 Khối pagination -->
+                <div ng-include="'content-admin-panel/element-global/view-pagination/pagination.html'" scope="" onload=""></div>
+                <!-- 02.4 End khối pagination -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 02.End khối dữ liệu -->

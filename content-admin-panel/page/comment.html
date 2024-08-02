@@ -1,0 +1,61 @@
+<!-- 01. Khối view dữ liệu đã xoá   -->
+<div class="container-fluid  margin-t-30">
+    <div class="row">
+
+        <!--01-02. Thanh search -->
+
+        <div class="col-12 search-box relative">
+
+
+            <!-- button add  -->
+            <div class="button-filter edit-radius" onclick="document.getElementById('filter-order').style.display='block'">
+                <span>Lọc theo điều kiện <i class="fa-solid fa-file-magnifying-glass"></i></span>
+            </div>
+            <!-- end button add -->
+        </div>
+
+        <!--01-02. End thanh search -->
+
+
+
+
+    </div>
+</div>
+<!-- 01. End khối view dữ liệu đã xoá   -->
+
+<!-- Add dữ liệu -->
+<div id="filter-order" style="display: none;" class="container-fluid modal-action " ng-include="'content-admin-panel/element-global/box-filter/box-filter.html'" scope="" onload=""></div>
+<!-- End add dữ liệu -->
+
+
+<!-- 02. Khối dữ liệu  -->
+<div class="container-fluid" ng-model="page_data" ng-init="page_data='comment'">
+    <div class="row">
+        <div class="col-12">
+            <div class=" card-basic margin-t-30 padding-30 round-medium">
+
+                <!-- 02.1 Khối setting -->
+                <div ng-include="'content-admin-panel/element-global/setting-source/setting-source.html'" scope="" onload=""></div>
+                <!-- 02.1 End khối setting -->
+
+                <!-- 02.2 Khối hiển thị khi có dữ liệu -->
+
+                </i>
+                <div ng-controller="checkBoxController" ng-if="data_get != '';" ng-include="'content-admin-panel/page-components/comment/table-load-all-comment.html'" scope="" onload=""></div>
+                <!-- 02.2 End khối hiển thị dữ liệu -->
+
+                <!-- 02.3 Khối thông báo khi không có dữ liệu -->
+                <div ng-if="data_get == '';" ng-include="'content-admin-panel/element-global/view-notification/notification_nodata.html'" scope="" onload=""></div>
+                <!-- 02.3 End khối thông báo khi không có dữ liệu -->
+
+                <!-- 02.4 Khối pagination -->
+                <div ng-include="'content-admin-panel/element-global/view-pagination/pagination.html'" scope="" onload=""></div>
+                <!-- 02.4 End khối pagination -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 02.End khối dữ liệu -->

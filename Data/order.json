@@ -1,0 +1,44 @@
+[{
+        "year": "January",
+        "profit": "39",
+        "revenue": "79"
+
+
+    },
+    {
+        "year": "February",
+        "profit": "39",
+        "revenue": "68"
+
+
+    },
+    {
+        "year": "March",
+        "profit": "19",
+        "revenue": "39"
+
+
+    },
+    {
+        "year": "April",
+        "profit": "15",
+        "revenue": "45"
+
+
+    },
+    {
+        "year": "May",
+        "profit": "68",
+        "revenue": "79"
+
+
+    },
+    {
+        "year": "June",
+        "profit": "56",
+        "revenue": "86"
+
+
+    }
+
+]

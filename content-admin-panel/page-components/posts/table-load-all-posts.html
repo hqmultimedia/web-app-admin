@@ -1,0 +1,109 @@
+<div class="w3-responsive">
+    <table class="w3-table-all table-border" ng-init="getDataPagination(page_data)">
+
+        <tr class=" tr-top-table-color">
+            <th colspan="2">#</th>
+
+            <!-- <th>ID</th> -->
+            <th class="th-left">Date</th>
+            <th class="th-left">Name</th>
+
+            <th>Img</th>
+            <th ng-if="info[0].level == 3 || info[0].level == 1">User</th>
+
+            <th>Status</th>
+
+        </tr>
+
+
+        <tr class="text-center" dir-paginate="one_data in data_get |orderBy :optionsModelDisplay.hienthi| filter:tukhoa |itemsPerPage:optionsModelQuantity.PageSize" style=" font-size: 15px;">
+            <td>
+                <div class="form-check" style="padding-bottom: 25px;">
+                    <input class="form-check-input" name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_data)" type="checkbox" value="" id="">
+                </div>
+            </td>
+            <td class="td-stt">{{$index +1}}</td>
+            <!-- <td>{{one_data.data_id}}</td> -->
+            <td class="td-left" style="white-space: normal; width: 186px;">
+                <p class=""> {{one_data.data_date}}</p>
+            </td>
+
+            <td class="td-left" style="white-space: normal; width: 239px;">
+                <a href="preview_posts/{{one_data.data_id}}"> <span>{{one_data.data_name}}</span></a>
+
+            </td>
+            <td class="flex-align-middle">
+                <div style="width: 55px;height:55px;">
+                    <img class="img-object-fix round-medium" src="{{one_data.data_img_thumb}}" alt="">
+                </div>
+            </td>
+
+
+            <td ng-if="info[0].level == 3 || info[0].level == 1">
+                <p>{{one_data.user}}</p>
+            </td>
+
+            <td class="td-action">
+
+
+                <div>
+                    <!-- status admin -->
+                    <div ng-if=" info[0].level == 1" class="margin-lr-5">
+                        <button ng-if="one_data.data_status == 1;" ng-click="ShowHiddenAct(one_data)" class="btn btn-info " style="width: 39px; margin: auto;">
+                                <i class="fa-regular fa-unlock"></i>
+                            
+                            </button>
+                        <button ng-if="one_data.data_status == 0;" ng-click="ShowHiddenAct(one_data)" class="btn btn-warning " style="width: 39px; margin: auto;">
+                                <i class="fa-sharp fa-solid fa-lock"></i>
+                            
+                            </button>
+
+                    </div>
+                    <!-- end status admin -->
+
+                    <!-- status Ctv -->
+                    <div ng-if="info[0].level == 2;" class="margin-lr-5">
+                        <button ng-if="one_data.data_status == 1;" class="btn btn-success " style="width: 39px; margin: auto;">
+                                <i class="fa-solid fa-circle-check"></i>
+                            
+                            </button>
+                        <div ng-if="one_data.data_status == 0;" class="btn color-60 text-color-60-contrast  " style="width: 39px; margin: auto;">
+                            <i class="fa-sharp fa-solid fa-lock"></i>
+
+                        </div>
+                        <button ng-if="one_data.data_status == 2 " class="btn color-bosung3 " style="width: 39px; margin: auto;">
+                                <i class="fa-regular fa-triangle-exclamation"></i>
+                            
+                            </button>
+
+                    </div>
+                    <!-- end status ctv -->
+                    <!-- status kiểm duyệt viên -->
+                    <div ng-if=" info[0].level == 3" class="margin-lr-5">
+                        <select ng-controller="SingleFunctionController" ng-model="user_level" ng-init="user_level='1'" class="text-left w3-select text-center round-medium" name="option" ng-click="ConfirmPosts_UnActive(one_data)">
+
+                                <option ng-if="one_data.data_status == 1 " value="1"> Đã duyệt</option>
+                                <option ng-click="ConfirmPosts_Redress(one_data)" value="2"> Từ chối</option>
+                                <option  value="3"> Ẩn</option>
+
+                            </select>
+
+                    </div>
+                    <!-- end status kiểm duyệt viên -->
+                    <!-- delete -->
+                    <!-- end delete -->
+
+                    <!-- end edit -->
+
+
+
+                </div>
+            </td>
+
+
+            <!--  -->
+        </tr>
+
+
+    </table>
+</div>

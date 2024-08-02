@@ -1,0 +1,75 @@
+<div class="w3-responsive">
+    <table class=" w3-table-all table-border" ng-init="getDataPagination(page_data)">
+
+        <tr class=" tr-top-table-color">
+            <th colspan="2">#</th>
+
+            <!-- <th>ID</th> -->
+            <th class="th-left">Ngày tạo</th>
+            <th class="th-left">Tên danh mục</th>
+
+            <th>Hình ảnh</th>
+
+            <th>Trạng thái</th>
+            <th>Cập nhật</th>
+
+        </tr>
+
+
+        <tr dir-paginate="one_data in data_get |orderBy :optionsModelDisplay.hienthi| filter:tukhoa |itemsPerPage:optionsModelQuantity.PageSize" style=" font-size: 15px;">
+            <td>
+                <div class="form-check" style="padding-bottom: 25px;">
+                    <input class="form-check-input" name="items_name[]" ng-model="itemSelectedModel" ng-click="toggleSelectionItem(one_data)" type="checkbox" value="" id="">
+                </div>
+            </td>
+            <td class="td-left">{{$index +1}}</td>
+            <!-- <td>{{one_data.product_id}}</td> -->
+            <td class="td-left">
+                <p class=""> {{one_data.product_date}}</p>
+            </td>
+
+            <td class="td-left">
+                <span>{{one_data.product_name}}</span>
+
+            </td>
+
+
+            <td class="flex-align-middle">
+                <div style="width: 55px;height:55px;">
+                    <img class="img-object-fix round-medium" src="{{one_data.product_img_thumb}}" alt="">
+                </div>
+            </td>
+
+            <td>
+
+
+                <div class="margin-lr-5">
+                    <button ng-if="one_data.product_status == 1;" ng-click="ShowHiddenAct(one_data)" class="btn card-status-success " style="width: 39px; margin: auto;">
+                                <i class="fa-regular fa-unlock"></i>
+                            
+                            </button>
+                    <button ng-if="one_data.product_status == 0;" ng-click="ShowHiddenAct(one_data)" class="btn card-inline-normal " style="width: 39px; margin: auto;">
+                                <i class="fa-sharp fa-solid fa-lock"></i>
+                            
+                            </button>
+
+                </div>
+
+
+
+
+
+            </td>
+            <td>
+                <button ng-click="ShowHiddenAct(one_data)" class="btn btn-success " style="width: 39px; margin: auto;">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                
+                </button>
+            </td>
+
+
+        </tr>
+
+
+    </table>
+</div>

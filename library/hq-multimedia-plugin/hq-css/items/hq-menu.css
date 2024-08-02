@@ -1,0 +1,57 @@
+@import url(menu-css-items/ul-center.css);
+@import url(menu-css-items/ul-primary.css);
+@import url(menu-css-items/ul-primary-delay.css);
+@import url(menu-css-items/ul-img-effect.css);
+@import url(menu-css-items/menu-click.css);
+
+/* Responsive */
+
+@media (min-width:768px) and (max-width:991px) {
+    .menu-medium.menu-medium-click {
+        display: none !important;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .menu-medium.menu-medium-click {
+        display: none !important;
+    }
+}
+
+@media (min-width:1026px) {
+    .menu-medium,
+    .logo-medium {
+        display: none !important;
+    }
+}
+
+@media (max-width:1025px) {
+    .logo-large,
+    .menu-large {
+        display: none !important;
+    }
+    .logo-medium {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+}
+
+.inTop {
+    position: fixed !important;
+    top: 0px;
+    transition: 0.5s;
+    z-index: 9999 !important;
+}
+
+.color-background-menu.background-menu-change {
+    transition: 0.5s;
+    background-color: #f99970 !important;
+    color: #ffffff;
+}
+
+a.color-link {
+    transition: 0.5s;
+    /* color: #ffffff !important; */
+}

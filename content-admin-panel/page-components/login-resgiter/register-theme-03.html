@@ -1,0 +1,77 @@
+<div class="container-fluid padding-b-30">
+    <div class="row">
+        <div class="col-12 img-background img-box-login-register none " style="background-image: url(../SourceData/login-register/1.png);"></div>
+        <div class="col-12 " style="padding:0 30px !important;">
+            <div class="login-register-title">
+                <h5>Admin Register</h5>
+
+
+            </div>
+            <!-- FORM -->
+            <form novalidate name="form_add">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <div class="relative">
+                        <input type="email" ng-model="user.email" class="form-control margin-b-30" aria-describedby="emailHelp" placeholder="Enter email" name="input_name_email" required>
+
+                        <!-- validation -->
+                        <!-- Không hợp lệ- Invalid -->
+                        <small id="emailHelp" class="icon-invalid" ng-show="form_add.input_name_email.$invalid"><i class="fas fa-times-circle"></i>
+                            </small>
+                        <div class="notification-invalid">
+                            <small id="emailHelp" class="" ng-show="form_add.input_name_email.$error.required">Vui lòng nhập dữ liệu !
+                                </small>
+                            <small id="emailHelp" class="" ng-show="form_add.input_name_email.$error.email">This is not an email !
+                                </small>
+                        </div>
+
+                        <!-- Hợp lệ - Valid-->
+                        <small id="emailHelp" class="icon-valid" ng-show="form_add.input_name_email.$valid"><i class="fas fa-check-circle"></i>
+                            </small>
+
+                        <!-- end validation -->
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <div class="relative">
+                        <input ng-model="user.password" type="password" class="form-control margin-b-30" placeholder="Password" name="input_name_password" ng-minlength="5" ng-maxlength="15" required>
+                        <!-- validation -->
+                        <!-- Không hợp lệ - Invalid -->
+                        <small id="emailHelp" class="icon-invalid" ng-show="form_add.input_name_password.$invalid"><i class="fas fa-times-circle"></i>
+                            </small>
+
+                        <div class="notification-invalid">
+                            <small id="emailHelp" class="" ng-show="form_add.input_name_password.$error.required">Vui lòng nhập password !
+                            </small>
+                            <small id="emailHelp" class="" ng-show="form_add.input_name_password.$error.minlength">Password quá ngắn !
+                            </small>
+                            <small id="emailHelp" class="" ng-show="form_add.input_name_password.$error.maxlength">Password vượt giới hạn cho phép !
+                            </small>
+                        </div>
+
+                        <!-- Hợp lệ - Valid-->
+                        <small id="emailHelp" class="icon-valid" ng-show="form_add.input_name_password.$valid"><i class="fas fa-check-circle"></i>
+                            </small>
+                    </div>
+
+
+                    <!-- end validation -->
+                </div>
+
+
+
+
+
+                <button type="button" ng-disabled="form_add.$invalid" ng-click="button_register(user)" class="btn btn-register">Đăng ký
+                    </button>
+                <div style="font-size: 14px">
+                    <a class="cursor" ng-click="doigiatri_hienthi()">Đăng nhập bằng tài khoản đã tạo </a>
+                </div>
+            </form>
+            <!-- END FORM -->
+
+        </div>
+    </div>
+</div>

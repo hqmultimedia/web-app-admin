@@ -1,0 +1,65 @@
+<!-- 01. Khối view dữ liệu đã xoá   -->
+<div class="container-fluid  margin-t-30" ng-model="page_data" ng-init="page_data='posts'">
+    <div class="row" ng-init="getDataBoxTrash(page_data)">
+        <!-- 01-01 button trash -->
+        <div class="col-12 col-sm-4 button-trash">
+            <a onclick="document.getElementById('id02').style.display='block'" style="color: #007bff; " href=""><i class="fa-solid fa-trash"></i> Bài viết đã xoá ({{data_get_box_trash.length}})</a>
+        </div>
+        <!-- 01-01 End button trash -->
+        <!--01-02. Thanh search -->
+
+        <div class="col-12 col-sm-8 search-box relative">
+
+            <input ng-model="tukhoa" class="input-search relative card-basic" type="text" placeholder="Nhập tên bài viết...">
+            <!-- button add  -->
+            <div class="button-add" onclick="document.getElementById('posts-add').style.display='block'">
+                <span>Thêm mới <i class="fa-solid fa-circle-plus"></i></span>
+            </div>
+            <!-- end button add -->
+        </div>
+
+        <!--01-02. End thanh search -->
+
+        <!--01-03. Table load posts box trash (thay đổi url theo dự án) -->
+        <div class="col-12 " ng-include="'content-admin-panel/element-global/data-trash/modal-view-box-trash.html'" scope="" onload=""></div>
+        <!--01-03. End table load posts box trash -->
+
+
+    </div>
+</div>
+<!-- 01. End khối view dữ liệu đã xoá   -->
+
+<!-- Add dữ liệu -->
+<div id="posts-add" style="display: none;" class="container-fluid modal-action " ng-include="'content-admin-panel/page-components/posts/add-posts-new.html'" scope="" onload=""></div>
+<!-- End add dữ liệu -->
+
+<!-- 02. Khối dữ liệu  -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class=" card-basic margin-t-30 padding-30 round-medium">
+
+                <!-- 02.1 Khối setting -->
+                <div ng-include="'content-admin-panel/element-global/setting-source/setting-source.html'" scope="" onload=""></div>
+                <!-- 02.1 End khối setting -->
+
+                <!-- 02.2 Khối hiển thị khi có dữ liệu -->
+
+                <div ng-controller="checkBoxController" ng-if="data_get != '';" ng-include="'content-admin-panel/page-components/posts/table-load-all-posts.html'" scope="" onload=""></div>
+                <!-- 02.2 End khối hiển thị dữ liệu -->
+
+                <!-- 02.3 Khối thông báo khi không có dữ liệu -->
+                <div ng-if="data_get == '';" ng-include="'content-admin-panel/element-global/view-notification/notification_nodata.html'" scope="" onload=""></div>
+                <!-- 02.3 End khối thông báo khi không có dữ liệu -->
+
+                <!-- 02.4 Khối pagination -->
+                <div ng-include="'content-admin-panel/element-global/view-pagination/pagination.html'" scope="" onload=""></div>
+                <!-- 02.4 End khối pagination -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 02.End khối dữ liệu -->

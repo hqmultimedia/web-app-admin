@@ -1,0 +1,99 @@
+/* 2 kiểu slider
+-kiểu 1 : slide từ MỘT ảnh tĩnh áp dụng hiệu ứng
+-kiểu 2 : slide từ CÁC đối tượng ảnh(MODEL,SẢN PHẨM) và tất cả các đối tượng là độc lập với nhau,chúng tương tương tác với nhau qua các hiệu ứng animate, animate-delay-+
+*/
+@import url(slide-css-item/slick-slider.css);
+
+
+@media (min-width:320px) and (max-width:767px) {
+    #wowslider-container1 .ws_bullets a.ws_selbull,
+    #wowslider-container1 .ws_bullets a:hover {
+        background-position: 0 100%;
+    }
+    #wowslider-container1 .ws_bullets a {
+        display: none;
+    }
+    .box-left-slide .layer-on {
+        width: 100% !important;
+        object-fit: cover;
+        object-position: top center;
+    }
+    .box-right-slide .box-text {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .box-right-slide .box-text a {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .box-right-slide.hidden-small {
+        display: none !important;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    .box-slide {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .box-right-slide.hidden-large {
+        display: none !important;
+    }
+}
+
+@media (min-width:992px) and (max-width:1360px) {
+    .layer-on {
+        padding-left: 91px !important;
+        width: 95% !important;
+        object-fit: cover;
+        object-position: top center;
+    }
+    .box-right-slide.hidden-large {
+        display: none !important;
+    }
+}
+
+@media (min-width:1361px) and (max-width:1500px) {
+    .box-right-slide.hidden-large {
+        display: none !important;
+    }
+}
+
+@media (min-width:1501px) and (max-width:1920px) {
+    .box-right-slide.hidden-large {
+        display: none !important;
+    }
+}
+
+.box-slide {
+    overflow: hidden !important;
+}
+
+.box-right-slide {
+    display: flex;
+    align-items: center;
+}
+
+.box-slide .box-text .hq-btn {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid black !important;
+}
+
+
+/* slide boostrap w3 */
+
+.img-slide {
+    height: 100vh;
+}
+
+
+/* fix slide khi dùng kèm menu intop  */
+
+.silde-fix-spill-inTop {
+    padding-top: var(--menuHeight) !important;
+}

@@ -1,0 +1,34 @@
+﻿/* sidebar-menu */
+
+.sidebar-layout {
+    display: flex;
+}
+
+.box-sidebar::-webkit-scrollbar-track-piece {
+    height: 5px;
+}
+
+:root {
+    /* menu */
+    --height--menu: 68px;
+    /* sidebar-basic */
+    --width--sidebar: 268px;
+    --width--sidebar--elastic: 72px;
+    /* bằng với chiều cao của menu */
+    --height--sidebar-top: 68px;
+    /* sidebar horizontal */
+    --height-sidebar--horizontal--theme: 60px;
+}
+
+
+/* content-view */
+
+
+/* mặc định container đã padding left 15px */
+
+
+/* .view-include {
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+} */

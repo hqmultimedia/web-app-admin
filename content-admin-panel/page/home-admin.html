@@ -1,0 +1,397 @@
+<div class="container-fluid" ng-model="page_data" ng-init="page_data='home'">
+    <div class="row">
+
+        <!-- block 3 : Đơn hàng mới -->
+        <div class="col-12">
+            <h6 class="margin-t-30 text-title"> Trạng thái đơn hàng </h6>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 box-home" style="flex: 1;">
+            <div class="card-basic parameter">
+                <div class="icon card-inline-normal round-medium">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <div class="right">
+                    <H6 class="text-title">Đơn hàng mới</H6>
+                    <H4 class="text-color-support-4">102</H4>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 box-home">
+            <div class="card-basic parameter">
+                <div class="icon card-inline-normal round-medium">
+                    <i class="fa-light fa-cart-shopping"></i>
+                </div>
+                <div class="right">
+                    <H6>Tổng đơn hàng</H6>
+                    <H4 class="text-color-support-4">6668</H4>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 box-home">
+            <div class="card-basic parameter">
+                <div class="icon card-inline-normal round-medium">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="right">
+                    <H6>Đổi,trả</H6>
+                    <H4 class="text-color-support-4">0</H4>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 box-home">
+            <div class="card-basic parameter">
+                <div class="icon card-inline-normal round-medium">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div class="right">
+                    <H6>Chưa xử lý</H6>
+                    <H4 class="text-color-support-4">79</H4>
+
+                </div>
+            </div>
+        </div>
+        <!-- end block 3 -->
+        <div class="col-12">
+            <h6 class="margin-t-30 text-title">Tình hình tăng trưởng</h6>
+        </div>
+        <!-- box filter -->
+        <div class="col-12 margin-t-30">
+
+            <!-- form filter -->
+            <form action="" autocomplete="off">
+                <div class="box-form">
+                    <div class="box-input card-basic">
+                        <span class="text-title label-input">Từ ngày : </span>
+                        <input type="text" ng-model="date_test" id="datepicker" class="input-date text-color-support-1" placeholder="21-05-2024">
+                    </div>
+                    <div class="box-input card-basic ">
+                        <span class="text-title label-input ">Đến ngày : </span>
+                        <input type="text" class="input-date text-color-support-1" ng-model="date_test_2" id="datepicker_2" placeholder="22-05-2025">
+                    </div>
+                    <div class="box-input card-basic ">
+                        <button ng-click="get_date(date_test,date_test_2)" class="button-filter-home color-support-1-opacity uppercase weight-500 btn btn-success">Lọc dữ liệu</button>
+
+
+                    </div>
+                </div>
+            </form>
+
+            <!-- end form filter -->
+
+
+        </div>
+        <!-- end box filter -->
+
+        <!-- chart line -->
+
+        <div class="col-12 col-md-6 margin-b-30" ng-init="getDataOrder_2()">
+
+            <div class="padding-tb-15 card-basic round-medium">
+                <div id="myfirstchart_line" style="height: 250px;"></div>
+
+            </div>
+
+
+        </div>
+        <!-- chart-bar -->
+        <div class="col-12 col-md-6 margin-b-30" ng-init="getDataOrder_2()">
+
+
+            <div id="myfirstchart_2" class="padding-tb-15 card-basic round-medium relative" style="height: 280px; padding-top: 39px;">
+                <!-- selected option -->
+                <select ng-model="optionCheckBox" ng-init="optionCheckBox='move-to-trash'" name="option_act" class="form-filter-basic text-title form-control form-sm" style="width: auto;background-color: transparent; border: 1px solid rgba(128, 128, 128, 0.664) !important;"
+                    required>
+                <!-- <option value="" disabled selected>-- Hành động --</option> -->
+
+                <option value="move-to-trash">6 tháng trước</option>
+                <option value="show">1 năm trước</option>
+                
+                
+            </select>
+                <!-- end selected option -->
+            </div>
+
+        </div>
+
+
+        <!-- chart donut -->
+        <div class="col-12 col-md-6 relative" ng-init="getDataOrder()">
+            <div class="chart-top padding-tb-15 card-basic round-medium" style="padding-top: 68px;">
+                <!-- selected option -->
+                <select ng-model="optionCheckBox" ng-init="optionCheckBox='move-to-trash'" name="option_act" class="form-filter-basic text-title form-control form-sm" style="width: auto;background-color: transparent; border: 1px solid rgba(128, 128, 128, 0.664) !important; top: 18px ;right:32px; position: absolute;"
+                    required>
+                     <!-- <option value="" disabled selected>-- Hành động --</option> -->
+
+                    <option value="move-to-trash">Tháng này</option>
+                    <option value="show">Tháng trước</option>
+                    <option value="show">Đầu năm</option>
+                    
+             
+                </select>
+                <!-- end selected option -->
+                <div id="myfirstchart" class="chart-left" style="height: 250px;"></div>
+                <h6 class="text-center margin-t-5">Orders during the month</h6>
+            </div>
+
+
+        </div>
+        <div class="col-12 col-md-6 relative" ng-init="getDataControlprofits()">
+            <div class="chart-top padding-tb-15 card-basic round-medium" style="padding-top: 68px;">
+
+                <div id="Control_profits_chart" class="chart-left" style="height: 250px;"></div>
+                <h6 class="text-center margin-t-5">Control profits</h6>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+<!-- block 4 -->
+<div class="container-fluid margin-t-15">
+    <div class="row">
+        <div class="col-12 ">
+            <h6 class="margin-t-15 text-title">Title 1</h6>
+            <p class="margin-t-15 text-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+
+    </div>
+</div>
+<!-- end block 4 -->
+
+<!-- block 6 bản đồ -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 margin-b-30 margin-t-15">
+            <H6 class="text-title">Top thị trường tiêu thụ nhiều nhất</H6>
+
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-12 col-md-6 margin-b-30">
+            <div class="card-basic round-medium padding-15">
+                <H6 class="padding-t-15">Consumer market USA </H6>
+                <p class="padding-b-15 padding-t-5">Example of google maps. </p>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d686290.0795860597!2d-95.97293687352857!3d36.96083975808419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2zSG9hIEvhu7M!5e0!3m2!1svi!2s!4v1718610422829!5m2!1svi!2s"
+                    width="100%" height="279" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 margin-b-30">
+            <div class="card-basic round-medium padding-15">
+                <H6 class="padding-t-15">Consumer market Japan </H6>
+                <p class="padding-b-15 padding-t-5">Example of google maps. </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65085101.514199376!2d55.156993207167105!3d5.343554545337733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2zTmjhuq10IELhuqNu!5e0!3m2!1svi!2s!4v1718610498969!5m2!1svi!2s"
+                    width="100%" height="279" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 margin-b-30">
+            <div class="card-basic round-medium padding-15">
+                <H6 class="padding-t-15">Consumer market Germany </H6>
+                <p class="padding-b-15 padding-t-5">Example of google maps. </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5135221.813256267!2d5.171558169681332!3d51.06356523940341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a721ec2b1be6b%3A0x75e85d6b8e91e55b!2zxJDhu6lj!5e0!3m2!1svi!2s!4v1718610748206!5m2!1svi!2s"
+                    width="100%" height="279" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 margin-3-30">
+            <div class="card-basic round-medium padding-15">
+                <H6 class="padding-t-15">Consumer market Asia</H6>
+                <p class="padding-b-15 padding-t-5">Example of google maps. </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.1894778111628!2d106.79181297392792!3d10.873188657403706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d8a027b168ed%3A0xccc7360f99278559!2zVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1718610771969!5m2!1svi!2s"
+                    width="100%" height="279" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 margin-b-30">
+            <div class="card-basic round-medium padding-15">
+                <H6 class="padding-t-15">Consumer market China</H6>
+                <p class="padding-b-15 padding-t-5">Example of google maps. </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27129972.246728264!2d82.7187654025563!3d33.89572648668871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2zVHJ1bmcgUXXhu5Fj!5e0!3m2!1svi!2s!4v1718611179384!5m2!1svi!2s"
+                    width="100%" height="279" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 margin-b-30">
+            <div class="card-basic round-medium padding-15">
+                <H6 class="padding-t-15">Consumer market Korea</H6>
+                <p class="padding-b-15 padding-t-5">Example of google maps. </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6634662.855577268!2d122.58070030693764!3d35.71191555977333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356455ebcb11ba9b%3A0x91249b00ba88db4b!2zSMOgbiBRdeG7kWM!5e0!3m2!1svi!2s!4v1718611292710!5m2!1svi!2s"
+                    width="100%" height="279" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end block 6 bản đồ -->
+
+<!-- block 7 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="margin-t-15 col-12 ">
+            <H6 class="text-title">
+                Title 2
+            </H6>
+        </div>
+        <div class="col-12 ">
+            <p class="text-normal margin-tb-15">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ducimus sint! Voluptates culpa impedit enim neque ipsum minima eaque esse? Eius asperiores dolorum accusantium non. Sint vero sit earum perspiciatis.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- end block 7 -->
+
+
+
+
+<script>
+    $(function() {
+        $("#datepicker").datepicker({
+            prevText: "Tháng trước",
+            nextText: "Tháng sau",
+            dateFormat: "yy-mm-dd",
+            dayNamesMin: ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ Nhật"],
+            duration: "slow"
+        });
+        $("#datepicker_2").datepicker({
+            prevText: "Tháng trước",
+            nextText: "Tháng sau",
+            dateFormat: "yy-mm-dd",
+            dayNamesMin: ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ Nhật"],
+            duration: "slow"
+        });
+    });
+</script>
+
+
+<script>
+    var chart = new Morris.Line({
+        // ID of the element in which to draw the chart.
+        element: 'myfirstchart_line',
+
+        // option
+        // Chart data records -- each entry in this array corresponds to a point on
+        // the chart.
+
+
+        // option
+        lineColors: ['brown'],
+        pointFillColors: ['#FFFFFF'],
+        pointStrokeColors: ['black'],
+        fillOpacity: 0.3,
+        hideHover: 'auto',
+        parseTime: false,
+        // The name of the data record attribute that contains x-values.
+        xkey: 'year',
+        // A list of names of data record attributes that contain y-values.
+        ykeys: ['profit', 'revenue'],
+        // Labels for the ykeys -- will be displayed when you hover over the
+        // chart.
+        labels: ['Profit', 'Revenue'],
+        resize: true
+    });
+</script>
+
+<script>
+    var chart_2 = new Morris.Bar({
+        // ID of the element in which to draw the chart.
+        element: 'myfirstchart_2',
+
+        // option
+        lineColors: ['brown'],
+        pointFillColors: ['#FFFFFF'],
+        pointStrokeColors: ['black'],
+        fillOpacity: 0.3,
+        hideHover: 'auto',
+        parseTime: false,
+        // Chart data records -- each entry in this array corresponds to a point on
+        // the chart.
+
+        // The name of the data record attribute that contains x-values.
+        xkey: 'year',
+        // A list of names of data record attributes that contain y-values.
+        ykeys: ['profit', 'revenue'],
+        // Labels for the ykeys -- will be displayed when you hover over the
+        // chart.
+        labels: ['Profit', 'Revenue'],
+        resize: true
+
+    });
+</script>
+<script>
+    new Morris.Donut({
+        // ID of the element in which to draw the chart.
+        element: 'myfirstchart',
+        // Chart data records -- each entry in this array corresponds to a point on
+        // the chart.
+        data: [{
+            year: '2008',
+            value: 102,
+            label: 'No process',
+            color: '#474238',
+        }, {
+            year: '2008',
+            value: 398,
+            label: 'Processed',
+            color: '#46725E',
+        }, {
+            year: '2008',
+            value: 500,
+            label: 'Success',
+            color: '#38c786',
+        }],
+        // The name of the data record attribute that contains x-values.
+        xkey: 'year',
+        // A list of names of data record attributes that contain y-values.
+        ykeys: ['value'],
+        // Labels for the ykeys -- will be displayed when you hover over the
+        // chart.
+        labels: ['Tình hình tăng trưởng'],
+        resize: true
+    });
+</script>
+<script>
+    new Morris.Donut({
+        // ID of the element in which to draw the chart.
+        element: 'Control_profits_chart',
+        // Chart data records -- each entry in this array corresponds to a point on
+        // the chart.
+        data: [{
+            year: '2008',
+            value: 102,
+            label: 'This Month',
+            color: '#A8AB5E',
+        }, {
+            year: '2008',
+            value: 89,
+            label: 'Last Month',
+            color: '#5C7080',
+        }],
+        // The name of the data record attribute that contains x-values.
+        xkey: 'year',
+        // A list of names of data record attributes that contain y-values.
+        ykeys: ['value'],
+        // Labels for the ykeys -- will be displayed when you hover over the
+        // chart.
+        labels: ['Tình hình tăng trưởng'],
+        resize: true
+    });
+</script>

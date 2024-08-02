@@ -1,0 +1,54 @@
+.color_package_no2.theme-light {
+    /*----------------------------------------------------------- màu chính màu 60*/
+    /*  #f5f8f9 */
+    /* --color--main: hsl(0, 4%, 82%); */
+    --color--main: hsl(0deg 0% 100%);
+    --color--main--hsl: hsl(0, 4%, 90%);
+    --color--main--hsl--2: hsl(0deg 4% 100% / 90%);
+    --color--main--hsl--3: hsl(0deg 4% 100% / 90%);
+    --color--main--hsl--4: hsl(0deg 4% 38%);
+    /*------------------------------------------------------------color-second màu 30 */
+    --color--second: hsl(0, 2%, 45%);
+    --color--second--hsl: hsl(0deg 2% 86%);
+    --color--second--hsl--2: hsl(0deg 2% 100% / 80%);
+    --color--second--hsl--3: hsl(0deg 0% 87% / 20%);
+    --color--second--hsl--4: hsl(0deg 2% 100% / 39%);
+    /* Color second 2 :sidebar left */
+    --color--second--2: hsl(176deg 24% 32%);
+    --color--second--2--hsl: hsl(176deg 24% 64% / 60%);
+    --color--second--2--hsl--2: hsl(176deg 24% 100% / 80%);
+    --color--second--2--hsl--3: hsl(176deg 24% 99% / 20%);
+    --color--second--2--hsl--4: hsl(176deg 24% 96%);
+    /*---------------------------------------------------------------color-highlight màu 10 */
+    --color--highlight: hsl(190deg 7% 28%);
+    --color--highlight--hsl: hsl(190deg 84% 100% / 90%);
+    --color--highlight--hsl--2: hsl(190deg 7% 96% / 39%);
+    --color--highlight--hsl--3: hsl(190deg 7% 42%);
+    /* ----------------------------------------------------------------color-support */
+    --color--support--1: #38C786;
+    --color--support--2: brown;
+}
+
+.color_package_no2.theme-dark {
+    /* màu chính màu 60*/
+    --color--main: hsl(213, 24%, 7%);
+    --color--main--hsl: hsl(213, 24%, 95%);
+    --color--main--hsl--2: hsl(213deg 24% 15%);
+    /* --color--main--hsl--3: hsl(0deg 0% 100% / 80%); */
+    --color--main--hsl--3: hsl(213deg 24% 75% / 20%);
+    /* color-second */
+    --color--second: hsl(215, 10%, 23%);
+    --color--second--hsl: hsl(210deg 25% 90% / 10%);
+    --color--second--hsl--2: hsl(210deg 25% 68% / 10%);
+    --color--second--hsl--3: hsl(210deg 25% 88% / 90%);
+    --color--second--hsl--4: hsl(210deg 25% 18%);
+    /* --color-highlight màu 10 */
+    --color--highlight: hsl(218, 10%, 39%);
+    --color--highlight--hsl: hsl(218deg 10% 96% / 90%);
+    --color--highlight--hsl--2: hsl(218deg 10% 96% / 20%);
+    --color--highlight--hsl--3: hsl(218deg 10% 96% / 39%);
+    /* color-support */
+    --color--support--1: #38C786;
+    --color--support--2: brown;
+    --color--support--3: #ed5e49;
+}

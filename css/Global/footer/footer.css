@@ -1,0 +1,29 @@
+/* menu hidden on login view */
+
+.sidebar-footer-setting {
+    font-size: 14px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-footer-setting .box-footer-left {
+    display: flex;
+    justify-content: left;
+}
+
+.sidebar-footer-setting .box-footer-right {
+    display: flex;
+    justify-content: right;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .sidebar-footer-setting {
+        height: 79px;
+    }
+    .sidebar-footer-setting .box-footer-left,
+    .sidebar-footer-setting .box-footer-right {
+        justify-content: center;
+        padding: 5px 0 5px 0;
+    }
+}

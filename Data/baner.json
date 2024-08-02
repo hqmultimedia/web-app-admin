@@ -1,0 +1,36 @@
+[{
+        "baner_id": "01",
+        "baner_name": "10 TRICKS TO BOOST YOUR FOLLOWERS",
+        "baner_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/baner/01.jpg",
+        "baner_date": "August 25, 2015",
+        "baner_status": "1",
+        "user": "ctv@gmail.com"
+
+
+    },
+
+    {
+        "baner_id": "01",
+        "baner_name": "10 TRICKS TO BOOST YOUR FOLLOWERS",
+        "baner_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/baner/02.jpg",
+        "baner_date": "August 25, 2015",
+        "baner_status": "0",
+        "user": "ctv@gmail.com"
+
+
+    },
+
+    {
+        "baner_id": "01",
+        "baner_name": "10 TRICKS TO BOOST YOUR FOLLOWERS",
+        "baner_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/baner/03.jpg",
+        "baner_date": "August 25, 2015",
+        "baner_status": "1",
+        "user": "ctv@gmail.com"
+
+
+    }
+
+
+
+]

@@ -1,0 +1,398 @@
+/*01.box-ratio */
+
+.box-ratio {
+    position: relative;
+    overflow: hidden;
+}
+
+.box-ratio::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* initial ratio of 1:1*/
+}
+
+.box-ratio .image,
+.box-ratio .image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-size: cover;
+    transform: scale(1.02);
+    background-position: center center;
+    transition: opacity .3s, transform 0.5s cubic-bezier(.25, .46, .45, .94), -webkit-transform 0.5s cubic-bezier(.25, .46, .45, .94);
+}
+
+
+/* Công thức (height / width * 100) */
+
+.box-ratio.ratio-box-content::before {
+    padding-top: 130%;
+    visibility: hidden;
+}
+
+.box-ratio.ratio-1-1::before {
+    padding-top: 100%;
+}
+
+.box-ratio.ratio-2-1::before {
+    padding-top: 50%;
+}
+
+.box-ratio.ratio-1-2::before {
+    padding-top: 200%;
+}
+
+.box-ratio.ratio-4-3:before {
+    padding-top: 75%;
+}
+
+.box-ratio.ratio-5-3:before {
+    padding-top: 60%;
+}
+
+.box-ratio.ratio-16-9:before {
+    padding-top: 56.25%;
+}
+
+
+/* 02.Overlay */
+
+
+/* Overlay image 1 */
+
+.box-ratio .overlay-zoom-out-hidden::before,
+.box-ratio .overlay-zoom-out-hidden-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .3);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0);
+}
+
+.box-ratio .overlay-zoom-out-hidden-circle::before {
+    border-radius: 50%;
+}
+
+.box-ratio:hover .overlay-zoom-out-hidden-circle::before,
+.box-ratio:hover .overlay-zoom-out-hidden::before {
+    transform: scale(1);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+
+
+/* Overlay Image 2*/
+
+.box-ratio .overlay-show-hidden::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .4);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.box-ratio:hover .overlay-show-hidden::before {
+    /* transform: scale(); */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+
+/* Overlay Image 3*/
+
+.box-ratio .overlay-hidden-show::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .3);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1);
+}
+
+.box-ratio:hover .overlay-hidden-show::before {
+    /* transform: scale(); */
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+}
+
+
+/* Overlay Image 4*/
+
+.box-ratio .overlay-show-zoom-in-hidden::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .3);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.box-ratio:hover .overlay-show-zoom-in-hidden::before {
+    transform: scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+
+/* Overlay Image 5*/
+
+.box-ratio .overlay-show-zoom-in-hidden-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .3);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(2);
+}
+
+.box-ratio:hover .overlay-show-zoom-in-hidden-circle::before {
+    transform: scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+
+/* 04.Overlay Filter */
+
+.box-ratio .filter-basic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .4);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* filter 01.black-white  */
+
+.filter-black-white {
+    position: relative;
+    filter: contrast(94%) brightness(110%) saturate(40%) sepia(9%) grayscale(91%) hue-rotate(182deg);
+}
+
+.filter-black-white::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0);
+}
+
+
+/* filter 02.one-color */
+
+.filter-one-color {
+    position: relative;
+    /* -webkit-filter: brightness(88%) saturate(79%) sepia(34%) grayscale(15%);
+    filter: brightness(88%) saturate(79%) sepia(34%) grayscale(15%); */
+    -webkit-filter: contrast(102%) brightness(100%) saturate(104%) sepia(0%) grayscale(0%);
+    filter: contrast(102%) brightness(100%) saturate(104%) sepia(0%) grayscale(0%);
+}
+
+.filter-one-color::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: color;
+    background: #6596B4;
+}
+
+
+/* filter 03.gradient-two-color */
+
+.filter-gradient-two-color {
+    position: relative;
+    /* -webkit-filter: contrast(107%) brightness(98%) saturate(148%) sepia(34%) grayscale(47%); */
+    /* filter: contrast(107%) brightness(98%) saturate(148%) sepia(34%) grayscale(47%); */
+    -webkit-filter: contrast(102%) brightness(100%) saturate(104%) sepia(0%) grayscale(0%);
+    filter: contrast(102%) brightness(100%) saturate(104%) sepia(0%) grayscale(0%);
+}
+
+.filter-gradient-two-color::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: hue;
+    /* background: linear-gradient(to top, #fba0bf, #ffafc5, #ef5085); */
+    background: linear-gradient(to bottom left, rgb(255 214 63), rgb(239 85 85));
+}
+
+
+/* filter 04.gradient-three-color */
+
+.filter-gradient-three-color {
+    position: relative;
+    /* -webkit-filter: contrast(107%) brightness(98%) saturate(148%) sepia(34%) grayscale(47%); */
+    /* filter: contrast(107%) brightness(98%) saturate(148%) sepia(34%) grayscale(47%); */
+    -webkit-filter: contrast(102%) brightness(100%) saturate(104%) sepia(0%) grayscale(0%);
+    filter: contrast(102%) brightness(100%) saturate(104%) sepia(0%) grayscale(0%);
+}
+
+.filter-gradient-three-color::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: hue;
+    background: linear-gradient(to bottom left, #ff2f2f, #ff4831, #f9f9f9);
+    /* background: linear-gradient(to bottom left, rgba(255, 87, 222, 1), rgba(255, 40, 118, 0.93)); */
+}
+
+.edit.filter-gradient-three-color::before {
+    background: linear-gradient(to bottom left, #ff0241, #ffffff, #fc0054) !important;
+}
+
+
+/*03.Image*/
+
+
+/* effect 1 */
+
+.image-opacity-zoom:hover .image2 {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.image-opacity-zoom:hover .image {
+    transform: scale(1.1);
+    transition: .6s ease-in-out;
+}
+
+
+/* effect 2 */
+
+.image-zoom-slow .image,
+.image-zoom-slow .image2 {
+    transition: 3s;
+}
+
+.image-zoom-slow:hover .image,
+.image-zoom-slow:hover .image2 {
+    transform: scale(1.2);
+    transition: 3s;
+}
+
+
+/* effect 3 */
+
+.image-zoom .image,
+.image-zoom .image2 {
+    transition: 1.2s;
+}
+
+.image-zoom:hover .image,
+.image-zoom:hover .image2 {
+    transform: scale(1.2);
+    transition: 1.2s;
+}
+
+
+/* effect 4 */
+
+.image-translate-left .image {
+    transition: 0.4s;
+    transform: scale(1);
+}
+
+.image-translate-left:hover .image {
+    transform: translateX(-5px) scale(1);
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    /* .box-oject-img img {
+        height: 360px;
+    } */
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    /* .box-oject-img img {
+        height: 379px;
+    } */
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    /* .box-oject-img img {
+        height: 386px;
+    } */
+}
+
+@media (min-width:992px) and (max-width:1359px) {
+    /* .box-oject-img img {
+        height: 390px;
+    } */
+}
+
+@media (min-width:1360px) and (max-width:1500px) {
+    /* .box-oject-img img {
+        height: 510px !important;
+    } */
+}
+
+@media (min-width:1501px) and (max-width:1920px) {}
+
+@media (max-width:1025px) {}
+
+@media (min-width:1026px) {}

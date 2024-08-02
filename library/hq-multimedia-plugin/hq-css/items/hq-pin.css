@@ -1,0 +1,25 @@
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 139px;
+}
+
+.message {
+    position: fixed !important;
+    right: 5px;
+    bottom: 25px;
+    background-color: #c99383;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 5px;
+    z-index: 999;
+    min-width: 286px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* font-family: 'Quicksand', sans-serif; */
+}
+
+.message :nth-child(1) {
+    margin-left: 10px;
+}

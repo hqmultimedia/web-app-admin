@@ -1,0 +1,291 @@
+/* ---------------------------------------------------------------------menu-elastic */
+
+.elastic .box-menu {
+    width: 100% !important;
+}
+
+.elastic.sidebar-menu-setting .box-menu {
+    width: calc(100% - var(--width--sidebar--elastic)) !important;
+    padding: 0 15px 0 25px;
+}
+
+
+/* button change sidebar */
+
+.elastic .box-menu .button-change-sidebar {
+    color: white;
+    font-size: 19px;
+    padding-right: 15px;
+    display: block !important;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.elastic .box-menu .button-change-sidebar.padding-left {
+    padding-left: 55px;
+}
+
+.elastic .box-information,
+.elastic .box-notification {
+    width: 219px;
+}
+
+
+/* ---------------------------------------------------------------------------------------sidebar elastic */
+
+.layout-left.elastic {
+    display: flex;
+}
+
+.box-sidebar.elastic {
+    width: var(--width--sidebar--elastic);
+    /* position: relative; */
+    /* position: fixed; */
+    z-index: 9999;
+}
+
+.box-sidebar.show-sidebar-elastic {
+    transform: translateX(0px) !important;
+}
+
+
+/* setting menu-content-footer khi elastic */
+
+.elastic.box-content-footer {
+    /* width: calc( 100% - var(--width--sidebar--elastic));
+    padding-left: 0 !important; */
+    /* width: calc( 100%); */
+    /* padding-left: var(--width--sidebar--elastic); */
+    /* transform: translateY(-275px); */
+    /* background-color: var(--color--second); */
+    width: calc( 100% - var(--width--sidebar--elastic));
+}
+
+.elastic.box-content-footer .view-include {
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 68px;
+    padding-bottom: 68px;
+}
+
+.elastic.sidebar-menu-setting {
+    padding-left: calc( var(--width--sidebar--elastic)) !important;
+}
+
+
+/* sidebar */
+
+
+/* box logo */
+
+.box-sidebar.elastic .sidebar-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width--sidebar--elastic);
+    padding: 28px;
+}
+
+.box-sidebar.elastic .sidebar-logo {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.box-sidebar.elastic .sidebar-category-title,
+
+/* .box-sidebar.elastic .title-link, */
+
+.box-sidebar.elastic .icon-dropdown,
+.box-sidebar.elastic .notification,
+.box-sidebar.elastic .title-link {
+    display: none;
+}
+
+
+/* box chứa toàn bộ link cấp 1 và cấp 2 */
+
+.box-sidebar.elastic .box_scroll {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* .box-sidebar.elastic ul:last-child li.sidebar-link .box_scroll::after {
+    content: '';
+    width: 100%;
+    min-height: 500px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9;
+} */
+
+
+/* box chứa tiêu đề link cấp 1 */
+
+.box-sidebar.elastic .scroll_title {
+    text-align: center;
+    font-size: 19px;
+    height: 55px;
+    line-height: 55px;
+}
+
+
+/* tiêu đề link */
+
+.box-sidebar.elastic .title-link {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    display: block;
+    z-index: -1;
+    min-width: 179px;
+    display: flex;
+    align-items: center;
+    height: 100% !important;
+    padding-left: 10px;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+/* box chứa dropdown link cấp 2 */
+
+.box-sidebar.elastic .scroll_content {
+    position: absolute;
+    top: 55px;
+    left: -150%;
+    z-index: 9;
+    min-width: 179px;
+    /* để bỏ tính năng thu gọn dropdown trong theme basic */
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    height: 279px;
+    overflow: scroll;
+}
+
+
+/* hover  */
+
+.box-sidebar.elastic .box_scroll:hover a .title-link,
+.box-sidebar.elastic .box_scroll:hover .scroll_content {
+    left: 100% !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* link cấp 2 */
+
+.box-sidebar.elastic .scroll_content .link-scroll {
+    height: 55px;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    font-weight: 500 !important;
+    padding-left: 10px;
+    border-top: 1px solid #80808056;
+}
+
+.box-sidebar.elastic .scroll_content .link-scroll:nth-child(1) {
+    border-top: none !important;
+}
+
+.box-sidebar.elastic .icon-link-dropdown {
+    font-size: 7px;
+    padding-right: 5px;
+}
+
+.elastic .product-highlight {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.elastic .product-highlight>a,
+.elastic .product-highlight>p {
+    color: var(--color--second--hsl--3);
+    text-align: center;
+}
+
+
+/* -----------------------------------------------------------------------------Responsive theme elastic */
+
+@media (min-width:320px) and (max-width:543px) {
+    .elastic.box-content-footer .view-include {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .elastic .box-sidebar {
+        /* position: fixed !important; */
+        z-index: 999 !important;
+        /* left: -100%; */
+        transition: 0.4s;
+        height: auto;
+        transform: translateX(-72px);
+    }
+    /* setting khối menu */
+    .elastic.sidebar-menu-setting {
+        padding-left: 0 !important;
+    }
+    .elastic.sidebar-menu-setting .box-menu {
+        width: 100% !important;
+    }
+    /* ẩn title page */
+    .elastic .box-title-page {
+        display: none;
+    }
+    /* setting lại position form search */
+    .elastic .box-search-menu-bar {
+        position: fixed !important;
+        top: 68px !important;
+        width: 100% !important;
+    }
+    .elastic .box-menu .box-search-menu-bar .form-control.form-search {
+        width: 100% !important;
+    }
+    /* setting lại box content */
+    .elastic .box-content-footer {
+        padding-left: 0px;
+        width: 100% !important;
+        transform: translateX(-72px);
+    }
+}
+
+
+/* fix lại nút button   */
+
+@media (min-width:544px) {
+    .elastic .box-menu .button-change-sidebar.padding-left {
+        padding-left: 0px;
+    }
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    /* hiển thị icon show */
+    .elastic .icon-show-box-search {
+        display: block;
+        margin-right: 10px;
+    }
+    /* form search */
+    .elastic .box-search-menu-bar {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        height: auto;
+        padding: 15px !important;
+        border-radius: 5px;
+        display: none;
+    }
+    /* class show form search */
+    .elastic .box-search-menu-bar.show-form-search {
+        display: block;
+        top: 50px;
+    }
+}

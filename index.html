@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://hqmultimedia.github.io/web-app-admin/">
+    <title>Admin-Home-4 actions</title>
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- fontawesome 6.0 -->
+    <link rel="stylesheet" href="library/fontawesome/css/all.min.css">
+
+
+    <!-- A.HQ-css-plugin -->
+    <link rel="stylesheet" href="library/hq-multimedia-plugin/hq-css/hqcss-ver-1.9.css">
+    <link rel="stylesheet" href="css/hqcss-global-element.css">
+    <!-- <link rel="stylesheet" href="css/hqcss-content-element.css"> -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/content.js"></script>
+
+
+    <!-- B.Vendor-Library -->
+    <!-- B1.W3-Css -->
+    <link rel="stylesheet" href="library/w3css/w3.css">
+
+
+    <!--B2.Bootstrap 5 W3School -->
+    <link rel="stylesheet" href="library/bootstrap-w3schools.com/css/bootstrap-5.min.css">
+
+    <script src="library/bootstrap-w3schools.com/js/jquery.min.js"></script>
+
+
+    <script src="library/bootstrap-w3schools.com/js/popper.min.js"></script>
+
+    <script src="library/bootstrap-w3schools.com/js/bootstrap.min.js"></script>
+
+
+    <!-- OWL Slider -->
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="vendor/fancybox_3/lib/jquery.mousewheel.pack.js"></script>
+    <script type="text/javascript" src="vendor/fancybox_3/source/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox_3/source/jquery.fancybox.css" media="screen" />
+
+
+    <!-- video -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist-edit-by-user.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/normalize.min.css">
+    <!--end video -->
+
+
+
+    <!--C.AngularJS -->
+    <script src="library/angular-file-upload-master/js/angular1.5.5.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-animate.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-aria.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-messages.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-material.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-route-1.5.5.js"></script>
+    <script src="library/angular-file-upload-master/js/dirPagination.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-cookies.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-sanitize.js"></script>
+
+
+    <!-- Angular HQMultimedia template -->
+
+
+    <!-- AngularJs Global -->
+    <script src="js-angularJs/js-global/setup.js "></script>
+    <script src="js-angularJs/js-global/AngularRoute.js "></script>
+    <script src="library/angular-file-upload-master/js/ng-directive/ng-directive.js "></script>
+
+    <script src="library/angular-file-upload-master/js/hq-toast/HQ-Toast-Messenger.js "></script>
+
+    <script src="js-angularJs/js-global/Login.js "></script>
+
+    <script src="js-angularJs/js-global/Data.js "></script>
+    <script src="js-angularJs/js-global/CheckBox.js "></script>
+
+    <script src="js-angularJs/js-global/Function.js "></script>
+    <!-- End AngularJs Global -->
+    <!--AngularJs Page -->
+    <script src="js-angularJs/page/banner-location.js "></script>
+    <!-- End AngularJs Page -->
+
+    <!-- Setting theme -->
+    <script src="js-angularJs/js-global/theme-layout.js "></script>
+    <!-- End setting theme -->
+    <!-- Angularjs page -->
+    <!-- End angularjs page-->
+
+
+
+
+
+    <!-- B4.Tags input -->
+    <!-- tags input -->
+    <link rel="stylesheet" href="vendor/tags-bootstrap-input/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="vendor/tags-bootstrap-input/css/tags-bootstrap.css">
+    <!-- tags input -->
+    <script src="vendor/tags-bootstrap-input/js/bootstrap-tagsinput.min.js"></script>
+
+    <style>
+        /* hidden menu footer khi login */
+        
+        .menutop.hidden-menu,
+        .footer-main.hidden-footer-main {
+            opacity: 0;
+            display: none !important;
+        }
+    </style>
+
+
+    <!-- lịch -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <!-- chart -->
+
+    <link rel="stylesheet" href="library/Morris-chart/morris.css">
+    <script src="library/Morris-chart/morris.min.js"></script>
+    <script src="library/Morris-chart/raphael-min.js"></script>
+
+
+
+
+
+</head>
+
+<body style="font-size: 15px;" ng-app="myApp" ng-controller="NotificationController">
+
+    <div ng-controller="ThemeLayoutController">
+
+        <div class="load">
+            <div class="load__img flex-align-middle">
+                <img src="SourceData/loading.gif" width="100px" alt="">
+            </div>
+        </div>
+
+
+        <!-- menu -->
+        <!-- class basic-theme chỉ để đánh dấu nơi thay thế cho class horizontal-theme -->
+        <div ng-controller="Function_Controller" id="menutop" class=" layout-left sidebar-menu-setting {{cookies_layout}} {{cookies_color}} {{color_package}}" ng-include="'content-admin-panel/element-global/menu/menu.html'" scope="" onload=""></div>
+
+
+        <div class=" layout-left {{cookies_color}} {{color_package}} {{cookies_layout}} ">
+            <!-- sidebar -->
+
+            <div class=" {{cookies_layout}} box-sidebar " ng-include="'content-admin-panel/element-global/sidebar/sidebar.html'" scope="" onload=""></div>
+
+
+
+            <!-- End menu -->
+            <!-- 02.Content -->
+            <!-- Phần thông báo -->
+            <div id="toast"></div>
+            <!-- End phần thông báo -->
+
+            <div class=" {{cookies_layout}} box-content-footer">
+                <!-- content -->
+
+
+
+                <div ng-controller="Load_Data_Controller" ng-view class="view-include" style="min-height: 100vh;"></div>
+
+
+                <!-- End content -->
+
+                <!-- 03.Footer -->
+                <div id="footer-main" style="width: 100%;" class="sidebar-footer-setting" ng-include=" 'content-admin-panel/element-global/footer/footer.html' " scope=" " onload=" "></div>
+            </div>
+
+        </div>
+
+        <!-- new code -->
+        <!-- box setting -->
+        <div class="box-setting ">
+            <div class="box-overlay">
+                <i class="fa-solid fa-circle-xmark" style="opacity:0;"></i>
+            </div>
+            <div class="box-setting-content">
+                <div class="box-setting-title">
+                    <h6>Setting</h6>
+                    <div class="box-setting-icon-close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+
+                <div style="padding: 0 15px;">
+                    <h6 class="padding-t-15">Choose color package</h6>
+                    <i class="margin-t-5 block">Color package : 11-6-2024</i>
+                    <form class="form-radio-theme-color">
+
+
+                        <label class="radio-theme-color">
+                              <input type="radio" ng-model ="color_package" disabled  value="color_package_no1" ng-click="select_color_package(color_package)" name="optradio">Color package 1 <i class="fa-solid fa-palette"></i>
+                        </label>
+                        <label class="radio-theme-color">
+                              <input type="radio" disabled ng-model ="color_package" value="color_package_no2" ng-click="select_color_package(color_package)" name="optradio">Color package 2 <i class="fa-solid fa-palette"></i>
+                        </label>
+                        <label class="radio-theme-color">
+                              <input type="radio" ng-model ="color_package" value="color_package_no3" ng-click="select_color_package(color_package)" name="optradio">Color package 3 <i class="fa-solid fa-palette"></i>
+                        </label>
+
+
+
+                    </form>
+
+                </div>
+                <div style="padding: 0 15px;">
+                    <h6 class="padding-t-15">Choose color theme </h6>
+
+                    <form class="form-radio-theme-color">
+
+
+                        <label class="radio-theme-color">
+                              <input type="radio" ng-model ="theme_color"  value="theme-light" ng-click="select_color_theme(theme_color)" disabled name="optradio">Theme light <i class=" fa-solid fa-sun-cloud"></i>
+                        </label>
+                        <label class="radio-theme-color">
+                              <input type="radio" ng-model ="theme_color" value="theme-dark" ng-click="select_color_theme(theme_color)" name="optradio">Theme dark <i class="fa-solid fa-house-night"></i>
+                        </label>
+
+
+
+                    </form>
+
+                </div>
+                <div style="padding: 0 15px;">
+                    <h6 class="padding-t-15">Choose layout theme </h6>
+
+
+                    <form class="form-radio-layout">
+
+                        <!-- layout-1 -->
+                        <div class="margin-t-15">
+                            <label class="radio-layout cursor" id="basic_layout">
+                            <input type="radio" ng-model ="theme_layout" ng-click="select_layout_theme(theme_layout)"  value="basic-theme active" name="optradio">Sidebar basic active (left) 
+                      </label>
+                            <img style="border: 4px solid #ebebeb;
+                  border-radius: 5px;" src="https://themesdesign.in/tocly/layouts/assets/images/layouts/layout-1.jpg" width="100%" alt="">
+                        </div>
+
+                        <!-- layout-3 -->
+                        <div class="margin-t-15">
+                            <label class="radio-layout cursor" id="horizontal_layout">
+                            <input type="radio" ng-model ="theme_layout" ng-click="select_layout_theme(theme_layout)" value="horizontal-theme active" name="optradio">Sidebar Horizontal 
+                      </label>
+                            <img style="border: 4px solid #ebebeb;
+                  border-radius: 5px;" src="https://themesdesign.in/tocly/layouts/assets/images/layouts/layout-2.jpg" width="100%" alt="">
+
+                        </div>
+                        <!-- layout-2 -->
+                        <div class="margin-t-15">
+                            <label class="radio-layout cursor" id="basic_elastic_layout">
+                            <input type="radio" ng-model ="theme_layout" ng-click="select_layout_theme(theme_layout)" disabled value="basic-theme elastic" name="optradio">Sidebar basic elastic (left) 
+                      </label>
+                            <img style="border: 4px solid #ebebeb;
+                  border-radius: 5px; filter: opacity(0.5);" src="https://themesdesign.in/tocly/layouts/assets/images/layouts/layout-2.jpg" width="100%" alt="">
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- end new code -->
+    </div>
+
+
+</body>
+<!-- Ck editor -->
+<script src="library/ckeditor/ckeditor/ckeditor.js "></script>
+<script src="library/ckeditor/ckfinder/ckfinder.js "></script>
+<!-- End Ck editor -->
+
+<!-- HQ template -->
+<!-- <link rel="stylesheet " href="css/settingProject-System-Admin-home.css ">
+<link rel="stylesheet " href="css/edit-admin-theme.css ">
+<link rel="stylesheet " href="css/content-admin.css ">
+<script src="js/js-sidebar.js "></script> -->
+<!-- HQ-js-plugin -->
+
+<link rel="stylesheet " href="library/hq-multimedia-plugin/hq-js/hq-js-ver-1.9.css ">
+<script src="library/hq-multimedia-plugin/hq-js/hq-js-ver-1.9.js "></script>
+<!-- HQ jquery theme project -->
+
+
+
+
+<!-- gọi hàm trong hq-jquery -->
+
+
+
+
+
+<!-- js video -->
+<script src="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/mediaelement-and-player.min.js">
+</script>
+<script src="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist.js"></script>
+<script>
+    var mediaElements = document.querySelectorAll('video, audio');
+
+    for (var i = 0, total = mediaElements.length; i < total; i++) {
+        new MediaElementPlayer(mediaElements[i], {
+            features: ['prevtrack', 'playpause', 'nexttrack', 'current', 'progress', 'duration', 'volume',
+                'playlist', 'shuffle', 'loop', 'fullscreen'
+            ],
+        });
+    }
+</script>
+<!-- end js video -->
+<script>
+    preloading();
+    // responsive
+    // sidebar_horizontal_responsive();
+</script>
+
+
+</html>

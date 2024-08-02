@@ -1,0 +1,355 @@
+/* cách viết mẫu w3-css */
+
+.w3-amber,
+.w3-hover-amber:hover {
+    color: #000;
+    background-color: #ffc107
+}
+
+
+/*theme color */
+
+
+/* thứ tự theo bảng màu trong forder theme */
+
+:root {
+    --color-box: #f7f7f9;
+    /* code bảng màu : ABCD191919 */
+    --color-60: #111;
+    --color-60-contrast: #f7f0f0;
+    --color-60-monochromatic: #242424;
+    --color-60-analogous: #222;
+    /* color-30 */
+    --color-30: #e5cac2;
+    --color-30-contrast: #000000;
+    --color-30-monochromatic: #D6AB9E;
+    --color-30-analogous: #E5DCC2;
+    /* color-10 */
+    --color-10: #7e6a65;
+    --color-10-contrast: #FFFFFF;
+    --color-10-monochromatic: #98837E;
+    --color-10-analogous: #7E656C;
+    /* color-bổ sung */
+    --color-bosung: #a98166e6;
+    --color-bosung2: #18191d;
+    --color-bosung3: #ffc107;
+}
+
+
+/* color background */
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.background-color-box {
+    background-color: var(--color-box) !important;
+}
+
+
+/* background-color */
+
+
+/* color-60 */
+
+.hover-color-60:hover,
+.color-60 {
+    background-color: var(--color-60) !important;
+    color: var(--color-60-contrast);
+}
+
+.hover-color-60-contrast:hover,
+.color-60-contrast {
+    background-color: var(--color-60-contrast) !important;
+    color: var(--color-60);
+}
+
+.hover-color-60-monochromatic:hover,
+.color-60-monochromatic {
+    background-color: var(--color-60-monochromatic) !important;
+    color: var(--color-60-contrast);
+}
+
+.hover-color-60-analogous:hover,
+.color-60-analogous {
+    background-color: var(--color-60-analogous)!important;
+    color: var(--color-60-contrast);
+}
+
+
+/* color-30 */
+
+.hover-color-30:hover,
+.color-30 {
+    background-color: var(--color-30) !important;
+    color: var(--color-30-contrast);
+}
+
+.hover-color-30-contrast:hover,
+.color-30-contrast {
+    background-color: var(--color-30-contrast)!important;
+    color: var(--color-30);
+}
+
+.hover-color-30-monochromatic:hover,
+.color-30-monochromatic {
+    background-color: var(--color-30-monochromatic)!important;
+    color: var(--color-30-contrast);
+}
+
+.hover-color-30-analogous:hover,
+.color-30-analogous {
+    background-color: var(--color-30-analogous)!important;
+    color: var(--color-30-contrast);
+}
+
+
+/* color-10 */
+
+.hover-color-10:hover,
+.color-10 {
+    background-color: var(--color-10)!important;
+    color: var(--color-10-contrast);
+}
+
+.hover-color-10-contrast:hover,
+.color-10-contrast {
+    background-color: var(--color-10-contrast)!important;
+    color: var(--color-10);
+}
+
+.hover-color-10-monochromatic:hover,
+.color-10-monochromatic {
+    background-color: var(--color-10-monochromatic)!important;
+    color: var(--color-10-contrast);
+}
+
+.hover-color-10-analogous:hover,
+.color-10-analogous {
+    background-color: var(--color-10-analogous)!important;
+    color: var(--color-10-contrast);
+}
+
+.hover-color-bosung:hover,
+.color-bosung {
+    background-color: var(--color-bosung)!important;
+}
+
+.hover-color-bosung2:hover,
+.color-bosung2 {
+    background-color: var(--color-bosung2)!important;
+}
+
+
+/*text-color*/
+
+
+/* mặc định : thường sẽ là màu tương phản với background */
+
+
+/* hover : thường sẽ là màu tương phản với background và monochromatic với text mặc định */
+
+
+/* text-color-60 */
+
+.hover-text-color-60:hover,
+.text-color-60 {
+    color: var(--color-60)!important;
+}
+
+.hover-text-color-60-contrast:hover,
+.text-color-60-contrast {
+    color: var(--color-60-contrast) !important;
+}
+
+.hover-text-color-60-monochromatic,
+.text-color-60-monochromatic {
+    color: var(--color-60-monochromatic)!important;
+}
+
+.hover-text-color-60-analogous,
+.text-color-60-analogous {
+    color: var(--color-60-analogous)!important;
+}
+
+
+/* text-color-30 */
+
+.hover-text-color-30:hover,
+.text-color-30 {
+    color: var(--color-30)!important;
+}
+
+.hover-text-color-30-contrast:hover,
+.text-color-30-contrast {
+    color: var(--color-30-contrast)!important;
+}
+
+.hover-text-color-30-monochromatic:hover,
+.text-color-30-monochromatic {
+    color: var(--color-30-monochromatic)!important;
+}
+
+.hover-text-color-30-analogous:hover,
+.text-color-30-analogous {
+    color: var(--color-30-analogous)!important;
+}
+
+
+/* color-text-10 */
+
+.hover-text-color-10:hover,
+.text-color-10 {
+    color: var(--color-10)!important;
+}
+
+.hover-text-color-10-contrast:hover,
+.text-color-10-contrast {
+    color: var(--color-10-contrast)!important;
+}
+
+.hover-text-color-10-monochromatic,
+.text-color-10-monochromatic {
+    color: var(--color-10-monochromatic)!important;
+}
+
+.hover-text-color-10-analogous,
+.text-color-10-analogous {
+    color: var(--color-10-analogous)!important;
+}
+
+
+/* color bổ sung */
+
+.hover-text-color-bosung:hover,
+.text-color-bosung {
+    color: var(--color-bosung)!important;
+}
+
+.hover-text-color-bosung2,
+.text-color-bosung2 {
+    color: var(--color-bosung2)!important;
+}
+
+.color-bosung3,
+.hover-color-bosung3:hover {
+    background-color: var(--color-bosung3)!important;
+}
+
+.hover-text-color-bosung3:hover,
+.text-color-bosung3 {
+    color: var(--color-bosung3)!important;
+}
+
+
+/* color-basic */
+
+.box-code-color {
+    background-color: #5a5959 !important;
+    color: #dfdfdf !important;
+}
+
+
+/* 01 */
+
+.color-basic-red,
+.hover-color-basic-red:hover {
+    background-color: red !important;
+}
+
+.text-color-basic-red,
+.hover-text-color-basic-red:hover {
+    color: red !important;
+}
+
+
+/* 02 */
+
+.color-basic-brown,
+.hover-color-basic-brown:hover {
+    background-color: brown !important;
+    color: #f7f0f0 !important;
+}
+
+.text-color-basic-brown,
+.hover-text-color-basic-brown:hover {
+    color: brown !important;
+}
+
+
+/* 03 */
+
+.color-basic-white,
+.hover-color-basic-white:hover {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.text-color-basic-white,
+.hover-text-color-basic-white:hover {
+    color: rgb(255, 255, 255) !important;
+}
+
+
+/* 04 */
+
+.color-basic-light-green,
+.hover-color-basic-light-green:hover {
+    background-color: #8bc34a !important;
+    color: #000 !important;
+}
+
+.text-color-basic-light-green,
+.hover-text-color-basic-light-green:hover {
+    color: #8bc34a !important;
+}
+
+
+/* 05 */
+
+.color-basic-light-yellow,
+.hover-color-basic-light-yellow:hover {
+    background-color: #f1c40f !important;
+    color: #fff !important;
+}
+
+.text-color-basic-light-yellow,
+.hover-text-color-basic-light-yellow:hover {
+    color: #f1c40f !important;
+}
+
+
+/* 06 */
+
+.color-basic-cyan,
+.hover-color-basic-cyan:hover {
+    background-color: #00bcd4 !important;
+    color: #000 !important;
+}
+
+.text-color-basic-cyan,
+.hover-text-color-basic-cyan:hover {
+    color: #00bcd4 !important;
+}
+
+
+/* alert-color */
+
+.color-alert-warning {
+    background-color: #FFF7D2 !important;
+    color: #65815b !important;
+}
+
+.color-alert-err {
+    background-color: brown !important;
+    color: #f7f0f0 !important;
+}
+
+.color-alert-notification {
+    background-color: #00bcd4 !important;
+    color: #000 !important;
+}
+
+.color-alert-success {
+    background-color: #8bc34a !important;
+    color: #000 !important;
+}

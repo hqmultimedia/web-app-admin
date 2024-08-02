@@ -1,0 +1,75 @@
+[{
+        "product_id": "19",
+        "product_name": "Áo CropTop",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/croptop.jpg",
+        "product_status": "0",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "20",
+        "product_name": "Quần Jean",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/jean.jpg",
+        "product_status": "1",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "21",
+        "product_name": "Túi Xách",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/tui-xach.jpg",
+        "product_status": "1",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "22",
+        "product_name": "Đồng Hồ",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/dong-ho.jpg",
+        "product_status": "1",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "23",
+        "product_name": "Mắt Kính",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/mat-kinh.jpg",
+        "product_status": "1",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "24",
+        "product_name": "Mỹ phẩm",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/my-pham.jpg",
+        "product_status": "1",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "25",
+        "product_name": "Giày,dép",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/giay.png",
+        "product_status": "0",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "25",
+        "product_name": "Dây chuyền",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/day-chuyen.png",
+        "product_status": "1",
+        "product_date": "August 29, 2024"
+    },
+    {
+        "product_id": "25",
+        "product_name": "Nhẫn",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/posts/01.jpg",
+        "product_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/nhan.jpg",
+        "product_status": "1",
+        "product_date": "August 29, 2024"
+    }
+
+
+]

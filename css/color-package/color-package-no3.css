@@ -1,0 +1,137 @@
+/* ------------------------------------------------------------------------------------I/ COLOR TRẠNG THÁI */
+
+.color_package_no3.theme-dark,
+.color_package_no3.theme-light {
+    /* error */
+    --text--card--status--error: #ed5e55;
+    --card--status--error: #ed5e552e;
+    --card--status--error--hsl: #da5643;
+    /* warning */
+    --text--card--status--warning: #f4ba40;
+    --card--status--warning: #f4ba402e;
+    --card--status--warning--hsl: #f4ba40;
+    /* success */
+    --text--card--status--success: #38c786;
+    --card--status--success: #38c7862e;
+    --card--status--success--hsl: #28a745;
+    /* normal */
+    --text--card--status--normal: #ffffffbf;
+    --card--status--normal: #17a2b854;
+    --card--status--normal--hsl: #17a2b8;
+}
+
+
+/* ----------------------------------------------------------------------------------II/ COLOR THEME SIDEBAR (THEME-LIGHT)*/
+
+.color_package_no3.theme-light {
+    /*----------------------------------------------------------- màu chính màu 60*/
+    /* --color--main: hsl(0deg 0% 96%); */
+    --color--main: hsl(0deg 0% 91%);
+    --color--main--hsl: hsl(0, 0%, 90%);
+    --color--main--hsl--2: hsl(0deg 0% 100% / 90%);
+    --color--main--hsl--3: hsl(0deg 0% 70% / 90%);
+    --color--main--hsl--4: hsl(0deg 0% 38%);
+    --color--main--hsl--5: hsl(0deg 0% 18%);
+    /*------------------------------------------------------------color-second màu 30 */
+    --color--second: hsl(0deg 0% 100%);
+    --color--second--hsl: hsl(0deg 0% 51%);
+    --color--second--hsl--2: hsl(0deg 0% 38% / 80%);
+    --color--second--hsl--3: hsl(0deg 0% 31% / 20%);
+    --color--second--hsl--4: hsl(0deg 0% 38% / 30%);
+    --color--second--hsl--5: hsl(0deg 0% 29%);
+    /* Color second 2 :sidebar left */
+    --color--second--2: hsl(0deg 11% 15%);
+    --color--second--2--hsl: hsl(0deg 11% 64% / 60%);
+    --color--second--2--hsl--2: hsl(0deg 11% 100% / 80%);
+    --color--second--2--hsl--3: hsl(0deg 11% 99% / 20%);
+    --color--second--2--hsl--4: hsl(0deg 11% 96%);
+    --color--second--2--hsl--5: hsl(0deg 11% 20%);
+    /* Color second 3 :menu basic */
+    --color--second--3: hsl(0deg 0% 100%);
+    /*---------------------------------------------------------------color-highlight màu 10 */
+    --color--highlight: hsl(210, 2%, 58%);
+    --color--highlight--hsl: hsl(210deg 2% 100% / 90%);
+    --color--highlight--hsl--2: hsl(210deg 2% 96% / 39%);
+    --color--highlight--hsl--3: hsl(210deg 2% 45%);
+    /* ----------------------------------------------------------------color-support */
+    --color--support--1: #FF5F54;
+    /*  */
+    --color--support--2: hsl(66, 100%, 66%);
+    --color--support--2--hsl: hsl(66deg 100% 15%);
+    --color--support--2--hsl--2: hsl(66deg 100% 75% / 60%);
+    /*  */
+    --color--support--3: hsl(0deg 59% 41%);
+    --color--support--4: rgb(236, 111, 9);
+}
+
+
+/* ----------------------------------------------------------------------------------II/ COLOR THEME SIDEBAR (THEME-DARK)*/
+
+.color_package_no3.theme-dark {
+    /* màu chính màu 60*/
+    --color--main: hsl(207, 15%, 12%);
+    --color--main--hsl: hsl(207, 15%, 95%);
+    --color--main--hsl--2: hsl(207deg 15% 15%);
+    /* --color--main--hsl--3: hsl(0deg 0% 100% / 80%); */
+    --color--main--hsl--3: hsl(207deg 15% 75% / 20%);
+    --color--main--hsl--4: hsl(207deg 15% 95% / 78%);
+    /* color-second */
+    --color--second: hsl(210, 15%, 18%);
+    --color--second--hsl: hsl(210deg 15% 90% / 10%);
+    --color--second--hsl--2: hsl(210deg 15% 68% / 10%);
+    --color--second--hsl--3: hsl(210deg 15% 88% / 90%);
+    --color--second--hsl--4: hsl(210deg 15% 18%);
+    /* --color-highlight màu 10 */
+    /* --color--highlight: hsl(77deg 6% 45%); */
+    --color--highlight: hsl(0deg 0% 39%);
+    --color--highlight--hsl: hsl(77deg 6% 96% / 90%);
+    --color--highlight--hsl--2: hsl(77deg 6% 96% / 20%);
+    --color--highlight--hsl--3: hsl(77deg 6% 96% / 39%);
+    /* color-support */
+    /* 1 */
+    --color--support--1: #38C786;
+    --color--support--1--hsl: hsl(154deg 2% 16%);
+    /* 2 */
+    --color--support--2: brown;
+    --color--support--2--hsl: hsl(0deg 59% 92%);
+    /* 3 */
+    --color--support--3: #ed5e49;
+    /* 04 */
+    --color--support--4: #f9fba0;
+    /* color-support content */
+}
+
+
+/* ----------------------------------------------------------------------------------II/ COLOR THEME CONTENT (THEME-LIGHT)*/
+
+.color_package_no3.theme-light {}
+
+
+/* ----------------------------------------------------------------------------------II/ COLOR THEME CONTENT (THEME-DARK)*/
+
+.color_package_no3.theme-dark {
+    /* card - background*/
+    /* 01.card--basic */
+    --card--basic: hsl(207deg 15% 15%);
+    --text--card--basic: hsl(207deg 15% 95% / 78%);
+    /* 02.card--inline--normal */
+    --card--inline--normal: hsl(207deg 15% 75% / 20%);
+    --text--card--inline--normal: hsl(207deg 15% 95% / 78%);
+    /* 03.card--inline--highlight */
+    /* 03.1 */
+    --card--inline--highlight--1: hsl(8, 67%, 56%);
+    --text--card--inline--highlight--1: hsl(207deg 15% 95% / 78%);
+    /* 03.2 */
+    --card--inline--highlight--2: hsl(190, 84%, 29%);
+    --text--card--inline--highlight--2: hsl(207deg 15% 95% / 78%);
+    /* 03.3 */
+    --card--inline--highlight--3: hsl(211, 68%, 57%);
+    --text--card--inline--highlight--3: hsl(207deg 15% 95% / 78%);
+    /* text */
+    --text--normal: hsl(207deg 15% 95% / 78%);
+    --text--title: hsl(207, 15%, 95%);
+    --text--highlight--1: var(--card--inline--highlight--1);
+    --text--highlight--2: var(--card--inline--highlight--2);
+    --text--highlight--3: var(--card--inline--highlight--3);
+    /* background */
+}

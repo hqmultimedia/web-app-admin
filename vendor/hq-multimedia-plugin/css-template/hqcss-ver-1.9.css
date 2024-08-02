@@ -1,0 +1,184 @@
+/* Carousel */
+
+@import url(items/hq-carousel.css);
+
+/* menu */
+
+@import url(items/hq-menu.css);
+@import url(items/hq-menu-medium.css);
+
+/* content, content text */
+
+@import url(items/hq-content-text.css);
+@import url(items/hq-content.css);
+
+/* Footer */
+
+@import url(items/hq-footer.css);
+
+/*  */
+
+@import url(items/hq-animate.css);
+@import url(items/hq-animate-hover.css);
+@import url(items/hq-table.css);
+@import url(items/hq-alert.css);
+@import url(items/hq-modal.css);
+@import url(items/hq-background-img.css);
+@import url(items/hq-border.css);
+@import url(items/hq-box-ratio.css);
+@import url(items/hq-oject-fit.css);
+@import url(items/hq-margin.css);
+@import url(items/hq-padding.css);
+@import url(items/hq-color.css);
+@import url(items/hq-round.css);
+@import url(items/hq-single.css);
+@import url(items/hq-flex.css);
+@import url(items/hq-button.css);
+@import url(items/hq-display.css);
+@import url(items/hq-slider.css);
+@import url(items/hq-font.css);
+@import url(items/responsive.css);
+@import url(items/hq-pin.css);
+@import url(items/hq-tooltip.css);
+
+/* @import url(settingProject.css); */
+
+@import url(items/fix-plugin.css);
+
+/*  */
+
+@import url(items/sidebar.css);
+
+/*  */
+
+@import url(items/w3tabs.css);
+@import url(items/w3-card.css);
+body {
+    overflow-x: hidden !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0rem;
+}
+
+
+/* phân trang codeigniter */
+
+.pagination li:nth-child(2) a.page-link.edit {
+    z-index: 3;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+li.page-item.unactive>a.page-link {
+    background-color: #9797974f !important;
+    cursor: not-allowed;
+    color: #0000008c;
+    pointer-events: none;
+}
+
+.page-link:focus {
+    box-shadow: none !important;
+}
+
+.fix-z-index-menu {
+    z-index: 999 !important;
+    position: relative;
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0rem !important;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+
+/* reverse-not-reverse */
+
+.row-flex-reverse {
+    padding: 0 60px;
+}
+
+.box-not-reverse {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-reverse:nth-child(2) {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
+
+.box-reverse:nth-child(1) {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    /* kích thước ảnh trong phần content ckeditor */
+    .content-setting>p>img {
+        width: 100% !important;
+    }
+    /* end kích thước ảnh trong phần content ckeditor  */
+    .row-flex-reverse {
+        padding: 0 15px;
+    }
+    /* không đảo ngược */
+    .box-reverse:nth-child(1),
+    .box-reverse:nth-child(2) {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    .row-flex-reverse {
+        padding: 0 30px;
+    }
+    /* không đảo ngược */
+    .box-reverse:nth-child(1),
+    .box-reverse:nth-child(2) {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .row-flex-reverse {
+        padding: 0 30px;
+    }
+}
+
+
+/* kích thước ảnh trong phần content ckeditor */
+
+.content-setting>p>img {
+    width: 56%;
+}
+
+.tr-fix-plugin>td:first-child,
+.tr-fix-plugin>th:first-child {
+    display: none !important;
+}
+
+
+/* fix  */

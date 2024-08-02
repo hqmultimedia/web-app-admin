@@ -1,0 +1,10 @@
+@import url(menu-small-items/menu-small-01.css);
+.big-title.active {
+    background-color: #000000b8 !important;
+    color: white !important;
+}
+
+.small-title.active {
+    background-color: #0000006e !important;
+    color: white !important;
+}

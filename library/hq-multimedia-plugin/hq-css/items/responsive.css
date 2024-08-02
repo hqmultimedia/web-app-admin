@@ -1,0 +1,87 @@
+/* plugin responsive */
+
+
+/* reponsive-1 */
+
+.box-responsive-1,
+.box-responsive-2 {
+    width: 390px;
+    height: 700px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.box-responsive-2 {
+    width: 80%;
+    height: 100vh;
+}
+
+.iframe-responsive-1 {
+    width: 88%;
+    height: 97%;
+    border: none;
+    transform: translateX(8px) translateY(37px);
+}
+
+.iframe-responsive-2 {
+    width: 95%;
+    height: 97%;
+    border: none;
+    transform: translateX(5px) translateY(60px);
+}
+
+.box-text-2 {
+    margin-top: 99px;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    .box-text {
+        margin-top: 86px;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    .box-text {
+        margin-top: 86px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1360px) {}
+
+@media (min-width:1361px) and (max-width:1500px) {}
+
+@media (min-width:1501px) and (max-width:1920px) {}
+
+
+/* setting sự xuất hiện của menu */
+
+@media (max-width:1025px) {}
+
+@media (min-width:1026px) {}
+
+
+/* @media (min-width:320px) and (max-width:543px) {}
+
+@media (min-width:544px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1360px) {}
+
+@media (min-width:1361px) and (max-width:1500px) {
+    
+}
+
+@media (min-width:1501px) and (max-width:1920px) {}
+
+
+/* setting sự xuất hiện của menu */
+
+
+/* 
+@media (max-width:1025px) {}
+
+@media (min-width:1026px) {}  */

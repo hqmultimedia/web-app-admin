@@ -1,0 +1,16 @@
+[{
+        "category_id": "19",
+        "category_name": "Áo CropTop",
+        "category_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/croptop.jpg",
+        "category_user_delete": "abc_admin@gmail.com",
+        "category_date_delete": "August 29, 2024"
+    },
+    {
+        "category_id": "20",
+        "category_name": "Quần Jean",
+        "category_img_thumb": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/category/jean.jpg",
+        "category_user_delete": "abc_admin@gmail.com",
+        "category_date_delete": "August 29, 2024"
+    }
+
+]

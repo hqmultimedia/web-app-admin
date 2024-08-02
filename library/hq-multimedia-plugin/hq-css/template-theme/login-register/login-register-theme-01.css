@@ -1,0 +1,155 @@
+/* phần nền  */
+
+.theme-01.background-login-register {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-position: -323px -17px;
+    height: 100vh;
+}
+
+.theme-01.background-login-register::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #cdcdcd;
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+
+/* phần box chứa login */
+
+
+/* setting độ rộng  */
+
+.theme-01 .box-login-register {
+    width: 339px;
+    position: relative;
+    z-index: 9999;
+}
+
+
+/* phần nền của box chứa */
+
+.theme-01 .box-login-register::before {
+    content: '';
+    width: 100% !important;
+    height: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+    opacity: 1;
+    z-index: 0;
+    border-radius: 15px;
+}
+
+
+/* phần image của box chứa */
+
+.theme-01 .img-box-login-register {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* height bằng 0 là ko xuất hiện image */
+    height: 200px;
+}
+
+
+/* phần title */
+
+.theme-01 .login-register-title {
+    margin: 15px 0 10px 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0C2E33;
+}
+
+
+/* phần text input */
+
+
+/* phần icon */
+
+.theme-01 .icon-invalid,
+.theme-01 .icon-valid {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 50px;
+    background-color: #c9c6c1;
+    color: brown;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.theme-01 .icon-valid {
+    color: #5f5fd9;
+}
+
+.theme-01 .notification-invalid {
+    position: absolute;
+    bottom: -25px;
+    color: white !important;
+}
+
+
+/* phần button */
+
+.theme-01 .btn-login,
+.theme-01 .btn-register {
+    font-size: 13px !important;
+    background: black !important;
+    /* background: linear-gradient(42deg, rgba(34, 193, 195, 1) 0%, rgba(20, 97, 98, 1) 100%) !important; */
+    border-radius: 5px;
+    border-color: black;
+    color: white;
+    transition: 0.4s;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.theme-01 .btn-login:hover {
+    background-color: rgb(31, 29, 29) !important;
+    color: white;
+}
+
+.theme-01 .btn-register {
+    background-color: #5f5fd9 !important;
+    border-color: #5f5fd9;
+}
+
+.theme-01 .btn-register:hover {
+    background-color: #7171dd !important;
+    border-color: #7171dd;
+    color: white;
+}
+
+.theme-01 input:focus {
+    box-shadow: 0 0 0 0 transparent !important;
+    border: 0 !important;
+    border-color: transparent !important;
+    font-size: 15px !important;
+}
+
+
+/* @media (min-width:320px) and (max-width:543px) {}
+
+@media (min-width:544px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1360px) {}
+
+@media (min-width:1361px) and (max-width:1500px) {
+    
+}
+
+ @media (min-width:1501px) and (max-width:1920px) {} */

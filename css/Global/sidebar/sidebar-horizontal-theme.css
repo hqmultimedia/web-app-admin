@@ -1,0 +1,326 @@
+/* horizontal theme*/
+
+
+/* ---------------------------------------------------------------------------menu-horizontal */
+
+.sidebar-menu-setting.horizontal-theme {
+    padding-left: 0 !important;
+    padding: 0 68px;
+}
+
+.horizontal-theme .box-menu {
+    width: 100% !important;
+    padding: 0 105px 0 115px !important;
+}
+
+.horizontal-theme .box-menu .box-logo {
+    display: block !important;
+}
+
+
+/* --------------------------------------------------------------------------------sidebar-horizontal */
+
+.horizontal-theme .sidebar-top {
+    position: fixed;
+    top: 0px;
+    left: 102px;
+    z-index: 99;
+}
+
+.horizontal-theme {
+    display: block !important;
+}
+
+.horizontal-theme .box-sidebar {
+    width: 100% !important;
+    height: var(--height-sidebar--horizontal--theme);
+    position: fixed;
+    top: calc( var(--height--menu) - 1px);
+    z-index: 1;
+    overflow: inherit;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 4%) !important;
+}
+
+.horizontal-theme .box-content-footer {
+    width: 100% !important;
+}
+
+.horizontal-theme .box-sidebar ul.ul-sidebar {
+    display: flex !important;
+}
+
+.horizontal-theme .box-sidebar ul.ul-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.horizontal-theme .sidebar-category-title {
+    display: none;
+}
+
+.horizontal-theme .box-sidebar ul.ul-sidebar {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: var(--height-sidebar--horizontal--theme);
+}
+
+.horizontal-theme li.sidebar-link {
+    height: 100%;
+    cursor: unset;
+}
+
+.horizontal-theme .scroll_content.fix_layout {
+    display: block !important;
+}
+
+.horizontal-theme li.sidebar-link .scroll_content {
+    position: absolute;
+    top: -200%;
+    left: -5px;
+    /* width: 100%; */
+    width: auto;
+    min-width: 139px;
+    z-index: -10;
+    transition: 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    /* tắt tính năng thu gọn dropdown ở theme basic  */
+    display: block;
+}
+
+
+/*dành cho dropdown center*/
+
+.horizontal-theme li.sidebar-link .scroll_content.drop-center {
+    left: auto;
+    width: calc(100vmax - 200px) !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    height: 439px;
+    overflow: scroll;
+}
+
+.horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop {
+    width: 25% !important;
+    border-right: 1px solid gray;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .link-scroll {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 9px 0 9px 0px;
+}
+
+.horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .link-scroll .icon-link-dropdown {
+    display: none;
+}
+
+.horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop:last-child {
+    border-right: none;
+}
+
+.horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .ul-level-3 li {
+    /*padding-left: 10px; */
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+.horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .ul-level-3 li .icon-link-level-3 {
+    font-size: 8px;
+    padding-right: 5px;
+}
+
+
+/* end drop center */
+
+
+/* hover */
+
+.horizontal-theme li.sidebar-link .box_scroll:hover .scroll_content {
+    top: calc( 100%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.horizontal-theme li.sidebar-link .box_scroll:hover .icon-dropdown {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.horizontal-theme .sidebar-link .icon-dropdown {
+    right: 9px;
+}
+
+
+/*ngăn chặn khi click ( change layout ) */
+
+.horizontal-theme .sidebar-link .selected .icon-dropdown {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.horizontal-theme .sidebar-link .notification {
+    right: 5px;
+}
+
+.horizontal-theme .box_scroll {
+    height: 100%;
+}
+
+.horizontal-theme .scroll_title {
+    position: relative;
+    padding: 0 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: 500;
+}
+
+
+/* box-content */
+
+.horizontal-theme .box-content-footer {
+    padding-left: 0 !important;
+}
+
+.horizontal-theme.box-content-footer .view-include {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 68px;
+    padding-bottom: 68px !important;
+    width: 100vmax !important;
+}
+
+
+/* footer */
+
+.horizontal-theme .box-content-footer .sidebar-footer-setting {
+    padding: 10px 100px !important;
+}
+
+.horizontal-theme .product-highlight {
+    display: block;
+    padding-bottom: 0px;
+}
+
+.horizontal-theme .product-highlight>a,
+.horizontal-theme .product-highlight>p {
+    color: black;
+    text-align: left;
+}
+
+
+/* -----------------------------------------------------------------------------Responsive theme horizontal */
+
+@media (max-width:543px) {
+    .horizontal-theme .box-menu .box-logo {
+        width: 25px;
+        overflow: hidden;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width:320px) and (max-width:991px) {
+    /* box menu top */
+    .horizontal-theme .box-menu {
+        padding: 0 15px 0 15px !important;
+    }
+    /* box sidebar horizontal */
+    .box-sidebar.horizontal-theme {
+        left: 0 !important;
+        top: -100%;
+        height: auto;
+        max-height: 339px;
+        overflow: scroll !important;
+    }
+    .box-sidebar.horizontal-theme.show {
+        top: calc( var(--height--menu) - 1px) !important;
+    }
+    .horizontal-theme .box-sidebar ul {
+        flex-wrap: wrap;
+        height: auto !important;
+    }
+    .horizontal-theme .box-sidebar ul li.sidebar-link {
+        width: 100% !important;
+        border-top: none;
+        border-bottom: none;
+    }
+    .horizontal-theme .scroll_title {
+        padding: 15px 10px 15px 10px;
+        justify-content: left;
+    }
+    .horizontal-theme .link-scroll {
+        /* border-bottom: 1px solid #80808036 !important; */
+        border-top: none;
+        border-top: none;
+        padding-left: 20px;
+    }
+    /* kết hợp thêm jquery */
+    /* fix hover icon dropdown */
+    .horizontal-theme li.sidebar-link .box_scroll:hover .icon-dropdown {
+        transform: translateY(-50%) rotate(0deg) !important;
+    }
+    /* phần sidebar */
+    .horizontal-theme li.sidebar-link .scroll_content {
+        display: none;
+        position: unset !important;
+        opacity: 1;
+        visibility: visible;
+    }
+    /* phần dropdown center */
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center.remove-display {
+        display: block !important;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center {
+        display: none !important;
+        width: 100% !important;
+        height: auto;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop {
+        width: 100% !important;
+        margin-top: 0;
+        border-right: none;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .link-scroll .icon-link-dropdown {
+        display: block;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .link-scroll {
+        text-transform: unset;
+        font-weight: 500;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .product-highlight {
+        display: none;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop ul.ul-level-3 {
+        display: none;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop ul.ul-level-3.remove-display {
+        display: block;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .ul-level-3 li {
+        padding-left: 10px;
+    }
+    .horizontal-theme li.sidebar-link .scroll_content.drop-center .items-drop .ul-level-3 li .icon-link-level-3 {
+        font-size: 6px;
+    }
+    /* end dropdown center */
+    /* content */
+    .horizontal-theme.box-content-footer .view-include {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100% !important;
+    }
+    /* footer */
+    .horizontal-theme .box-content-footer .sidebar-footer-setting {
+        padding: 15px 0px !important;
+    }
+}

@@ -1,0 +1,98 @@
+/* 02. ul-primary  */
+
+@media (min-width:320px) and (max-width:543px) {
+    /* ẩn 2 icon đầu tiên */
+    .boxMenu-PrimarySystem .item-5 .element-1,
+    .boxMenu-PrimarySystem .item-5 .element-2 {
+        display: none;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1199px) {}
+
+@media (max-width:1025px) {
+     :root {
+        --menuPrimaryHeight: 68px;
+        --liPrimaryHeight: 68px;
+    }
+}
+
+@media (min-width:1026px) {
+     :root {
+        /* chieu cao ,line-height menu cap 1 ul-center,ul-primary  */
+        --menuPrimaryHeight: 68px;
+        --liPrimaryHeight: 68px;
+        /* chieu cao ,line-height menu cap 1 ul-center,ul-primary */
+        --menu-primary-c2-Height: 35px;
+        --li-primary-c2-Height: 35px;
+        /* chieu dai li menu cap 1 ul-center,ul-primary*/
+        --width-li-primary-c1: 100px;
+        /* chieu dai li menu cap 2 ul-center,ul-primary */
+        --width-li-primary-c2: 200px;
+    }
+}
+
+
+/* style 2 */
+
+.boxMenu-PrimarySystem .item-5 .element-3 .top-right,
+.boxMenu-PrimarySystem .item-5 .element-4 .top-right {
+    width: 20px;
+    height: 20px;
+    font-size: 11px !important;
+    top: 12px;
+    left: 7px;
+}
+
+.box-left-menu-primary,
+.box-center-menu-primary,
+.box-right-menu-primary {
+    line-height: var(--menuPrimaryHeight);
+}
+
+.ul-primary {
+    list-style: none;
+    /* margin-bottom: 0; */
+    display: flex!important;
+    position: relative;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+    position: relative;
+    /* width: 100vmax; */
+    margin: auto !important;
+}
+
+.ul-primary>a,
+.ul-primary>li {
+    position: relative;
+    width: var(--width-li-primary-c1);
+    color: aliceblue !important;
+    text-align: center;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.dropdown-menu-primary {
+    transform: none;
+    text-align: left;
+    min-width: 150px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    display: inline;
+    width: auto;
+    z-index: 9999 !important;
+}
+
+.dropdown-menu-primary>ul>a>li {
+    font-size: 14px;
+    padding-left: 5px;
+    width: var(--width-li-primary-c2);
+    height: var(--menu-primary-c2-Height) !important;
+    line-height: var(--li-primary-c2-Height) !important;
+}

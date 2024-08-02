@@ -1,0 +1,47 @@
+[{
+        "product_name": "Dior Bag 'Gray Stone'",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/preview-order/01.jpg",
+        "product_type": "Xám",
+        "quantity": "1",
+        "price": "187.500.000",
+        "total": "187.500.000"
+
+    },
+    {
+        "product_name": "Dior Mini Bag 'Rani Pink'",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/preview-order/02.jpg",
+        "product_type": "Hồng",
+        "quantity": "1",
+        "price": "79.500.000",
+        "total": "79.500.000"
+
+    },
+    {
+        "product_name": "Dior Miss Caro Mini Bag ",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/preview-order/03.jpg",
+        "product_type": "Hồng",
+        "quantity": "1",
+        "price": "83.000.000",
+        "total": "83.000.000"
+
+    },
+    {
+        "product_name": "Dior Lady D-Joy ",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/preview-order/04.jpg",
+        "product_type": "Trắng",
+        "quantity": "1",
+        "price": "95.500.000",
+        "total": "95.500.000"
+
+    },
+    {
+        "product_name": " Dior Bag 'Rust Colored'",
+        "product_img": "https://hqmultimedia.github.io/project-admin-panel/SourceData/JSON/preview-order/05.jpg",
+        "product_type": "Đỏ",
+        "quantity": "1",
+        "price": "187.000.000",
+        "total": "187.000.000"
+
+    }
+
+]

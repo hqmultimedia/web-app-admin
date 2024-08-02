@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------------------------------ on view login */
+
+.sidebar-menu-setting.on-view-login {
+    display: none !important;
+    padding-left: 0 !important;
+}
+
+.box-sidebar.on-view-login {
+    display: none;
+}
+
+.box-content-footer.on-view-login {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+}
+
+.box-content-footer .view-include.on-view-login {
+    padding: 0 !important;
+    width: 100vmax !important;
+}
+
+.sidebar-footer-setting.on-view-login {
+    padding-left: 0 !important;
+    display: none;
+}
+
+
+/*end setting menu-content-footer on view login */

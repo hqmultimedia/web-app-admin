@@ -1,0 +1,84 @@
+/* carousel_bootstrap */
+
+.carousel_bootstrap .item-1 .element-1 {
+    height: 100vh;
+}
+
+.carousel_bootstrap .item-1 .element-2 .element-child-1 {
+    font-size: 39px !important;
+}
+
+.carousel_bootstrap .item-1 .element-2 .element-child-2 {
+    font-size: 30px !important;
+    font-weight: 300;
+}
+
+.carousel_bootstrap .item-1 .element-2 .element-child-3 {
+    font-size: 16px !important;
+    padding: 6.5px 15px 6.5px 15px;
+}
+
+.setting-next-bootstrap {
+    right: 20px !important;
+}
+
+.setting-prev-bootstrap {
+    left: 20px !important;
+}
+
+.setting-next-bootstrap,
+.setting-prev-bootstrap {
+    top: 0 !important;
+    bottom: 0;
+    width: 39px !important;
+    /* background: black; */
+    opacity: 1 !important;
+    transition: 0.4s !important;
+    visibility: hidden;
+}
+
+
+/* icon */
+
+.setting-icon-next-bootstrap,
+.setting-icon-prev-bootstrap {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-color: var(--color-60);
+    opacity: .5;
+    transition: 0.4s;
+}
+
+
+/* setting hover icon next prev */
+
+.setting-icon-next-bootstrap:hover,
+.setting-icon-prev-bootstrap:hover {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-color: var(--color-10);
+    opacity: 1 !important;
+}
+
+
+/* Di chuột để hiển thị icon */
+
+.carousel:hover .setting-next-bootstrap,
+.carousel:hover .setting-prev-bootstrap {
+    visibility: visible;
+    opacity: .5;
+}
+
+@media (min-width:320px) and (max-width:543px) {
+    /* .setting-next-bootstrap,
+    .setting-prev-bootstrap {
+        width: 30px !important;
+        height: 30px !important;
+    } */
+}
+
+@media (min-width:544px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}

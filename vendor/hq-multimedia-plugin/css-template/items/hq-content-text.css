@@ -1,0 +1,54 @@
+/* font-size,font-weight */
+
+
+/* Giới hạn ký tự xuất hiện của dòng */
+
+.text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+/* text-align */
+
+.text-align-right {
+    text-align: right !important;
+}
+
+.text-align-center {
+    text-align: center!important
+}
+
+.text-align-left {
+    text-align: left !important;
+}
+
+
+/* font-weight */
+
+.weight-100 {
+    font-weight: 100;
+}
+
+.weight-200 {
+    font-weight: 200;
+}
+
+.weight-300 {
+    font-weight: 300;
+}
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.weight-500 {
+    font-weight: 500;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
